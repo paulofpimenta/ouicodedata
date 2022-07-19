@@ -1,0 +1,63 @@
+body {
+  background:#807d7d;
+}
+.demopadding {
+  margin:50px auto;
+  width:140px;
+  text-align:center;
+}
+.icon {
+	position:relative;
+	text-align:center;
+	width:0px;
+	height:0px;
+	padding:20px;
+	border-top-right-radius: 	20px;
+	border-top-left-radius: 	20px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 	20px; 
+	-moz-border-radius: 		20px 20px 20px 20px;
+	-webkit-border-radius: 		20px 20px 20px 20px;
+	-khtml-border-radius: 		20px 20px 20px 20px; 	
+	color:#FFFFFF;
+}
+.icon i {
+	font-size:20px;
+	position:absolute;
+	left:9px;
+	top:10px;
+}
+.icon.social {
+	float:right;
+	margin:0 10px 0 0;
+	cursor:pointer;
+	background:#c2c3c7 ;
+	color:#262626;
+	transition: 0.1s;
+	-moz-transition: 0.1s;
+	-webkit-transition: 0.1s;
+	-o-transition: 0.1s; 	
+}
+.icon.social:hover {
+	background:#262626 ;
+	color:#eaecf1;
+	transition: 0.1s;
+	-moz-transition: 0.1s;
+	-webkit-transition: 0.1s;
+	-o-transition: 0.1s;
+	-webkit-filter:	drop-shadow(0 1px 1px rgba(0,0,0,.8));
+	-moz-filter: 	drop-shadow(0 1px 1px rgba(0,0,0,.8));
+	-ms-filter: 		drop-shadow(0 1px 1px rgba(0,0,0,.8));
+	-o-filter: 		drop-shadow(0 1px 1px rgba(0,0,0,.8));
+	filter: 			drop-shadow(0 1px 1px rgba(0,0,0,.8));	 	
+}
+.icon.social.fb i {
+	left:13px;
+	top:10px;
+}
+.icon.social.tw i {
+	left:11px;
+}
+.icon.social.in i {
+	left:11px;
+}

@@ -1,0 +1,40 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: OuiCodeGIS
+email: pfpimenta@gmail.com
+description: # this means to ignore newlines until "baseurl:"
+  A portal with news, tutorials and tips about GIS.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://paulofpimenta.github.io/ouicodegis/" # the base hostname & protocol for your site
+github_username:  paulofpimenta
+twitter_username:  paulofpimenta
+linkedin_username:  paulofpimenta
+
+permalink: none
+
+# Gems settings
+plugins: [jekyll-paginate]
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+paginate: 5
+
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"
+      author: "Paulo Pimenta"
