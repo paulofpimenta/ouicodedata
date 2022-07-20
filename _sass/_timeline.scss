@@ -134,7 +134,7 @@ $link-color: $brand-color;
     }
   }
   .time-wrapper {
-    float: right;
+    //float: right;
     @media(max-width: 320px) {
       float: none;
     }
@@ -144,7 +144,7 @@ $link-color: $brand-color;
 .flag-wrapper {
   position: relative;
   display: inline-block;
-  text-align: center;
+  //text-align: center;
   @media(max-width: 320px) {
     text-align: center;
   }
