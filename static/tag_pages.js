@@ -42,9 +42,10 @@ function parseURL(url) {
     let hash_item = parseURL(url).prop('hash')
     if (hash_item) {
       var hash_page_idx = $(hash_item).closest('div.page-content').attr("page-idx")
+      console.log($(hash_item).get(0))
       showPage(hash_page_idx);
       // Blink
-      $(hash_item).get(0);
+      $(hash_item).get(0).scrollIntoView();
       $(hash_item)
         .find('a')
         .delay(150)
