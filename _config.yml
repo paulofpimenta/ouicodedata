@@ -21,6 +21,8 @@ permalink: none
 # Gems settings
 plugins:
   - jekyll-paginate
+  - jekyll-redirect-from
+
 
 
 # Build settings
