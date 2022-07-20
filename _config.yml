@@ -21,7 +21,7 @@ permalink: none
 # Gems settings
 plugins:
   - jekyll-paginate
-  - jekyll-twitter-plugin
+  #- jekyll-twitter-plugin
 
 
 # Build settings
