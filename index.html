@@ -86,7 +86,7 @@ layout: default
     <br />
 
     <div class="post-contents-shadow">
-      <h3>About Me</h3>
+      <p style="font-size: 21px;font-weight: 300;line-height: 24px;color: #292F33; ">About Me</p>
       <img src="{{ site.baseurl }}/img/me.jpg" style="margin:20px auto 0 auto;"><br /> <br />
       <p style="font-size:18px;">I'm a software engineer and web developper currently living in Montpellier. I made this blog to share some stuff about GIS and programming related to research topics.</p>
       <br />
@@ -95,18 +95,21 @@ layout: default
     <br />
 
     <div class="post-contents">
-        <h3>Books</h3>
+      <p style="font-size: 21px;font-weight: 300;line-height: 24px;color: #292F33;">Books</p>
     </div>
     <br/>
 
     <div class="post-contents">
-      <h3>Recent Posts</h3>
-    </div>
+        <p style="font-size: 21px;font-weight: 300;line-height: 24px;color: #292F33;">Recent Posts</p>
+      </div>
     <br/>
 
     <div class="post-contents">
-        <h3>Twitter</h3>
+        <!--<p style="font-size: 21px;font-weight: 300;line-height: 24px;color: #292F33;">Twitter</p>-->
+        {% twitter https://twitter.com/paulofpimenta maxwidth=500 limit=1 %}
+
     </div>
+
 
   <!--.col-4-->
   </div>

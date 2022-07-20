@@ -19,7 +19,10 @@ linkedin_username:  paulofpimenta
 permalink: none
 
 # Gems settings
-plugins: [jekyll-paginate]
+plugins:
+  - jekyll-paginate
+  - jekyll-twitter-plugin
+
 
 # Build settings
 markdown: kramdown
