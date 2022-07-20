@@ -74,13 +74,17 @@ layout: default
   <div class="col-md-4">
     
     <!-- Tags-->
-    <div class="post-contents-shadow">
+    <!--<div class="post-contents-shadow">
       <i class="fa fa-tags">&nbsp;&nbsp; Tags</i><br />
       {% for tag in site.tags %}
-      {% assign t = tag | first %}
-      {% assign posts = tag | last %}
-      <span class="label label-default">{{t | downcase | replace:" ","-" }} ( {{ posts | size }} )</span><br />
+        {% assign t = tag | first %}
+        {% assign posts = tag | last %}
+        <span class="label label-default">{{t | downcase | replace:" ","-" }} ( {{ posts | size }} )</span><br />
       {% endfor %}
+    </div>-->
+    <div class="post-contents-shadow">
+      <i class="fa fa-tags">&nbsp;&nbsp; Tags</i><br />
+        {% include collect_tags.html%}
     </div>
     <br />
     
@@ -114,8 +118,6 @@ layout: default
           <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <!--<p style="font-size: 21px;font-weight: 300;line-height: 24px;color: #292F33;">Twitter</p>-->
     </div>
-
-
   <!--.col-4-->
   </div>
   <!--.col-8-->
