@@ -6,12 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: OuiCodeGIS
+title: OuiCodeData
 email: pfpimenta@gmail.com
 description: # this means to ignore newlines until "baseurl:"
   A portal with news, tutorials and tips about GIS.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://paulofpimenta.github.io/ouicodegis/" # the base hostname & protocol for your site
+url: "https://paulofpimenta.github.io/ouicodedata/" # the base hostname & protocol for your site
 github_username:  paulofpimenta
 twitter_username:  paulofpimenta
 linkedin_username:  paulofpimenta
@@ -21,7 +21,6 @@ permalink: none
 # Gems settings
 plugins:
   - jekyll-paginate
-  #- jekyll-twitter-plugin
 
 
 # Build settings
