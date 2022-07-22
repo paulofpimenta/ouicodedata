@@ -2,12 +2,13 @@
 layout: default
 ---
 
+
 <!--Content-->
 <div class="row">
 
   <!--Image welcome-->
 <div class="col-md-12" style="padding-bottom: 10px">
-    <img  style="object-fit: fill;" src="{{ site.baseurl }}/img/logo2.png">
+    <img style="width: inherit;" src="{{ site.baseurl }}/img/logo2.png">
 </div>
 <br/>
 <br/>
@@ -47,7 +48,7 @@ layout: default
     <!-- Paginator-->
     <div class="row">
       {% if paginator.total_pages > 1 %}
-      <div class="pagination mx-auto">
+      <div class="pagination mx-auto" style="width: fit-content">
         {% if paginator.previous_page %}
         <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button page-button">&laquo;</a>
         {% endif %}
@@ -75,44 +76,33 @@ layout: default
   <div class="col-md-4">
     
     <!-- Tags-->
-    <!--<div class="post-contents-shadow">
-      <i class="fa fa-tags">&nbsp;&nbsp; Tags</i><br />
-      {% for tag in site.tags %}
-        {% assign t = tag | first %}
-        {% assign posts = tag | last %}
-        <span class="label label-default">{{t | downcase | replace:" ","-" }} ( {{ posts | size }} )</span><br />
-      {% endfor %}
-    </div>-->
     <div class="post-contents-shadow ">
-      <i class="fa fa-tags">&nbsp;&nbsp; Tags</i><br />
-        {% include collect_tags.html%}
+      <i class="fa fa-tags">&nbsp;&nbsp;</i>
+        {% include card_tags.html%}
     </div>
     <br />
     
     <!-- About me-->
     <div class="post-contents-shadow">
-      <p style="font-size: 21px;font-weight: 300;line-height: 24px;color: #292F33; ">About Me</p>
-      <img src="{{ site.baseurl }}/img/me.jpg" style="margin:20px auto 0 auto;"><br /> <br />
-      <p style="font-size:18px;">I'm a software engineer and web developper currently living in Montpellier. I made this blog to share some stuff about GIS and programming related to research topics.</p>
-      <br />
-      {% include social-profile-buttons.html%}
+        <i class="fa fa-face-smile">&nbsp;&nbsp;</i>
+          {% include card_about_me.html%}
     </div>
     <br />
 
     <!-- Books-->
-    <div class="post-contents">
+    <div class="post-contents-shadow">
       <p style="font-size: 21px;font-weight: 300;line-height: 24px;color: #292F33;">Books</p>
     </div>
     <br/>
 
     <!-- Recent Posts-->
-    <div class="post-contents">
+    <div class="post-contents-shadow">
         <p style="font-size: 21px;font-weight: 300;line-height: 24px;color: #292F33;">Recent Posts</p>
       </div>
     <br/>
 
     <!-- Twitter-->
-    <div class="post-contents">
+    <div class="post-contents-shadow" style="margin-bottom: 20px;">
       <a class="twitter-timeline" 
           data-tweet-limit="1"
           href="https://twitter.com/paulofpimenta?ref_src=twsrc%5Etfw">Tweets by paulofpimenta</a> 

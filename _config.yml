@@ -55,6 +55,14 @@ defaults:
       author: "Paulo Pimenta"
 
 
+#Plugins
+############################################################
+
+#Carousel configuration
+iis_slider_array: []
+
+
+
 # Outputting
 ############################################################
 permalink: /posts/:title/
