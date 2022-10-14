@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>OuiCodeData</title>
+  <meta name="description" content="A portal with news, tutorials and tips about GIS.">
+  
+  <!-- Jquery -->
+  <script src="/static/jquery-3.6.0.min.js"></script>
+
+  <!-- Bootstrap -->
+  <!--<link rel="stylesheet" href="/static/bootstrap.min.css"> -->
+  <!--<script src="/static/bootstrap.min.js"></script>-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+
+
+  <!-- Fontsawesome -->
+  <link rel="stylesheet" href="/static/font-awesome/css/all.css">
+  <link rel="stylesheet" href="/static/font-awesome/css/v4-shims.css">
+
+  <!-- Social icons -->
+  <link rel="stylesheet" href="/static/social-icons.css">
+
+  <!-- Portfolio -->
+  <link rel="stylesheet" href="/static/portfolio.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon_32.ico">
+
+  <!-- should put bootstrap before main style sheet, otherwise it't hard to override  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <script src="/static/flickity.pkgd.min.js"></script>
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="canonical" href="http://localhost:4000/about-me/">
+  <link rel="alternate" type="application/rss+xml" title="OuiCodeData" href="http://localhost:4000/feed.xml">
+</head>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86140592-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  <body>
+
+    <header class="site-header">
+    <div class="container px-0">
+      <!-- <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">OuiCodeData </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-alt" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse navbar-alt" id="navbarNav">
+          <ul class="navbar-nav">
+            <li  class="nav-item" >
+              <a class="nav-link" href="/index.html"> Home</a>
+            </li>
+            <li  class="nav-item" >
+                <a class="nav-link" href="http://localhost:4000/portfolio">Portfolio</a>
+            </li>
+            <li  class="nav-item" >
+                <a class="nav-link" href="/resume">Resume</a>
+            </li>
+            <li  class="nav-item active"  class="nav-item" >
+                <a class="nav-link" href="/about-me">About me</a>
+            </li>
+            <li  class="nav-item" >
+              <a class="nav-link" href="/tag_index">Tags</a>
+          </li>
+          </ul>
+        </div>
+      </nav> -->
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid" >
+          <a class="navbar-brand " href="#" style="color: white"  >OuiCodeData </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" ></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li  class="nav-item" >
+                <a class="nav-link" href="/index.html" style="color: white" > Home</a>
+              </li>
+              <li  class="nav-item" >
+                  <a class="nav-link" href="http://localhost:4000/portfolio" style="color: white" >Portfolio</a>
+              </li>
+              <li  class="nav-item" >
+                  <a class="nav-link" href="/resume" style="color: white" >Resume</a>
+              </li>
+              <li  class="nav-item active"  class="nav-item" >
+                  <a class="nav-link" href="/about-me" style="color: white" >About me</a>
+              </li>
+              <li  class="nav-item" >
+                <a class="nav-link" href="/tag_index" style="color: white" >Tags</a>
+            </li>
+              
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>s<a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+               -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    </div>
+  </header>
+
+    <div class="page-content">
+      <div class="container" style="padding-left:0;padding-right:0;">
+        <div class="row" style="margin-bottom:30px;padding: 10px;">
+		<div class="post-contents-shadow" style="font-size:18px;text-align: justify;text-justify: inter-word;">
+
+			<img src="/img/me.jpg" style="max-width: 25%;max-height:25%;margin-right:20px;margin-bottom:10px;float:left">
+				<p><strong>Not so brieflly about me</strong> </p>
+					<p>My name is Paulo Pimenta and I am not an ordinary software developper. If you clicked here I believe you wanted to know more about me
+					and you want now know why I consider myself a no ordinary software developper. To answer these two questions, I will start 
+					from the end: the reason why I created this blog.</p>
+					
+					<p>I always liked to help people, sharing my knowledge whatever team I would be part of. As much I have learned from my collegues,
+					I have always wanted to give it back. If not directly to people that helped me, then, to others. I also enjoy writting, so I decided to create this blog to practice my writting skills.
+					blog to practice my english writting skillls. By the way, I suppose that, at this point, you have already noticed that I am not a native English writter.</p>
+					
+					<p>An how did I get here ? Well, I failed the exams to enter to medicine school. Only to realize later, in 1999, that my interests 
+					towards computers were much greater than my those about the human body. Hopefully I decided to follow my intuintion an I went to 
+					collegue, to pursue an information systems degree. I dived in the world of computers, programming languages and networks. 
+					I have learned that computer science is very useful (and profits from) on solving problems found in other sciences. Living in the Amazon 
+					region on that time, led me to believe that computer science applied to envinroment could be an interesting starting field to help
+					some common evenrironmental issues that we encounter in that region. The day I was lectured about geographic information systems just 
+					reinforced what I believed. And that is where my story with GIS begins.</p>
+					
+					<p>I had professional experience as a software developer for both web and desktop platforms. My focus was alaywas GIS. Later, I dediced to
+					start my masters in the wondeful world of modelling, focusing on land use and land cover modelling. As my interest about modelling grew stronger,
+					I have also noticed that modelling was like a black box to novices. Thus, I wanted to help decreasing the distance between modelling tools and
+					normal non-programmer users. That said, I decided to move to Montpellier (France), and pursue a PhD at the University of Montpelier. During my PhD, 
+					I used software engineering aproach called Model Driven Engineer (MDE). I used MDE to develop a programming language called B-Reactive, a language to specify reactive behaviour in multi-agent
+                    systems. After I graduated from my PhD, I started to dive in the wonderful world of Python. I was, naturally,
+                    led to search for Python applications in modelling and web development, such as Scikit Learn and Django.
+					Continously learning, my goals are to use my skills in the domain of GIS, web developpment and modelling.
+					</p>
+		</div>
+	</div>
+	<!-- row -->
+
+<div class="clearfix"></div>
+      </div>
+      <div class="clearfix">
+    </div>
+
+    
+
+<footer class="site-footer">
+
+  <div class="container fluid center-block">
+
+    <!-- <h2 class="footer-heading">OuiCodeData</h2> -->
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1" >
+        <!-- <ul class="contact-list">
+          <li>OuiCodeData</li> 
+          <li><a href="mailto:pfpimenta@gmail.com">pfpimenta@gmail.com</a></li> 
+        </ul>!-->
+      </div>
+
+      <div class="footer-col footer-col-2">
+          <br />
+        <ul class="social-media-list list-inline text-center">
+          
+          <li class="list-inline-item">
+            
+
+<a href="https://github.com/paulofpimenta"  class="btn">
+    <i class="fa fa-github footer-icons"></i>
+</a>
+
+          </li>
+          
+
+          
+          <li class="list-inline-item">
+            
+<a href="https://twitter.com/paulofpimenta"  class="btn">
+    <i class="fa fa-twitter footer-icons"></i>
+    <!--<span class="username">paulofpimenta</span> -->
+</a>
+
+          </li>
+          
+
+          
+          <li class="list-inline-item">
+            
+<a href="https://linkedin.com/paulofpimenta" class="btn">
+    <i class="fa fa-linkedin footer-icons"></i>
+</a>
+          </li>
+          
+          
+        </ul>
+        <p class="text-white text-center small mb-0">© Copyright OuiCodeData 2022
+        </p>   
+
+      </div>
+    </div>
+    
+  </div>
+
+</footer>
+<script src="/static/input_expand_collapse.js"></script>
+<script src="/static/tag_pages.js"></script>
+
+    <script id="dsq-count-scr" src="//ouicodegis.disqus.com/count.js" async></script>
+
+
+  </body>
+
+</html>

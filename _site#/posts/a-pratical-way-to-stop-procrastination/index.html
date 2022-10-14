@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>A Pratical Strategy To Stop Procrastination</title>
+  <meta name="description" content="Background">
+  
+  <!-- Jquery -->
+  <script src="/static/jquery-3.6.0.min.js"></script>
+
+  <!-- Bootstrap -->
+  <!--<link rel="stylesheet" href="/static/bootstrap.min.css"> -->
+  <!--<script src="/static/bootstrap.min.js"></script>-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+
+
+  <!-- Fontsawesome -->
+  <link rel="stylesheet" href="/static/font-awesome/css/all.css">
+  <link rel="stylesheet" href="/static/font-awesome/css/v4-shims.css">
+
+  <!-- Social icons -->
+  <link rel="stylesheet" href="/static/social-icons.css">
+
+  <!-- Portfolio -->
+  <link rel="stylesheet" href="/static/portfolio.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon_32.ico">
+
+  <!-- should put bootstrap before main style sheet, otherwise it't hard to override  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <script src="/static/flickity.pkgd.min.js"></script>
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="canonical" href="http://localhost:4000/posts/a-pratical-way-to-stop-procrastination/">
+  <link rel="alternate" type="application/rss+xml" title="OuiCodeData" href="http://localhost:4000/feed.xml">
+</head>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86140592-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  <body>
+
+    <header class="site-header">
+    <div class="container px-0">
+      <!-- <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">OuiCodeData </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-alt" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse navbar-alt" id="navbarNav">
+          <ul class="navbar-nav">
+            <li  class="nav-item" >
+              <a class="nav-link" href="/index.html"> Home</a>
+            </li>
+            <li  class="nav-item" >
+                <a class="nav-link" href="http://localhost:4000/portfolio">Portfolio</a>
+            </li>
+            <li  class="nav-item" >
+                <a class="nav-link" href="/resume">Resume</a>
+            </li>
+            <li  class="nav-item" >
+                <a class="nav-link" href="/about-me">About me</a>
+            </li>
+            <li  class="nav-item" >
+              <a class="nav-link" href="/tag_index">Tags</a>
+          </li>
+          </ul>
+        </div>
+      </nav> -->
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid" >
+          <a class="navbar-brand " href="#" style="color: white"  >OuiCodeData </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" ></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li  class="nav-item" >
+                <a class="nav-link" href="/index.html" style="color: white" > Home</a>
+              </li>
+              <li  class="nav-item" >
+                  <a class="nav-link" href="http://localhost:4000/portfolio" style="color: white" >Portfolio</a>
+              </li>
+              <li  class="nav-item" >
+                  <a class="nav-link" href="/resume" style="color: white" >Resume</a>
+              </li>
+              <li  class="nav-item" >
+                  <a class="nav-link" href="/about-me" style="color: white" >About me</a>
+              </li>
+              <li  class="nav-item" >
+                <a class="nav-link" href="/tag_index" style="color: white" >Tags</a>
+            </li>
+              
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>s<a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+               -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    </div>
+  </header>
+
+    <div class="page-content">
+      <div class="container" style="padding-left:0;padding-right:0;">
+        <div class="row">
+  <div class="col-md-1 col-xs-0"></div>
+    <div class="col-md-10 col-xs-12">
+<article class="post post-contents-shadow" style="margin-bottom:30px;" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">A Pratical Strategy To Stop Procrastination</h1>
+    <p class="post-meta"><i class="fa fa-calendar">&nbsp;&nbsp;</i>
+      <time datetime="2016-10-31T13:18:02+00:00" itemprop="datePublished">Oct 31, 2016</time>
+      
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Paulo Pimenta</span></span>
+      
+    </p>
+  </header>
+
+  <div class="post-content" style="margin:15px;" itemprop="articleBody">
+    <h2 id="background">Background</h2>
+
+<p>During this weekend, I was reading a book called <a href="https://www.amazon.com/Feeling-Good-New-Mood-Therapy/dp/0380810336/ref=sr_1_1?ie=UTF8&amp;qid=1477920055&amp;sr=8-1&amp;keywords=david+d+burns">Feeling Good: The New Mood Therapy</a> by David D. Burns, which was recommended by a Coursera course <a href="https://www.coursera.org/learn/learning-how-to-learn">Learning How To Learn</a>. The book is aimed for curing depression, and it’s also very pragmatic for improving learning efficiency and stress handling.</p>
+
+<p>A method called <code class="language-plaintext highlighter-rouge">TIC-TOC (Task-Interfering Cognition, Task Oriented Cognition)</code> for stopping procrastination is introduced in this book.</p>
+
+<h2 id="how-to-use-it">How to Use It</h2>
+
+<p>When you find yourself procrastinating on a certain task, for example, you have a report which is due next Monday, and you havent’t started writing anything until Friday night. You know you should spend the whole weekend writing this report, but the recent Netflix series attract you so much. And you spend the whole Saturday watching it. You are under high stress, and there is only one day left, but it’s too hard for you to get started. (I did this quite often (ノД`)ハァ )</p>
+
+<p>Then you can using this simple technique:</p>
+
+<ol>
+  <li>Drawing a table with two columns</li>
+  <li>Writing down your negative thoughts that make you procrastinate in the left column</li>
+  <li>Writing down your rational thoughts towards these negative thoughts in the right hand</li>
+</ol>
+
+<p>Take the example of writing report, you may create a table like this:</p>
+
+<table class="mbtablestyle">
+  <thead>
+    <tr>
+      <th>TIC (Why you don’t want to get started)</th>
+      <th>TOC (Rational Thoughts)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>I don’t want to get started because I’m afraid of getting bad grades.</td>
+      <td>The grade won’t be too bad due to my experience on writing reports. At least I won’t fail.</td>
+    </tr>
+    <tr>
+      <td>I don’t want to get started because there is no much time.</td>
+      <td>Well, at least there’s still 8 hours writing it, it should be enough.</td>
+    </tr>
+    <tr>
+      <td>I don’t want to get started because I didn’t pay much effort in the class.</td>
+      <td>Then focus more next time.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Hopefully this will make you relax, and go to write your report. (￣Д)＝３</p>
+
+<hr />
+
+<h2 id="finding-out-why-you-procrastinate">Finding Out Why You Procrastinate</h2>
+
+<p>The book also implied that there must be some reasons hidden behind related with your personal values. You should find these reasons out to prevent from procrastinating next time.</p>
+
+<p>For example, the first reason <i>I don’t want to get started because I’m afraid of getting bad grades.</i> I will ask myself why I’m afraid of that.</p>
+
+<div style="border:1px solid black;padding:5px;">
+<p style="text-align:center"><i>I don't want to get started because I'm afraid of getting bad grades.</i></p>
+<p style="text-align:center"><i class="fa fa-arrow-down"></i>Why afraid of bad grades?</p>
+<p style="text-align:center"><i>That reveals lack of ability.</i></p>
+<p style="text-align:center"><i class="fa fa-arrow-down"></i>If I should get a bad grades, does that prove my inability to study?</p>
+<p style="text-align:center"><i>Probably won't, but I just hate failing, that makes me inperfect.</i></p>
+</div>
+
+<p>Then you’ll find out perfectionism probably is the reason that makes you procrastinate, not because Netflix series is so amazing. Next time, you will realize that perfectionsim is making you feeling stressful, it will be eaiser to get started.</p>
+
+    <!-- Social Bar -->
+<hr />
+<div class="row">
+    <div class="col"><h4 class="text-left">Share this post : </h4> </div>
+    <div class="col">
+        <a class='icon social gp' href="https://www.linkedin.com/sharing/share-offsite/?mini=true&url="
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">
+            <i class='fab fa-google-plus-g'></i>
+        </a>
+        <a class='icon social in' href="https://www.linkedin.com/sharing/share-offsite/?mini=true&url="
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">
+            <i class='fa fa-linkedin'></i>
+        </a>
+        <a class='icon social tw' href="https://twitter.com/intent/tweet?text=&url=&related=paulofpimenta&hashtags=ouicodegis">
+            <i class="fa fa-twitter"></i>
+        </a>
+        <a class='icon social fb' href="https://twitter.com/intent/tweet?text=&url=&related=paulofpimenta&hashtags=ouicodegis">
+            <i class='fa fa-facebook-f'></i>
+        </a>
+
+    </div>
+</div>
+<br />
+
+
+  </div>
+</article>
+
+<div class="post-contents-shadow" style="margin-bottom:30px;">
+  <div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    
+    var disqus_config = function () {
+        this.page.url = ouicodegis.com;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = ouicodegis; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+        var d = document, s = d.createElement('script');
+        
+        s.src = 'https://ouicodegis.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+<div class="col-md-1 col-xs-0"></div>
+</div>
+      </div>
+      <div class="clearfix">
+    </div>
+
+    
+
+<footer class="site-footer">
+
+  <div class="container fluid center-block">
+
+    <!-- <h2 class="footer-heading">OuiCodeData</h2> -->
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1" >
+        <!-- <ul class="contact-list">
+          <li>OuiCodeData</li> 
+          <li><a href="mailto:pfpimenta@gmail.com">pfpimenta@gmail.com</a></li> 
+        </ul>!-->
+      </div>
+
+      <div class="footer-col footer-col-2">
+          <br />
+        <ul class="social-media-list list-inline text-center">
+          
+          <li class="list-inline-item">
+            
+
+<a href="https://github.com/paulofpimenta"  class="btn">
+    <i class="fa fa-github footer-icons"></i>
+</a>
+
+          </li>
+          
+
+          
+          <li class="list-inline-item">
+            
+<a href="https://twitter.com/paulofpimenta"  class="btn">
+    <i class="fa fa-twitter footer-icons"></i>
+    <!--<span class="username">paulofpimenta</span> -->
+</a>
+
+          </li>
+          
+
+          
+          <li class="list-inline-item">
+            
+<a href="https://linkedin.com/paulofpimenta" class="btn">
+    <i class="fa fa-linkedin footer-icons"></i>
+</a>
+          </li>
+          
+          
+        </ul>
+        <p class="text-white text-center small mb-0">© Copyright OuiCodeData 2022
+        </p>   
+
+      </div>
+    </div>
+    
+  </div>
+
+</footer>
+<script src="/static/input_expand_collapse.js"></script>
+<script src="/static/tag_pages.js"></script>
+
+    <script id="dsq-count-scr" src="//ouicodegis.disqus.com/count.js" async></script>
+
+
+  </body>
+
+</html>

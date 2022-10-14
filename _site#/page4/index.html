@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>OuiCodeData</title>
+  <meta name="description" content="A portal with news, tutorials and tips about GIS.">
+  
+  <!-- Jquery -->
+  <script src="/static/jquery-3.6.0.min.js"></script>
+
+  <!-- Bootstrap -->
+  <!--<link rel="stylesheet" href="/static/bootstrap.min.css"> -->
+  <!--<script src="/static/bootstrap.min.js"></script>-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+
+
+  <!-- Fontsawesome -->
+  <link rel="stylesheet" href="/static/font-awesome/css/all.css">
+  <link rel="stylesheet" href="/static/font-awesome/css/v4-shims.css">
+
+  <!-- Social icons -->
+  <link rel="stylesheet" href="/static/social-icons.css">
+
+  <!-- Portfolio -->
+  <link rel="stylesheet" href="/static/portfolio.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon_32.ico">
+
+  <!-- should put bootstrap before main style sheet, otherwise it't hard to override  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <script src="/static/flickity.pkgd.min.js"></script>
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="canonical" href="http://localhost:4000/page4/">
+  <link rel="alternate" type="application/rss+xml" title="OuiCodeData" href="http://localhost:4000/feed.xml">
+</head>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86140592-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  <body>
+
+    <header class="site-header">
+    <div class="container px-0">
+      <!-- <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">OuiCodeData </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-alt" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse navbar-alt" id="navbarNav">
+          <ul class="navbar-nav">
+            <li  class="nav-item" >
+              <a class="nav-link" href="/index.html"> Home</a>
+            </li>
+            <li  class="nav-item" >
+                <a class="nav-link" href="http://localhost:4000/portfolio">Portfolio</a>
+            </li>
+            <li  class="nav-item" >
+                <a class="nav-link" href="/resume">Resume</a>
+            </li>
+            <li  class="nav-item" >
+                <a class="nav-link" href="/about-me">About me</a>
+            </li>
+            <li  class="nav-item" >
+              <a class="nav-link" href="/tag_index">Tags</a>
+          </li>
+          </ul>
+        </div>
+      </nav> -->
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid" >
+          <a class="navbar-brand " href="#" style="color: white"  >OuiCodeData </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" ></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li  class="nav-item" >
+                <a class="nav-link" href="/index.html" style="color: white" > Home</a>
+              </li>
+              <li  class="nav-item" >
+                  <a class="nav-link" href="http://localhost:4000/portfolio" style="color: white" >Portfolio</a>
+              </li>
+              <li  class="nav-item" >
+                  <a class="nav-link" href="/resume" style="color: white" >Resume</a>
+              </li>
+              <li  class="nav-item" >
+                  <a class="nav-link" href="/about-me" style="color: white" >About me</a>
+              </li>
+              <li  class="nav-item" >
+                <a class="nav-link" href="/tag_index" style="color: white" >Tags</a>
+            </li>
+              
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>s<a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+               -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    </div>
+  </header>
+
+    <div class="page-content">
+      <div class="container" style="padding-left:0;padding-right:0;">
+        <!--Content-->
+<div class="row">
+
+  <!--Image welcome-->
+<div class="col-md-12" style="padding-bottom: 10px">
+    <img style="width: inherit;" src="/img/logo2.png">
+</div>
+<br/>
+<br/>
+
+  <!--Left content -->
+  <div class="home col-md-8" style="margin-bottom: 30px">
+    <!--Posts-->
+    
+    <div class="post-contents-shadow">
+      <h2>
+        <a class="post-link" href="/posts/one-week-trying-improvisation/">One week trying improvisation</a>
+      </h2>
+      <span class="post-meta" style="margin-right:50px">
+          <i class="fas fa-user">&nbsp;&nbsp;</i>By Paulo Pimenta
+      </span>
+      
+      <span class="post-meta"><i class="fa fa-calendar">&nbsp;&nbsp;</i>Apr 27, 2016</span>
+      <span class="post-meta" style="margin-left:50px;margin-right:50px;">
+        <i class="fa fa-comment-o">&nbsp;&nbsp;</i>
+        <a style="color:#828282" href="/posts/one-week-trying-improvisation/#disqus_thread"></a>
+      </span>
+
+      
+        <span class="post-meta" ><i class="fa fa-tags">&nbsp;&nbsp;</i>music</span>
+      
+
+      <div class="post-content truncate" itemprop="articleBody" style="max-height:300px;margin-top:20px;">
+	      <p>This week I’m trying simle improvisation following instructions of Youtube video, it’s really interesting because unlike normal composing, I don’t have to care about writing scores, all it focuses on is the moment. The idea of living in this moment sounds like Zen, and I really want to develop that lifestyle.</p>
+
+<p>At first two days, I tried to focus on the melody part, it’s hard at first, because I’m always trying to make the melody sadder and sadder, considering my loneliness recently.</p>
+
+<p>Then the third day, after watching Youtube video, I started to work on chords. Like go from the I chord, and goes to V chord, like leaving home, and finally came back to the I chord. Then my improvisation style turned into Cannon style, with few varations.</p>
+
+<p>The forth day, I watched more Youtube videos, then I knew the circle of fifth, using it to build passages and repeat themes. It’s quite cool, because it’s a good way for repetition. And actually I can remember many classical music uses circle of fifth, and produces quite beautiful sound.</p>
+
+<p>Finally the fifth and sixth day, I wanted more and more Youtube videos, and know how to implement modulation to make the piece more interesting. I was trying to think about how I’m going to develop this piece, what is the thing that really want to get accossed to.</p>
+
+<p>And one interesting thing I found is that, I’m the superuser of the music I’m improvising, there are certain rules to follow, following these rules, and see what interesting stuffs we can make, the infinate possibility really fasinates me a lot.</p>
+
+<p>Another thing I find is about creativity. When I’m improvising, I only focused on this moment, excluding stuffs realted with chords,  most of it does not need much problem-sloving. But when I’m faced with a programming problem, I’m actually seeking the results, I don’t care too much about the process, I’m too eager to get the problem done, which always lead to anxity when facing uncertainty. I really want to change my way of programming, but I’m still not sure how to find out a way of my own.</p>
+
+
+      </div>
+      <div style="height:50px;">
+	      <a href="/posts/one-week-trying-improvisation/" class="button readmore-button">Read More</a>
+      </div>
+    </div>
+    <br />
+    
+    <div class="post-contents-shadow">
+      <h2>
+        <a class="post-link" href="/posts/two-months-back-in-china/">Two Months Back In China</a>
+      </h2>
+      <span class="post-meta" style="margin-right:50px">
+          <i class="fas fa-user">&nbsp;&nbsp;</i>By Paulo Pimenta
+      </span>
+      
+      <span class="post-meta"><i class="fa fa-calendar">&nbsp;&nbsp;</i>Apr 22, 2016</span>
+      <span class="post-meta" style="margin-left:50px;margin-right:50px;">
+        <i class="fa fa-comment-o">&nbsp;&nbsp;</i>
+        <a style="color:#828282" href="/posts/two-months-back-in-china/#disqus_thread"></a>
+      </span>
+
+      
+        <span class="post-meta" ><i class="fa fa-tags">&nbsp;&nbsp;</i>life</span>
+      
+
+      <div class="post-content truncate" itemprop="articleBody" style="max-height:300px;margin-top:20px;">
+	      <p>It has been nearly two months since I came back from Japan. At the first several weeks, days were miserable for me, I sort of felt reverse culture shock. Things  like changing credits, and renew my residential card really bothered me, because staffs in public service positions lack knowledge about their workflow, along with their ignorant attitude.</p>
+
+<p>Also, I don’t get into my living environment so much, I found myself lose common topics with my friends before I came for exchanging, because I changed so much during my exchange year, what we cared about now is different ( Actually most students just worry about whether they can go to the graduate school ). Another thing that frustrates me is that there is no exciting stuffs liking technology meet ups, life is quite boring for me.</p>
+
+<p>At the first month, I haven’t touched any stuffs on music, also not composed a single music piece. I really want to compose music pieces that are made from deep heart, but things are I can’t connect short music ideas into a whole piece. I’m sort of a perfectionism, who always want to make a perfect piece, but feared to take the first step make pieces that are not perfected done.</p>
+
+<p>It’s always to really put aside time to do things that we really want to do. At one hand, there is no deadline, we have plenty time to do it, but ends out spending much more time on Facebook, rather than our indeed goals. At another hand, we are afraid to face the fact we are not perfect, the first few pieces must not be of good quality, there must be a progress. Because in our education system, imperfect is “bad”, perfect is “good”, and we don’t want to be “bad”, we want to be “good”. But time passes by, we end out doing nothing, which is really bad thing for our innate goal.</p>
+
+<p>Recently, I’m realizing that I’m procrastinating too much. Last year, I’m planning to build my own blog, but actually not until one week ago, I started to learn Jekyll, use Sass to make beautiful layouts, write my first post, and all these only cost me one day!</p>
+
+<p>It’s time for changing now! I gradually accept that I have to experience the process of knowing nothing, constructing “bad” stuffs at the first period.</p>
+
+      </div>
+      <div style="height:50px;">
+	      <a href="/posts/two-months-back-in-china/" class="button readmore-button">Read More</a>
+      </div>
+    </div>
+    <br />
+    
+
+    <!-- Paginator-->
+    <div class="row">
+      
+      <div class="pagination mx-auto" style="width: fit-content">
+        
+        <a href="/page3" class="button page-button">&laquo;</a>
+        
+
+        
+          
+            <a href="/page3" class="button page-button">1</a>
+          
+        
+          
+            <a href="/page2" class="button page-button">2</a>
+          
+        
+          
+            <a href="/page3" class="button page-button">3</a>
+          
+        
+          
+            <a href="/page3" class="button current-page-button">4</a>
+          
+        
+
+        
+      </div>
+      
+    </div>
+  <!-- Left content-->
+  </div>
+  
+  <!-- Right content-->
+  <div class="col-md-4">
+    
+    <!-- Tags-->
+    <div class="post-contents-shadow ">
+      <i class="fa fa-tags">&nbsp;&nbsp;</i>
+        <span style="font-size: 21px;font-weight: 300;line-height: 24px;color: #292F33;vertical-align: bottom;">Tags</span>
+<br />
+
+<!-- Sort tags by number of posts
+	Sorting is done by creating sortable strings which have the counts prepended.
+	- Counts are separated from tags with ":::"
+	- Sortable tag-counts are seperated with "###"
+	- `site.tags` is a hashmap from tag to list of posts, use `size` to get number of posts.
+-->
+
+
+
+
+
+    
+    
+    <a href="/tag_index/#programming" class="btn btn-link shadow-none text-decoration-none" style="padding: .375rem 0rem 0.375rem .75rem;box-shadow: none;">
+        <span class="fa fa-tag" aria-hidden="true"></span> programming (11)
+    </a> <br/>
+
+    
+    
+    <a href="/tag_index/#life" class="btn btn-link shadow-none text-decoration-none" style="padding: .375rem 0rem 0.375rem .75rem;box-shadow: none;">
+        <span class="fa fa-tag" aria-hidden="true"></span> life (5)
+    </a> <br/>
+
+    
+    
+    <a href="/tag_index/#中文" class="btn btn-link shadow-none text-decoration-none" style="padding: .375rem 0rem 0.375rem .75rem;box-shadow: none;">
+        <span class="fa fa-tag" aria-hidden="true"></span> 中文 (2)
+    </a> <br/>
+
+    
+    
+    <a href="/tag_index/#spirituality" class="btn btn-link shadow-none text-decoration-none" style="padding: .375rem 0rem 0.375rem .75rem;box-shadow: none;">
+        <span class="fa fa-tag" aria-hidden="true"></span> spirituality (1)
+    </a> <br/>
+
+    
+    
+    <a href="/tag_index/#music" class="btn btn-link shadow-none text-decoration-none" style="padding: .375rem 0rem 0.375rem .75rem;box-shadow: none;">
+        <span class="fa fa-tag" aria-hidden="true"></span> music (1)
+    </a> <br/>
+
+    
+    
+    <a href="/tag_index/#language-learning" class="btn btn-link shadow-none text-decoration-none" style="padding: .375rem 0rem 0.375rem .75rem;box-shadow: none;">
+        <span class="fa fa-tag" aria-hidden="true"></span> language learning (1)
+    </a> <br/>
+
+
+
+
+
+
+    </div>
+    <br />
+    
+    <!-- About me-->
+    <div class="post-contents-shadow">
+        <i class="fa fa-face-smile">&nbsp;&nbsp;</i>
+          <span style="font-size: 21px;font-weight: 300;line-height: 24px;color: #292F33;vertical-align: bottom;">About me</span>
+<br />
+
+<p style="text-align: center;">
+    <img src="/img/me.png" style="margin:20px auto 0 auto;">
+</p>
+<br />
+<p style="font-size:18px;">
+    I'm a data scientist currently living in Montpellier. I made this blog to share some stuff about data science, programming and spatial modelling
+    research topics.
+</p><br />
+<div class="text-center">
+    <div class="btn-group">
+      <a class="btn rounded-circle" style="font-size:25px" href="#" title="Facebook" onclick='window.open();'>
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a class="btn rounded-circle" style="font-size:25px" href="#" title="Facebook">
+        <i class="fa fa-github"></i>
+      </a>
+      <a class="btn rounded-circle" style="font-size:25px" href="#" title="Facebook">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a class="btn rounded-circle" style="font-size:25px" href="#" title="Facebook">
+        <i class="fa fa-slack"></i>
+      </a>
+      <a class="btn rounded-circle" style="font-size:25px" href="#" title="Facebook">
+        <i class="fa fa-at"></i>
+      </a>
+    </div>
+  </div>
+    </div>
+    <br />
+
+    <!-- Books-->
+    <div class="post-contents-shadow">
+      <i class="fa fa-face-smile">&nbsp;&nbsp;</i>
+        <span style="font-size: 21px;font-weight: 300;line-height: 24px;color: #292F33;">Books</span>
+<!-- Flickity HTML init -->
+<div class="carousel" data-flickity>
+  <div class="carousel-cell"> <img src="../img/iswi1.jpg" alt=""></div>
+  <div class="carousel-cell"> <img src="../img/iswi2.jpg" alt=""></div>
+  <div class="carousel-cell"> <img src="../img/iswi3.jpg" alt=""></div>
+  <div class="carousel-cell"> <img src="../img/iswi4.jpg" alt=""></div>
+  <div class="carousel-cell"></div>
+</div>
+
+    </div>
+    <br/>
+
+    <!-- Recent Posts-->
+    <div class="post-contents-shadow">
+        <p style="font-size: 21px;font-weight: 300;line-height: 24px;color: #292F33;">Recent Posts</p>
+      </div>
+    <br/>
+
+    <!-- Twitter-->
+    <div class="post-contents-shadow" style="margin-bottom: 20px;">
+      <a class="twitter-timeline" 
+          data-tweet-limit="1"
+          href="https://twitter.com/paulofpimenta?ref_src=twsrc%5Etfw">Tweets by paulofpimenta</a> 
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!--<p style="font-size: 21px;font-weight: 300;line-height: 24px;color: #292F33;">Twitter</p>-->
+    </div>
+  <!--.col-4-->
+  </div>
+  <!--.col-8-->
+  </div>
+<!--.row-->
+</div>
+
+
+      </div>
+      <div class="clearfix">
+    </div>
+
+    
+
+<footer class="site-footer">
+
+  <div class="container fluid center-block">
+
+    <!-- <h2 class="footer-heading">OuiCodeData</h2> -->
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1" >
+        <!-- <ul class="contact-list">
+          <li>OuiCodeData</li> 
+          <li><a href="mailto:pfpimenta@gmail.com">pfpimenta@gmail.com</a></li> 
+        </ul>!-->
+      </div>
+
+      <div class="footer-col footer-col-2">
+          <br />
+        <ul class="social-media-list list-inline text-center">
+          
+          <li class="list-inline-item">
+            
+
+<a href="https://github.com/paulofpimenta"  class="btn">
+    <i class="fa fa-github footer-icons"></i>
+</a>
+
+          </li>
+          
+
+          
+          <li class="list-inline-item">
+            
+<a href="https://twitter.com/paulofpimenta"  class="btn">
+    <i class="fa fa-twitter footer-icons"></i>
+    <!--<span class="username">paulofpimenta</span> -->
+</a>
+
+          </li>
+          
+
+          
+          <li class="list-inline-item">
+            
+<a href="https://linkedin.com/paulofpimenta" class="btn">
+    <i class="fa fa-linkedin footer-icons"></i>
+</a>
+          </li>
+          
+          
+        </ul>
+        <p class="text-white text-center small mb-0">© Copyright OuiCodeData 2022
+        </p>   
+
+      </div>
+    </div>
+    
+  </div>
+
+</footer>
+<script src="/static/input_expand_collapse.js"></script>
+<script src="/static/tag_pages.js"></script>
+
+    <script id="dsq-count-scr" src="//ouicodegis.disqus.com/count.js" async></script>
+
+
+  </body>
+
+</html>

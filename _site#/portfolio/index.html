@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>OuiCodeData</title>
+  <meta name="description" content="A portal with news, tutorials and tips about GIS.">
+  
+  <!-- Jquery -->
+  <script src="/static/jquery-3.6.0.min.js"></script>
+
+  <!-- Bootstrap -->
+  <!--<link rel="stylesheet" href="/static/bootstrap.min.css"> -->
+  <!--<script src="/static/bootstrap.min.js"></script>-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+
+
+  <!-- Fontsawesome -->
+  <link rel="stylesheet" href="/static/font-awesome/css/all.css">
+  <link rel="stylesheet" href="/static/font-awesome/css/v4-shims.css">
+
+  <!-- Social icons -->
+  <link rel="stylesheet" href="/static/social-icons.css">
+
+  <!-- Portfolio -->
+  <link rel="stylesheet" href="/static/portfolio.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon_32.ico">
+
+  <!-- should put bootstrap before main style sheet, otherwise it't hard to override  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <script src="/static/flickity.pkgd.min.js"></script>
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="canonical" href="http://localhost:4000/portfolio/">
+  <link rel="alternate" type="application/rss+xml" title="OuiCodeData" href="http://localhost:4000/feed.xml">
+</head>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86140592-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  <body>
+
+    <header class="site-header">
+    <div class="container px-0">
+      <!-- <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">OuiCodeData </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-alt" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse navbar-alt" id="navbarNav">
+          <ul class="navbar-nav">
+            <li  class="nav-item" >
+              <a class="nav-link" href="/index.html"> Home</a>
+            </li>
+            <li  class="nav-item active"  class="nav-item" >
+                <a class="nav-link" href="http://localhost:4000/portfolio">Portfolio</a>
+            </li>
+            <li  class="nav-item" >
+                <a class="nav-link" href="/resume">Resume</a>
+            </li>
+            <li  class="nav-item" >
+                <a class="nav-link" href="/about-me">About me</a>
+            </li>
+            <li  class="nav-item" >
+              <a class="nav-link" href="/tag_index">Tags</a>
+          </li>
+          </ul>
+        </div>
+      </nav> -->
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid" >
+          <a class="navbar-brand " href="#" style="color: white"  >OuiCodeData </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" ></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li  class="nav-item" >
+                <a class="nav-link" href="/index.html" style="color: white" > Home</a>
+              </li>
+              <li  class="nav-item active"  class="nav-item" >
+                  <a class="nav-link" href="http://localhost:4000/portfolio" style="color: white" >Portfolio</a>
+              </li>
+              <li  class="nav-item" >
+                  <a class="nav-link" href="/resume" style="color: white" >Resume</a>
+              </li>
+              <li  class="nav-item" >
+                  <a class="nav-link" href="/about-me" style="color: white" >About me</a>
+              </li>
+              <li  class="nav-item" >
+                <a class="nav-link" href="/tag_index" style="color: white" >Tags</a>
+            </li>
+              
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>s<a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+               -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    </div>
+  </header>
+
+    <div class="page-content">
+      <div class="container" style="padding-left:0;padding-right:0;">
+        <div class="row" style="margin-bottom:10px">
+
+<div class="jumbotron container-fluid post-contents-shadow">
+  <div class="row text-center">
+    <img class="rounded-circle" src="/img/me.jpg" style="margin:20px auto 0 auto; width:120px; height:120px;text-align:center">
+  </div>
+  <h1 class="display-4 text-center">Welcome to my Portfolio</h1>
+  <p class="lead">This is a small sample of some work that I have done during my professional and academic experiences. They have are hosted on github, 
+    so I hope you are free to use them. I hope you find them of some use on your personal or professional work. </p>
+  <hr class="my-4 texr-right">
+  <div class="row" style="float:right">
+    <div class="btn-group" style="align-items: center;float:right" role="group">
+        Contact me :  <div class="text-center">
+    <div class="btn-group">
+      <a class="btn rounded-circle" style="font-size:25px" href="#" title="Facebook" onclick='window.open();'>
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a class="btn rounded-circle" style="font-size:25px" href="#" title="Facebook">
+        <i class="fa fa-github"></i>
+      </a>
+      <a class="btn rounded-circle" style="font-size:25px" href="#" title="Facebook">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a class="btn rounded-circle" style="font-size:25px" href="#" title="Facebook">
+        <i class="fa fa-slack"></i>
+      </a>
+      <a class="btn rounded-circle" style="font-size:25px" href="#" title="Facebook">
+        <i class="fa fa-at"></i>
+      </a>
+    </div>
+  </div>
+    </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- Page Content -->
+<div class="container" style="margin-bottom:50px">
+
+
+
+  <div class="row">
+
+
+    <div class="col-lg-3 col-md-3 col-xs-6 thumb">
+      <a href="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+        class="fancybox" rel="ligthbox">
+        <img src="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+          class="zoom img-fluid " alt="">
+
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+      <a href="https://uniquefacts.net/wp-content/uploads/2015/09/Technology.jpeg" class="fancybox" rel="ligthbox">
+        <img src="https://uniquefacts.net/wp-content/uploads/2015/09/Technology.jpeg" class="zoom img-fluid" alt="">
+      </a>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+      <a href="https://images.pexels.com/photos/158827/field-corn-air-frisch-158827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        class="fancybox" rel="ligthbox">
+        <img src="https://images.pexels.com/photos/158827/field-corn-air-frisch-158827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          class="zoom img-fluid " alt="">
+      </a>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+      <a href="https://images.pexels.com/photos/302804/pexels-photo-302804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="fancybox"
+        rel="ligthbox">
+        <img src="https://images.pexels.com/photos/302804/pexels-photo-302804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid "
+          alt="">
+      </a>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+      <a href="https://images.pexels.com/photos/1038914/pexels-photo-1038914.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox"
+        rel="ligthbox">
+        <img src="https://images.pexels.com/photos/1038914/pexels-photo-1038914.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid "
+          alt="">
+      </a>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+      <a href="https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox"
+        rel="ligthbox">
+        <img src="https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid "
+          alt="">
+      </a>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+      <a href="https://images.pexels.com/photos/1038002/pexels-photo-1038002.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        class="fancybox" rel="ligthbox">
+        <img src="https://images.pexels.com/photos/1038002/pexels-photo-1038002.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          class="zoom img-fluid " alt="">
+      </a>
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+</div>
+      </div>
+      <div class="clearfix">
+    </div>
+
+    
+
+<footer class="site-footer">
+
+  <div class="container fluid center-block">
+
+    <!-- <h2 class="footer-heading">OuiCodeData</h2> -->
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1" >
+        <!-- <ul class="contact-list">
+          <li>OuiCodeData</li> 
+          <li><a href="mailto:pfpimenta@gmail.com">pfpimenta@gmail.com</a></li> 
+        </ul>!-->
+      </div>
+
+      <div class="footer-col footer-col-2">
+          <br />
+        <ul class="social-media-list list-inline text-center">
+          
+          <li class="list-inline-item">
+            
+
+<a href="https://github.com/paulofpimenta"  class="btn">
+    <i class="fa fa-github footer-icons"></i>
+</a>
+
+          </li>
+          
+
+          
+          <li class="list-inline-item">
+            
+<a href="https://twitter.com/paulofpimenta"  class="btn">
+    <i class="fa fa-twitter footer-icons"></i>
+    <!--<span class="username">paulofpimenta</span> -->
+</a>
+
+          </li>
+          
+
+          
+          <li class="list-inline-item">
+            
+<a href="https://linkedin.com/paulofpimenta" class="btn">
+    <i class="fa fa-linkedin footer-icons"></i>
+</a>
+          </li>
+          
+          
+        </ul>
+        <p class="text-white text-center small mb-0">© Copyright OuiCodeData 2022
+        </p>   
+
+      </div>
+    </div>
+    
+  </div>
+
+</footer>
+<script src="/static/input_expand_collapse.js"></script>
+<script src="/static/tag_pages.js"></script>
+
+    <script id="dsq-count-scr" src="//ouicodegis.disqus.com/count.js" async></script>
+
+
+  </body>
+
+</html>

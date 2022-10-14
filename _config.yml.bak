@@ -26,14 +26,14 @@ plugins:
 
 # Where things are
 ############################################################
-#source: . # Set by GitHub
+source: . # Set by GitHub
 # This is where the generated site will be placed once Jekyll is done transforming it.
-destination: ./_site#
+destination: ./_site
 #plugins_dir: ./_plugins
 # This folder is for the main templates your content will be inserted into. You can have different layouts for different pages or page sections.
-#layouts_dir: ./_layouts
-#data_dir: ./_data
-#collections: null
+layouts_dir: ./_layouts
+data_dir: ./_data
+collections: null
 
 # Build settings
 markdown: kramdown

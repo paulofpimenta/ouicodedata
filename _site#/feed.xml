@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-14T10:24:05+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">OuiCodeData</title><subtitle>A portal with news, tutorials and tips about GIS.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/posts/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2022-03-31T09:30:42+00:00</published><updated>2022-03-31T09:30:42+00:00</updated><id>http://localhost:4000/posts/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/posts/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;Tom&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &apos;Hi, Tom&apos; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>Paulo Pimenta</name></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">My Experience During ISWI(International Student Week in Ilmenau)</title><link href="http://localhost:4000/posts/my-experience-of-iswi/" rel="alternate" type="text/html" title="My Experience During ISWI(International Student Week in Ilmenau)" /><published>2017-06-12T12:15:09+00:00</published><updated>2017-06-12T12:15:09+00:00</updated><id>http://localhost:4000/posts/my-experience-of-iswi</id><content type="html" xml:base="http://localhost:4000/posts/my-experience-of-iswi/">&lt;p&gt;Last month I spent such an unforgettable week with participants from all over the world in Ilmenau, Germany(2017.iswi.org) to discuss the topic ‘Global Justice’. It was my first time in Europe and the first student conference I joined, the conference was a crazy party week and it was so amazing. I came there alone and surprised to find that I’m the only delegate from China!&lt;/p&gt;
+
+&lt;h3 id=&quot;to-get-to-ilmenau&quot;&gt;To Get to Ilmenau&lt;/h3&gt;
+&lt;p&gt;Ilmenau was quite a small city located in central Germany, the transportation is not that convinient compared with other big cities. From Berlin, I could either take FlixBus or ICE, finally I chose to take ICE from Berlin Central Station which is 20 mins from the airport, it took about 4 hours to get to ilmenau. Pay attention that ICE has a reservation system, if you don’t pay for the reservation you can still choose a seat after riding on the train, but it might be reserved, in that case you need to look for some other seat.&lt;/p&gt;
+
+&lt;h3 id=&quot;general-experience&quot;&gt;General Experience&lt;/h3&gt;
+&lt;p&gt;The conference was held by TU Ilmenau, an university centering in technology. The campus was built on a moutain with a very nice secenery. I actually met several computer science guys there ^_^.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/iswi3.jpg&quot; style=&quot;height:50%;width:50%;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A typical day during the week is basically lecture/workshop + discussion + live concert/some other festival + club night, starting from 9 am to 2pm. The lectures were actually very interesting, there were topics on international NGOs, human rights, and even Bitcoin!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/iswi1.jpg&quot; style=&quot;height:50%;width:50%;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I was in the music group, and I met extremly talented people there, there was a professional pianist and famous band members! We made an original EuroVision-like song about global justice. Somehow I’ve managed to play the electronic guitar and the closing ceremony finally ^_^.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/iswi2.jpg&quot; style=&quot;height:50%;width:50%;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;During the live concert, I could experiece something “Germany” (mixed beer haha). Somehow I love the idea of mixing beer with everything.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/iswi4.jpg&quot; style=&quot;height:50%;width:50%;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After schedule on the time table finally comes party time! I’m not a night person so I only went to clubs inside campus for three times, I tasted all kinds of beer from different parts of Germany, but unluckily I missed the “Jägermeister night”.&lt;/p&gt;
+
+&lt;h3 id=&quot;incidents-in-berlin&quot;&gt;Incidents in Berlin&lt;/h3&gt;
+&lt;p&gt;Unluckily my cash (about 150 euros) was stolen in the bus from the airport to Berlin central station. Before coming I thought Germany was general safe but this incident told me it’s not. What disappoints me most is how the police deal with such things. In my case, the policeman said it wasn’t much money at all and it happens here every day. I believe they’re not making any efforts to stop theft towards travellers, even not putting on a notice telling people to take care of their wallet.&lt;/p&gt;
+
+&lt;p&gt;Another incident was after the conference when I spent several days to hangout with my friends in Berlin. One day I walked on the street and suddenly a middle aged man riding a bicycle passed by me calling me “stupid Chinese”. I tried to grab him out of his fucking bycle but he had been already far away. Guys if you encounter similar insults in Germany, erect your middle figure and call him “Wichser”.&lt;/p&gt;
+
+&lt;p&gt;I’m so disappointed in Berlin, the conference I joined was about “Global Justice”, and in Berlin it seems not “safe” to be Asian, it’s not global justice at all. There’re still many ignorant people in the world, that’s why global justice is so hard to achieve.&lt;/p&gt;
+
+&lt;h3 id=&quot;my-thinkings&quot;&gt;My Thinkings&lt;/h3&gt;
+&lt;p&gt;Except the disappointment in Berlin, I had nice time in Germany. I met amazing people of my age in the conference, my vision about the world was different now, I saw young people doing great effort to achieve global justice, it’s not easy, let’s try at least!&lt;/p&gt;</content><author><name>Paulo Pimenta</name></author><category term="life" /><summary type="html">Last month I spent such an unforgettable week with participants from all over the world in Ilmenau, Germany(2017.iswi.org) to discuss the topic ‘Global Justice’. It was my first time in Europe and the first student conference I joined, the conference was a crazy party week and it was so amazing. I came there alone and surprised to find that I’m the only delegate from China!</summary></entry><entry><title type="html">Configure Mailgun settings in Rails app</title><link href="http://localhost:4000/posts/configure-mailgun-setting-in-rails-app/" rel="alternate" type="text/html" title="Configure Mailgun settings in Rails app" /><published>2017-03-29T12:15:09+00:00</published><updated>2017-03-29T12:15:09+00:00</updated><id>http://localhost:4000/posts/configure-mailgun-setting-in-rails-app</id><content type="html" xml:base="http://localhost:4000/posts/configure-mailgun-setting-in-rails-app/">&lt;p&gt;Recently I’m learning to create a Rails 5 api only application with an android mobile application. I want to send a activation email after user registered from the android app, and I found there is a free Mailgun add-on on Heroku. It’s perfect choice to start to play with because you can send up to 100 messages/hour without being charged. The documentation is good enough but I do found several steps confusing.&lt;/p&gt;
+
+&lt;p&gt;Firstly, you need to create a Mailgun account and add your credit card information, otherwise you can’t send to recipents other than authorized ones(which means test only).&lt;/p&gt;
+
+&lt;p&gt;Then, use the test domain(XXX@XXX.mailgun.org) to ensure Mailgun not being blocked by your test mail address(In my case I use qq mail at first, it actually blocks all traffic from mailgun). After that, you need to add a custom domain. Go to your domain name provider and configure DNS settings as following the steps of Mailgun instructions. In my case I use Namecheap and it took me a while(a cup of coffee) for Mailgun to verify my domain.&lt;/p&gt;
+
+&lt;p&gt;After your custom domain is active, configure your development environment and make sure it works. In my case I use smtp instead of api call, the settings are for example:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+	:address =&amp;gt; &quot;smtp.mailgun.org&quot;,
+	:port =&amp;gt; 587,
+	:domain =&amp;gt; mydomain.club&apos;,
+	:user_name =&amp;gt; &quot;postmaster@mydomain.club&quot;,
+	:password =&amp;gt; XXXX
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then start your rails server and see if the mail was delivered. I spent quite a few hours here because at first my emails weren’t delivered. I refered to the log and showed Mailgun accepted the mail address, and one minute later a ESP throttling message showed up. The reason is Mailgun being blocked by certain ISP(like qq mail, in this case I have to use an extra mail hosting service), so I couldn’t see any mail sent inbox.&lt;/p&gt;
+
+&lt;p&gt;If OK in development environemnt, change your production settings as well, it should work as well.&lt;/p&gt;</content><author><name>Paulo Pimenta</name></author><category term="programming" /><summary type="html">Recently I’m learning to create a Rails 5 api only application with an android mobile application. I want to send a activation email after user registered from the android app, and I found there is a free Mailgun add-on on Heroku. It’s perfect choice to start to play with because you can send up to 100 messages/hour without being charged. The documentation is good enough but I do found several steps confusing.</summary></entry><entry><title type="html">如何在ubuntu16通过终端设置shadowsocks实现科学上网</title><link href="http://localhost:4000/posts/install-shadowsocks-in-ubuntu/" rel="alternate" type="text/html" title="如何在ubuntu16通过终端设置shadowsocks实现科学上网" /><published>2016-12-06T06:23:06+00:00</published><updated>2016-12-06T06:23:06+00:00</updated><id>http://localhost:4000/posts/install-shadowsocks-in-ubuntu</id><content type="html" xml:base="http://localhost:4000/posts/install-shadowsocks-in-ubuntu/">&lt;p&gt;给三年前买的旧笔记本重装了Ubuntu桌面版，第一件要做的事就是科学上网啦。&lt;/p&gt;
+
+&lt;p&gt;┗(・o・)┛ナハ┗(・o・)┛ナハ&lt;/p&gt;
+
+&lt;p&gt;shadowsocks的安装有两种方法，一是安装shadowsocks-qt5 GUI版，二是通过终端运行shadowsocks。我试过了第一种GUI安装，但是一直连不上服务器，发现输出的json配置文件格式是错误的，于是选择了第二种, 具体步骤如下:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;1-下载shadowsocks&quot;&gt;1. 下载shadowsocks&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get update
+sudo apt-get install python-pip
+sudo apt-get install python-setuptools m2crypto
+pip install shadowsocks
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2-设置配置文件&quot;&gt;2. 设置配置文件&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+&quot;server&quot;:&quot;XX.XX.XX.XX&quot;,
+&quot;server_port&quot;:XX,
+&quot;local_port&quot;:1080,
+&quot;password&quot;:&quot;your password&quot;,
+&quot;timeout&quot;:600,
+&quot;method&quot;:&quot;aes-256-cfb&quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;3-启动shadowsocks&quot;&gt;3. 启动shadowsocks&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sslocal -c /your/path/shadowsocks.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;如果启动成功了可以看到如下信息(/home/momoko/shadowsocks/ss-config.json是我存放配置文件的路径)&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;INFO: loading config from /home/momoko/shadowsocks/ss-config.json
+2016-12-06 19:31:54 INFO     loading libcrypto from libcrypto.so.1.0.0
+2016-12-06 19:31:54 INFO     starting local at 127.0.0.1:1080
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;4-设置浏览器&quot;&gt;4. 设置浏览器&lt;/h3&gt;
+
+&lt;p&gt;接下来需要设置浏览器，代理到shadowsocks指定端口(默认情况是1080)&lt;/p&gt;
+
+&lt;p&gt;我使用的浏览器是Ubuntu下的Chromium，chrome插件本来可以在chrome商店里下载到，成功翻墙之前是进不去的。这里推荐从github上下载SwitchyOmega，里面有中文下载说明, 网址如下:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/FelisCatus/SwitchyOmega/releases/&quot;&gt;https://github.com/FelisCatus/SwitchyOmega/releases/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;还有配合GFWList的使用方法:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/FelisCatus/SwitchyOmega/wiki/GFWList&quot;&gt;https://github.com/FelisCatus/SwitchyOmega/wiki/GFWList&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;下载结束之后需要设置代理选项，情景模式里选&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;socks 5&lt;/code&gt;, 端口号&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1080&lt;/code&gt;，其余设置参考上述链接。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;打开youtube或是facebook测试一下，有点小惊喜呢。┌&lt;/td&gt;
+      &lt;td&gt;≧∇≦&lt;/td&gt;
+      &lt;td&gt;┘&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;5-attention&quot;&gt;5. Attention&lt;/h3&gt;
+
+&lt;p&gt;值得注意的是，虽然浏览器可以翻墙了，但是用终端访问比如&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;curl www.google.com&lt;/code&gt; 还是没有响应，这里需要安装额外的插件，我使用的是proxychains4，具体安装方法请自行搜索。如果你运行的是例如polipo全局代理的插件，在终端运行某些命令会失败（比如说&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git clone&lt;/code&gt;），这时候暂时关掉代理插件即可。&lt;/p&gt;
+
+&lt;p&gt;什么？不会安装？浏览器都能翻墙了还不谷歌一下。 (￣▽￣人))　((人￣▽￣)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;自从学会科学上网，看youtube视频根本停不下来。&lt;/p&gt;
+
+&lt;p&gt;へ(￣&lt;em&gt;￣へ)(ノ￣&lt;/em&gt;￣)ノ パラパラ♪&lt;/p&gt;
+
+&lt;p&gt;最后推荐一个颜文字网站：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://kaomojiya.com/&quot;&gt;http://kaomojiya.com/&lt;/a&gt;&lt;/p&gt;</content><author><name>Paulo Pimenta</name></author><category term="programming" /><category term="中文" /><summary type="html">给三年前买的旧笔记本重装了Ubuntu桌面版，第一件要做的事就是科学上网啦。</summary></entry><entry><title type="html">Troubleshooting with Installing Broadcom Wireless Drivers in Ubuntu Desktop</title><link href="http://localhost:4000/posts/Troubleshooting-with-Installing-Broadcom-Wireless-Drivers-in-Ubuntu-Desktop/" rel="alternate" type="text/html" title="Troubleshooting with Installing Broadcom Wireless Drivers in Ubuntu Desktop" /><published>2016-12-02T12:23:06+00:00</published><updated>2016-12-02T12:23:06+00:00</updated><id>http://localhost:4000/posts/Troubleshooting-with-Installing-Broadcom-Wireless-Drivers-in-Ubuntu-Desktop</id><content type="html" xml:base="http://localhost:4000/posts/Troubleshooting-with-Installing-Broadcom-Wireless-Drivers-in-Ubuntu-Desktop/">&lt;p&gt;Days before, I changed the operating system of my old laptop from Windows7 to Ubuntu Desktop, I installed Ubuntu from a USB stick from my friend. After installing I found I Broadcom wireless driver wasn’t installed so I couldn’t connect to my WiFi. I tried several ways then found the solution, hope it my be helpful.&lt;/p&gt;
+
+&lt;p&gt;To download the driver from Internet, you need to connect with Ethernet.&lt;/p&gt;
+
+&lt;p&gt;Open Software and Update from system and configuration, open the fifth tab optional drivers and see if wireless driver comes out or not.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/ubuntu1.png&quot; style=&quot;height:50%;width:50%;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Make sure allowing downloading drivers from Internet is checked in the first tab Ubuntu Software.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/ubuntu2.png&quot; style=&quot;height:50%;width:50%;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If it still doesn’t come out, you need to manually install it from terminal, use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lspci -nn -d 14e4:&lt;/code&gt; command to see which network card you’re using, then install the corresponding driver. &lt;a href=&quot;http://askubuntu.com/questions/55868/installing-broadcom-wireless-drivers&quot;&gt;http://askubuntu.com/questions/55868/installing-broadcom-wireless-drivers&lt;/a&gt; offers an excellent guide.&lt;/p&gt;</content><author><name>Paulo Pimenta</name></author><category term="programming" /><summary type="html">Days before, I changed the operating system of my old laptop from Windows7 to Ubuntu Desktop, I installed Ubuntu from a USB stick from my friend. After installing I found I Broadcom wireless driver wasn’t installed so I couldn’t connect to my WiFi. I tried several ways then found the solution, hope it my be helpful.</summary></entry><entry><title type="html">My Experience And Thoughts on Remote Working as A Junior Programmer</title><link href="http://localhost:4000/posts/my-experience-and-thoughts-on-remote-working-as-a-junior-programmer/" rel="alternate" type="text/html" title="My Experience And Thoughts on Remote Working as A Junior Programmer" /><published>2016-11-15T09:31:00+00:00</published><updated>2016-11-15T09:31:00+00:00</updated><id>http://localhost:4000/posts/my-experience-and-thoughts-on-remote-working-as-a-junior-programmer</id><content type="html" xml:base="http://localhost:4000/posts/my-experience-and-thoughts-on-remote-working-as-a-junior-programmer/">&lt;h3 id=&quot;about-me-and-my-job&quot;&gt;About Me And My Job&lt;/h3&gt;
+
+&lt;p&gt;I started my current job a year ago when I was an exchange student in Japan, I was second year in university then. I worked in the office for 9 months, after that my exchange year ended, I went back to my home university and started remote working since then. Until now, it has been half year.&lt;/p&gt;
+
+&lt;p&gt;I rent an apartment and lived alone near my university. I’m not full-time employed, I worked for about 5 hours a day, every day in the week because I found this schedule suits me better. When I’m not working, I go to classes, playing the piano or reading books.&lt;/p&gt;
+
+&lt;h3 id=&quot;my-half-year-on-remote-working&quot;&gt;My Half Year on Remote Working&lt;/h3&gt;
+
+&lt;h4 id=&quot;good-parts&quot;&gt;good parts&lt;/h4&gt;
+
+&lt;p&gt;The best part of remote working is much more free time. I don’t have to wake up early and spend hours on a crowded subway to the office, I could spend more time on doing whatever I want to do.&lt;/p&gt;
+
+&lt;p&gt;Also for me, working from home is easier to concentrate because there are fewer distractions.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/remote_working.jpg&quot; style=&quot;height:50%;width:50%;&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size:14px&quot;&gt;My desktop and my friends  o(●´ω｀●)oわくわく♪&lt;/p&gt;
+
+&lt;h4 id=&quot;challenges-for-a-junior-programmer&quot;&gt;challenges for a junior programmer&lt;/h4&gt;
+
+&lt;p&gt;For me, the biggest challenge is finding out the solution to the problem independently. As a junior developer, I don’t have much experience, when I encounter a problem that appears for the first time, it’s hard to get response from my colleges immediately, more often, I have to find out how to handle it by myself, sometimes it’s quite hard because I really don’t know what to do with it, and have to dig really deep on the problem.&lt;/p&gt;
+
+&lt;p&gt;The second is about confirming specification. When I just started remote working, it’s quite often to get confused with specification in junior year, and confirming specification online usually takes more time than face to face, and I have to make sure my colleges are available at that time.&lt;/p&gt;
+
+&lt;p&gt;Another challenge is about building up habits. For me, I don’t have a fixed working schedule, sometimes I find it hard to get myself backing to working from the lure of reading Reddit or watching Youtube videos. It needs self-discipline to keep myself from slacking off.&lt;/p&gt;
+
+&lt;h4 id=&quot;mental-challenges&quot;&gt;mental challenges&lt;/h4&gt;
+
+&lt;p&gt;It’s easy to feel emotionally detached with other people. Since I live alone, and my colleges are all in another country, I feel lonely from time to time. I can’t keep being productive if I feel lonely. It’s not healthy to keep sitting in front of a desktop for all day, going out and networking is also important.&lt;/p&gt;
+
+&lt;h3 id=&quot;my-thinkings&quot;&gt;My Thinkings&lt;/h3&gt;
+
+&lt;p&gt;I loved my current living style. I can get my work done and do whatever I want to do. For me, it’s not easy at first, half year later, I enjoy more and more.&lt;/p&gt;</content><author><name>Paulo Pimenta</name></author><category term="programming" /><category term="life" /><summary type="html">About Me And My Job</summary></entry><entry><title type="html">Use class_eval and instance_eval</title><link href="http://localhost:4000/posts/use-class_eval-and-instance_eval/" rel="alternate" type="text/html" title="Use class_eval and instance_eval" /><published>2016-11-13T02:23:06+00:00</published><updated>2016-11-13T02:23:06+00:00</updated><id>http://localhost:4000/posts/use-class_eval-and-instance_eval</id><content type="html" xml:base="http://localhost:4000/posts/use-class_eval-and-instance_eval/">&lt;h3 id=&quot;current-object-and-current-class&quot;&gt;current object and current class&lt;/h3&gt;
+
+&lt;p&gt;Everything is an object in Ruby, there is an current object and current class referred to in every line of code. We use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;self&lt;/code&gt; to refer to current object (there is no keyword for current class).&lt;/p&gt;
+
+&lt;p&gt;When call a method on an object, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;self&lt;/code&gt;(current object) is the receiver of the method. In a class definition, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;self&lt;/code&gt;(current object) is the class itself.&lt;/p&gt;
+
+&lt;p&gt;Though there is no keyword for current class, it’s easy to refer to as long as we know what is our current object.&lt;/p&gt;
+
+&lt;h3 id=&quot;class_eval&quot;&gt;class_eval&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Module#class_eval&lt;/code&gt; is used for modifying current class. It’s commonly used when we don’t know the exact name of class we want to refer to. For example,&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add_method_to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;my_class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;class_eval&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;foo&apos;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+			
+&lt;span class=&quot;n&quot;&gt;add_method_to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot;bar&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; &quot;foo&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;One example in Rails is putting common code for several models (just like what model conern does). For example, I want to add common validations for my models, I can create a module and use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class_eval&lt;/code&gt; to add methods in classes that include it. In order to get that class, we need a hook method &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;self.included&lt;/code&gt;, and put &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class_eval&lt;/code&gt; part inside this method.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;SomeCommonModule&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;included&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;class_eval&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;validates_presence_of&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:balabalabala&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;instance_eval&quot;&gt;instance_eval&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;instance_eval&lt;/code&gt; is used for modifying current object (self), it breaks encapsulation, be careful with it.&lt;/p&gt;
+
+&lt;p&gt;An example is to change instance variable of an object:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;bar&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@bar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;bar&quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;bar&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;instance_eval&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@bar&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; &quot;bar&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;instance_eval&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@bar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;bbbbar&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;instance_eval&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@bar&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; &quot;bbbbar&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Paulo Pimenta</name></author><category term="programming" /><summary type="html">current object and current class</summary></entry><entry><title type="html">Simple Functional Programming in Ruby and Javascript</title><link href="http://localhost:4000/posts/simple-functional-programming-in-Ruby-and-Javascript/" rel="alternate" type="text/html" title="Simple Functional Programming in Ruby and Javascript" /><published>2016-11-12T02:23:06+00:00</published><updated>2016-11-12T02:23:06+00:00</updated><id>http://localhost:4000/posts/simple-functional-programming-in-Ruby-and-Javascript</id><content type="html" xml:base="http://localhost:4000/posts/simple-functional-programming-in-Ruby-and-Javascript/">&lt;p&gt;In Ruby, methods like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;map&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reject&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reduce&lt;/code&gt; are very handy to use. Recently, I came across Javascript functional programming, I found there are similar usages in Javascript.&lt;/p&gt;
+
+&lt;h3 id=&quot;map&quot;&gt;map&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;map&lt;/code&gt; is used to transform an array into another&lt;/p&gt;
+
+&lt;p&gt;Here’s a simple example in Ruby, it accepts a block as parameter:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;m&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;o&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;n&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;k&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;e&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;y&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;1&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; [&quot;m1&quot;, &quot;o1&quot;, &quot;n1&quot;, &quot;k1&quot;, &quot;e1&quot;, &quot;y1&quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In Javascript, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;map&lt;/code&gt; accepts another function as a parameter, here is an example:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+&lt;span class=&quot;c1&quot;&gt;// [ &apos;m1&apos;, &apos;o1&apos;, &apos;n1&apos;, &apos;k1&apos;, &apos;e1&apos;, &apos;y1&apos; ]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In ES6, you can also do this with arrow function, which is much similar to Ruby way:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// [ &apos;m1&apos;, &apos;o1&apos;, &apos;n1&apos;, &apos;k1&apos;, &apos;e1&apos;, &apos;y1&apos; ]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;reduce&quot;&gt;reduce&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reduce&lt;/code&gt; comes very handy to apply an operator on enumerable elements&lt;/p&gt;
+
+&lt;p&gt;Here is an example of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reduce&lt;/code&gt; in Ruby, it takes an initial value and a block applying operation on element&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; 15&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reduce&lt;/code&gt; can also accept a symbol as a parameter, initial value is default set to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt; for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:+&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt; for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:*&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; 15&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In Javascript, you can do this, the first parameter is a function that applies the operator, return value will be the next parameter that this function accepts, the second parameter is initial value:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 15&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In ES6, you can do this, also I prefer this way as a Ruby programmer:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 15&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;メノ&quot;&gt;＼（＾∀＾）メ（＾∀＾）ノ&lt;/h3&gt;
+
+&lt;p&gt;Let’s have more fun in functional programming&lt;/p&gt;</content><author><name>Paulo Pimenta</name></author><category term="programming" /><summary type="html">In Ruby, methods like map, reject, reduce are very handy to use. Recently, I came across Javascript functional programming, I found there are similar usages in Javascript.</summary></entry><entry><title type="html">A Pratical Strategy To Stop Procrastination</title><link href="http://localhost:4000/posts/a-pratical-way-to-stop-procrastination/" rel="alternate" type="text/html" title="A Pratical Strategy To Stop Procrastination" /><published>2016-10-31T13:18:02+00:00</published><updated>2016-10-31T13:18:02+00:00</updated><id>http://localhost:4000/posts/a-pratical-way-to-stop-procrastination</id><content type="html" xml:base="http://localhost:4000/posts/a-pratical-way-to-stop-procrastination/">&lt;h2 id=&quot;background&quot;&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;During this weekend, I was reading a book called &lt;a href=&quot;https://www.amazon.com/Feeling-Good-New-Mood-Therapy/dp/0380810336/ref=sr_1_1?ie=UTF8&amp;amp;qid=1477920055&amp;amp;sr=8-1&amp;amp;keywords=david+d+burns&quot;&gt;Feeling Good: The New Mood Therapy&lt;/a&gt; by David D. Burns, which was recommended by a Coursera course &lt;a href=&quot;https://www.coursera.org/learn/learning-how-to-learn&quot;&gt;Learning How To Learn&lt;/a&gt;. The book is aimed for curing depression, and it’s also very pragmatic for improving learning efficiency and stress handling.&lt;/p&gt;
+
+&lt;p&gt;A method called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TIC-TOC (Task-Interfering Cognition, Task Oriented Cognition)&lt;/code&gt; for stopping procrastination is introduced in this book.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-use-it&quot;&gt;How to Use It&lt;/h2&gt;
+
+&lt;p&gt;When you find yourself procrastinating on a certain task, for example, you have a report which is due next Monday, and you havent’t started writing anything until Friday night. You know you should spend the whole weekend writing this report, but the recent Netflix series attract you so much. And you spend the whole Saturday watching it. You are under high stress, and there is only one day left, but it’s too hard for you to get started. (I did this quite often (ノД`)ハァ )&lt;/p&gt;
+
+&lt;p&gt;Then you can using this simple technique:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Drawing a table with two columns&lt;/li&gt;
+  &lt;li&gt;Writing down your negative thoughts that make you procrastinate in the left column&lt;/li&gt;
+  &lt;li&gt;Writing down your rational thoughts towards these negative thoughts in the right hand&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Take the example of writing report, you may create a table like this:&lt;/p&gt;
+
+&lt;table class=&quot;mbtablestyle&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;TIC (Why you don’t want to get started)&lt;/th&gt;
+      &lt;th&gt;TOC (Rational Thoughts)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;I don’t want to get started because I’m afraid of getting bad grades.&lt;/td&gt;
+      &lt;td&gt;The grade won’t be too bad due to my experience on writing reports. At least I won’t fail.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;I don’t want to get started because there is no much time.&lt;/td&gt;
+      &lt;td&gt;Well, at least there’s still 8 hours writing it, it should be enough.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;I don’t want to get started because I didn’t pay much effort in the class.&lt;/td&gt;
+      &lt;td&gt;Then focus more next time.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Hopefully this will make you relax, and go to write your report. (￣Д)＝３&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;finding-out-why-you-procrastinate&quot;&gt;Finding Out Why You Procrastinate&lt;/h2&gt;
+
+&lt;p&gt;The book also implied that there must be some reasons hidden behind related with your personal values. You should find these reasons out to prevent from procrastinating next time.&lt;/p&gt;
+
+&lt;p&gt;For example, the first reason &lt;i&gt;I don’t want to get started because I’m afraid of getting bad grades.&lt;/i&gt; I will ask myself why I’m afraid of that.&lt;/p&gt;
+
+&lt;div style=&quot;border:1px solid black;padding:5px;&quot;&gt;
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;i&gt;I don&apos;t want to get started because I&apos;m afraid of getting bad grades.&lt;/i&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;i class=&quot;fa fa-arrow-down&quot;&gt;&lt;/i&gt;Why afraid of bad grades?&lt;/p&gt;
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;i&gt;That reveals lack of ability.&lt;/i&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;i class=&quot;fa fa-arrow-down&quot;&gt;&lt;/i&gt;If I should get a bad grades, does that prove my inability to study?&lt;/p&gt;
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;i&gt;Probably won&apos;t, but I just hate failing, that makes me inperfect.&lt;/i&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then you’ll find out perfectionism probably is the reason that makes you procrastinate, not because Netflix series is so amazing. Next time, you will realize that perfectionsim is making you feeling stressful, it will be eaiser to get started.&lt;/p&gt;</content><author><name>Paulo Pimenta</name></author><category term="life" /><summary type="html">Background</summary></entry><entry><title type="html">Using Concern To Refactor Rails Model</title><link href="http://localhost:4000/posts/using-concern-to-refactor-rails-model/" rel="alternate" type="text/html" title="Using Concern To Refactor Rails Model" /><published>2016-10-22T07:25:09+00:00</published><updated>2016-10-22T07:25:09+00:00</updated><id>http://localhost:4000/posts/using-concern-to-refactor-rails-model</id><content type="html" xml:base="http://localhost:4000/posts/using-concern-to-refactor-rails-model/">&lt;h1 id=&quot;background&quot;&gt;Background&lt;/h1&gt;
+
+&lt;p&gt;Recently I’m working on upgrading a Rails 2.3 application to Rails 4.2 (Yes, it’s true, our company is still using 2.3 now, ( ‘Θ’)ﾉ( ‘Θ’)ﾉ( ‘Θ’)ﾉ). There are 5 models containing codes which are 90% the same. I tried to refactor them with Rails 4’s concern module.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;what-is-concern&quot;&gt;What is concern&lt;/h1&gt;
+
+&lt;h3 id=&quot;rails-23-way&quot;&gt;Rails 2.3 way&lt;/h3&gt;
+&lt;p&gt;In Rails 2.3, if you extract code from model to a module, you need to create a module and put it into your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/lib&lt;/code&gt; directory. To realize validations and class methods, you need to add a hook method in it, which was not an elegant way.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Taggable&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt;  &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;included&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;extend&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ClassMethods&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;class_eval&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;scope&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:disabled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;disabled: &lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;# scope, validations, after_save .....&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ClassMethods&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;find_with_tag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	 &lt;span class=&quot;c1&quot;&gt;# .....&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;realization-with-concern&quot;&gt;Realization with concern&lt;/h3&gt;
+&lt;p&gt;In Rails 4, you can eaily realize it by creating a module extending &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ActiveSupport::Concern&lt;/code&gt; and include this module in your model.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Taggable&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;extend&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveSupport&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Concern&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;included&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;scope&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:disabled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;disabled: &lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  
+  &lt;span class=&quot;n&quot;&gt;class_methods&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;find_with_tag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	 &lt;span class=&quot;c1&quot;&gt;# ...&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  
+  &lt;span class=&quot;c1&quot;&gt;#put instance methods here&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;notice&quot;&gt;Notice&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;If you want to know which class is using this module in a class method, you can simply call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;self&lt;/code&gt;. For example, I want to cache class method &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;find&lt;/code&gt;, then in my taggble module, I use&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;class_methods&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;some_class_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;Rails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.find(&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:expires_in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;minutes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If it’s in an instance method, use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;self.class&lt;/code&gt; instead&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;some_instance_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Rails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.find(&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:expires_in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;minutes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And the code is more elegant (^m^ )クスッ.&lt;/p&gt;</content><author><name>Paulo Pimenta</name></author><category term="programming" /><summary type="html">Background</summary></entry></feed>
