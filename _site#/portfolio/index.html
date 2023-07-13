@@ -26,6 +26,7 @@
 
   <!-- Portfolio -->
   <link rel="stylesheet" href="/static/portfolio.css">
+  
 
   <!--Flickity -->
   <link rel="stylesheet" href="/static/flickity/flickity.css" media="screen">
@@ -36,7 +37,9 @@
 
   <!-- should put bootstrap before main style sheet, otherwise it't hard to override  -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
- 
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/syntax.css">
   <link rel="canonical" href="http://localhost:4000/portfolio/">
@@ -131,115 +134,238 @@
 
     <div class="page-content">
       <div class="container" style="padding-left:0;padding-right:0;">
-        <div class="row" style="margin-bottom:10px">
+        <div class="row" style="margin-bottom: 10px">
+  <!-- Page Content -->
+  <div class="container" style="margin-bottom: 50px">
+    <div class="row">
+      <!-- ======= Portfolio Section ======= -->
+      <div id="work" class="portfolio-mf sect-pt4 route">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">Portfolio</h3>
+              <p class="subtitle-a">
+                You will find here some of my work as data scientist :-)
+              </p>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
 
-<div class="jumbotron container-fluid post-contents-shadow">
-  <div class="row text-center">
-    <img class="rounded-circle" src="/img/me.jpg" style="margin:20px auto 0 auto; width:120px; height:120px;text-align:center">
-  </div>
-  <h1 class="display-4 text-center">Welcome to my Portfolio</h1>
-  <p class="lead">This is a small sample of some work that I have done during my professional and academic experiences. They have are hosted on github, 
-    so I hope you are free to use them. I hope you find them of some use on your personal or professional work. </p>
-  <hr class="my-4 texr-right">
-  <div class="row" style="float:right">
-    <div class="btn-group" style="align-items: center;float:right" role="group">
-        Contact me :  <div class="text-center">
-    <div class="btn-group">
-      <a class="btn rounded-circle" style="font-size:25px" href="#" title="Facebook" onclick='window.open();'>
-        <i class="fa fa-facebook"></i>
-      </a>
-      <a class="btn rounded-circle" style="font-size:25px" href="#" title="Facebook">
-        <i class="fa fa-github"></i>
-      </a>
-      <a class="btn rounded-circle" style="font-size:25px" href="#" title="Facebook">
-        <i class="fa fa-twitter"></i>
-      </a>
-      <a class="btn rounded-circle" style="font-size:25px" href="#" title="Facebook">
-        <i class="fa fa-slack"></i>
-      </a>
-      <a class="btn rounded-circle" style="font-size:25px" href="#" title="Facebook">
-        <i class="fa fa-at"></i>
-      </a>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="work-box">
+              <a
+                href="/img/portifolio/work-1.jpg"
+                data-gallery="portfolioGallery"
+                class="portfolio-lightbox"
+              >
+                <div class="work-img">
+                  <img
+                    src="/img/portifolio/work-1.jpg"
+                    class="img-fluid"
+                  />
+                </div>
+              </a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Work 1</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> /
+                      <span class="w-date">18 Sep. 2018</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <a href="/portfolio/work1.html">
+                        <span class="bi bi-plus-circle"></span
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="work-box">
+              <a
+                href="/img/portifolio/work-2.jpg"
+                data-gallery="portfolioGallery"
+                class="portfolio-lightbox"
+              >
+                <div class="work-img">
+                  <img
+                    src="/img/portifolio/work-2.jpg"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </div>
+              </a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Work 2</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> /
+                      <span class="w-date">18 Sep. 2018</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <a href="portfolio-details.html">
+                        <span class="bi bi-plus-circle"></span
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="work-box">
+              <a
+                href="/img/portifolio/work-3.jpg"
+                data-gallery="portfolioGallery"
+                class="portfolio-lightbox"
+              >
+                <div class="work-img">
+                  <img
+                    src="/img/portifolio/work-3.jpg"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </div>
+              </a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Work 3</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> /
+                      <span class="w-date">18 Sep. 2018</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <a href="portfolio-details.html">
+                        <span class="bi bi-plus-circle"></span
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="work-box">
+              <a
+                href="/img/portifolio/work-4.jpg"
+                data-gallery="portfolioGallery"
+                class="portfolio-lightbox"
+              >
+                <div class="work-img">
+                  <img
+                    src="/img/portifolio/work-4.jpg"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </div>
+              </a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Work 4</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> /
+                      <span class="w-date">18 Sep. 2018</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <a href="portfolio-details.html">
+                        <span class="bi bi-plus-circle"></span
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="work-box">
+              <a
+                href="/img/portifolio/work-5.jpg"
+                data-gallery="portfolioGallery"
+                class="portfolio-lightbox"
+              >
+                <div class="work-img">
+                  <img src="/img/portifolio/work-5.jpg""
+                  alt="" class="img-fluid">
+                </div>
+              </a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Work 5</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> /
+                      <span class="w-date">18 Sep. 2018</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <a href="portfolio-details.html">
+                        <span class="bi bi-plus-circle"></span
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="work-box">
+              <a
+                href="/img/portifolio/work-6.jpg"
+                data-gallery="portfolioGallery"
+                class="portfolio-lightbox"
+              >
+                <div class="work-img">
+                  <img
+                    src="/img/portifolio/work-6.jpg"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </div>
+              </a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Work 6</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> /
+                      <span class="w-date">18 Sep. 2017</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <a href="portfolio-details.html">
+                        <span class="bi bi-plus-circle"></span
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Portfolio Section -->
     </div>
   </div>
-    </div>
-    </div>
-  </div>
-
 </div>
 
-
-<!-- Page Content -->
-<div class="container" style="margin-bottom:50px">
-
-
-
-  <div class="row">
-
-
-    <div class="col-lg-3 col-md-3 col-xs-6 thumb">
-      <a href="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-        class="fancybox" rel="ligthbox">
-        <img src="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-          class="zoom img-fluid " alt="">
-
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a href="https://uniquefacts.net/wp-content/uploads/2015/09/Technology.jpeg" class="fancybox" rel="ligthbox">
-        <img src="https://uniquefacts.net/wp-content/uploads/2015/09/Technology.jpeg" class="zoom img-fluid" alt="">
-      </a>
-    </div>
-
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a href="https://images.pexels.com/photos/158827/field-corn-air-frisch-158827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-        class="fancybox" rel="ligthbox">
-        <img src="https://images.pexels.com/photos/158827/field-corn-air-frisch-158827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-          class="zoom img-fluid " alt="">
-      </a>
-    </div>
-
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a href="https://images.pexels.com/photos/302804/pexels-photo-302804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="fancybox"
-        rel="ligthbox">
-        <img src="https://images.pexels.com/photos/302804/pexels-photo-302804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid "
-          alt="">
-      </a>
-    </div>
-
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a href="https://images.pexels.com/photos/1038914/pexels-photo-1038914.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox"
-        rel="ligthbox">
-        <img src="https://images.pexels.com/photos/1038914/pexels-photo-1038914.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid "
-          alt="">
-      </a>
-    </div>
-
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a href="https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox"
-        rel="ligthbox">
-        <img src="https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid "
-          alt="">
-      </a>
-    </div>
-
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a href="https://images.pexels.com/photos/1038002/pexels-photo-1038002.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-        class="fancybox" rel="ligthbox">
-        <img src="https://images.pexels.com/photos/1038002/pexels-photo-1038002.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-          class="zoom img-fluid " alt="">
-      </a>
-    </div>
-
-
-
-
-  </div>
-
-
-
-
-</div>
       </div>
       <div class="clearfix">
     </div>
@@ -295,7 +421,7 @@
           
           
         </ul>
-        <p class="text-white text-center small mb-0">© Copyright OuiCodeData 2022
+        <p class="text-white text-center small mb-0">© Copyright OuiCodeData 2023
         </p>   
 
       </div>
