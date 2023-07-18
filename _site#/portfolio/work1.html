@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>如何在ubuntu16通过终端设置shadowsocks实现科学上网</title>
-  <meta name="description" content="给三年前买的旧笔记本重装了Ubuntu桌面版，第一件要做的事就是科学上网啦。">
+  <title>Work 1 Title</title>
+  <meta name="description" content="A portal with news, tutorials and tips about GIS.">
   
   <!-- Jquery -->
   <script src="/static/jquery-3.6.0.min.js"></script>
@@ -43,7 +43,7 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/syntax.css">
-  <link rel="canonical" href="http://localhost:4000/posts/install-shadowsocks-in-ubuntu/">
+  <link rel="canonical" href="http://localhost:4000/portfolio/work1">
   <link rel="alternate" type="application/rss+xml" title="OuiCodeData" href="http://localhost:4000/feed.xml">
 
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
@@ -135,167 +135,79 @@
 
     <div class="page-content">
       <div class="container" style="padding-left:0;padding-right:0;">
-        <div class="row">
-  <div class="col-md-1 col-xs-0"></div>
-    <div class="col-md-10 col-xs-12">
-<article class="post post-contents-shadow" style="margin-bottom:30px;" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="hero hero-single route bg-image" style="background-image: url(assets/img/overlay-bg.jpg)">
+  <div class="overlay-mf"></div>
+  <div class="hero-content display-table">
+    <div class="table-cell">
+      <div class="container">
+        <h2 class="hero-title mb-4">Portfolio Details</h2>
+        <ol class="breadcrumb d-flex justify-content-center">
+          <li class="breadcrumb-item">
+            <a href="#">Home</a>
+          </li>
+          <li class="breadcrumb-item active">Portfolio Details</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">如何在ubuntu16通过终端设置shadowsocks实现科学上网</h1>
-    <p class="post-meta"><i class="fa fa-calendar">&nbsp;&nbsp;</i>
-      <time datetime="2016-12-06T06:23:06+00:00" itemprop="datePublished">Dec 6, 2016</time>
-      
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">Paulo Pimenta</span></span>
-      
-    </p>
-  </header>
+<main id="main">
 
-  <div class="post-content" style="margin:15px;" itemprop="articleBody">
-    <p>给三年前买的旧笔记本重装了Ubuntu桌面版，第一件要做的事就是科学上网啦。</p>
+  <!-- ======= Portfolio Details Section ======= -->
+  <section id="portfolio-details" class="portfolio-details">
+    <div class="container">
 
-<p>┗(・o・)┛ナハ┗(・o・)┛ナハ</p>
+      Work 1 Content
 
-<p>shadowsocks的安装有两种方法，一是安装shadowsocks-qt5 GUI版，二是通过终端运行shadowsocks。我试过了第一种GUI安装，但是一直连不上服务器，发现输出的json配置文件格式是错误的，于是选择了第二种, 具体步骤如下:</p>
 
-<hr />
+      <div class="row gy-4">
 
-<h3 id="1-下载shadowsocks">1. 下载shadowsocks</h3>
+        <div class="col-lg-8">
+          <div class="portfolio-details-slider swiper">
+            <div class="swiper-wrapper align-items-center">
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update
-sudo apt-get install python-pip
-sudo apt-get install python-setuptools m2crypto
-pip install shadowsocks
-</code></pre></div></div>
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio-details-1.jpg" alt="">
+              </div>
 
-<p><br /></p>
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio-details-2.jpg" alt="">
+              </div>
 
-<h3 id="2-设置配置文件">2. 设置配置文件</h3>
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio-details-3.jpg" alt="">
+              </div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
-"server":"XX.XX.XX.XX",
-"server_port":XX,
-"local_port":1080,
-"password":"your password",
-"timeout":600,
-"method":"aes-256-cfb"
-}
-</code></pre></div></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
 
-<p><br /></p>
+        <div class="col-lg-4">
+          <div class="portfolio-info">
+            <h3>Project information</h3>
+            <ul>
+              <li><strong>Category</strong>: Web design</li>
+              <li><strong>Client</strong>: ASU Company</li>
+              <li><strong>Project date</strong>: 01 March, 2020</li>
+              <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+            </ul>
+          </div>
+          <div class="portfolio-description">
+            <h2>Work 1 Title</h2>
+            <p>
+              Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+            </p>
+          </div>
+        </div>
 
-<h3 id="3-启动shadowsocks">3. 启动shadowsocks</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sslocal -c /your/path/shadowsocks.json
-</code></pre></div></div>
-
-<p>如果启动成功了可以看到如下信息(/home/momoko/shadowsocks/ss-config.json是我存放配置文件的路径)</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>INFO: loading config from /home/momoko/shadowsocks/ss-config.json
-2016-12-06 19:31:54 INFO     loading libcrypto from libcrypto.so.1.0.0
-2016-12-06 19:31:54 INFO     starting local at 127.0.0.1:1080
-</code></pre></div></div>
-
-<p><br /></p>
-
-<h3 id="4-设置浏览器">4. 设置浏览器</h3>
-
-<p>接下来需要设置浏览器，代理到shadowsocks指定端口(默认情况是1080)</p>
-
-<p>我使用的浏览器是Ubuntu下的Chromium，chrome插件本来可以在chrome商店里下载到，成功翻墙之前是进不去的。这里推荐从github上下载SwitchyOmega，里面有中文下载说明, 网址如下:</p>
-
-<p><a href="https://github.com/FelisCatus/SwitchyOmega/releases/">https://github.com/FelisCatus/SwitchyOmega/releases/</a></p>
-
-<p>还有配合GFWList的使用方法:</p>
-
-<p><a href="https://github.com/FelisCatus/SwitchyOmega/wiki/GFWList">https://github.com/FelisCatus/SwitchyOmega/wiki/GFWList</a></p>
-
-<p>下载结束之后需要设置代理选项，情景模式里选<code class="language-plaintext highlighter-rouge">socks 5</code>, 端口号<code class="language-plaintext highlighter-rouge">1080</code>，其余设置参考上述链接。</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td>打开youtube或是facebook测试一下，有点小惊喜呢。┌</td>
-      <td>≧∇≦</td>
-      <td>┘</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><br /></p>
-
-<h3 id="5-attention">5. Attention</h3>
-
-<p>值得注意的是，虽然浏览器可以翻墙了，但是用终端访问比如<code class="language-plaintext highlighter-rouge">curl www.google.com</code> 还是没有响应，这里需要安装额外的插件，我使用的是proxychains4，具体安装方法请自行搜索。如果你运行的是例如polipo全局代理的插件，在终端运行某些命令会失败（比如说<code class="language-plaintext highlighter-rouge">git clone</code>），这时候暂时关掉代理插件即可。</p>
-
-<p>什么？不会安装？浏览器都能翻墙了还不谷歌一下。 (￣▽￣人))　((人￣▽￣)</p>
-
-<hr />
-
-<p>自从学会科学上网，看youtube视频根本停不下来。</p>
-
-<p>へ(￣<em>￣へ)(ノ￣</em>￣)ノ パラパラ♪</p>
-
-<p>最后推荐一个颜文字网站：</p>
-
-<p><a href="http://kaomojiya.com/">http://kaomojiya.com/</a></p>
-
-    <!-- Social Bar -->
-<hr />
-<div class="row">
-    <div class="col"><h4 class="text-left">Share this post : </h4> </div>
-    <div class="col">
-        <a class='icon social gp' href="https://www.linkedin.com/sharing/share-offsite/?mini=true&url="
-            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">
-            <i class='fab fa-google-plus-g'></i>
-        </a>
-        <a class='icon social in' href="https://www.linkedin.com/sharing/share-offsite/?mini=true&url="
-            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">
-            <i class='fa fa-linkedin'></i>
-        </a>
-        <a class='icon social tw' href="https://twitter.com/intent/tweet?text=&url=&related=paulofpimenta&hashtags=ouicodegis">
-            <i class="fa fa-twitter"></i>
-        </a>
-        <a class='icon social fb' href="https://twitter.com/intent/tweet?text=&url=&related=paulofpimenta&hashtags=ouicodegis">
-            <i class='fa fa-facebook-f'></i>
-        </a>
+      </div>
 
     </div>
-</div>
-<br />
+  </section><!-- End Portfolio Details Section -->
 
-
-  </div>
-</article>
-
-<div class="post-contents-shadow" style="margin-bottom:30px;">
-  <div id="disqus_thread"></div>
-<script>
-    /**
-     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-     */
-    
-    var disqus_config = function () {
-        this.page.url = ouicodegis.com;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = ouicodegis; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    
-    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
-        var d = document, s = d.createElement('script');
-        
-        s.src = 'https://ouicodegis.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
-        
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
-</div>
-
-<div class="col-md-1 col-xs-0"></div>
-</div>
+</main><!-- End #main -->
       </div>
       <div class="clearfix">
     </div>
