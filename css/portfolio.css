@@ -53,6 +53,11 @@
   .work-img img {
     transition: all 1s;
   }
+
+  .work-img img:hover {
+    pointer-events: none;
+
+  }
   
   .work-content {
     padding: 2rem 3% 1rem 4%;
