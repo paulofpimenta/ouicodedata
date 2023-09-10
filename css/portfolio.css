@@ -39,6 +39,7 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     background-color: #fff;
+    position: relative;
   }
   
   .work-box:hover img {
@@ -52,6 +53,7 @@
   
   .work-img img {
     transition: all 1s;
+    object-fit: cover;
   }
 
   .work-img img:hover {
