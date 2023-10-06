@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,7 +61,7 @@
 </script>
 
   <body>
-
+    <!--Header-->
     <header class="site-header" style="background-color: #212529">
     <div class="container px-0">
       <!-- <nav class="navbar navbar-expand-lg navbar-dark">
@@ -133,6 +134,8 @@
     </div>
   </header>
 
+    
+    <!--Content-->
     <div class="page-content">
       <div class="container" style="padding-left:0;padding-right:0;">
         <!--Content-->
@@ -148,6 +151,46 @@
   <!--Left content -->
   <div class="home col-md-8" style="margin-bottom: 30px">
     <!--Posts-->
+    
+    <div class="post-contents-shadow">
+      <h2>
+        <a class="post-link" href="/posts/Troubleshooting-with-Installing-Broadcom-Wireless-Drivers-in-Ubuntu-Desktop/">Troubleshooting with Installing Broadcom Wireless Drivers in Ubuntu Desktop</a>
+      </h2>
+      <span class="post-meta" style="margin-right:50px">
+          <i class="fas fa-user">&nbsp;&nbsp;</i>By Paulo Pimenta
+      </span>
+      
+      <span class="post-meta"><i class="fa fa-calendar">&nbsp;&nbsp;</i>Dec 2, 2016</span>
+      <span class="post-meta" style="margin-left:50px;margin-right:50px;">
+        <i class="fa fa-comment-o">&nbsp;&nbsp;</i>
+        <a style="color:#828282" href="/posts/Troubleshooting-with-Installing-Broadcom-Wireless-Drivers-in-Ubuntu-Desktop/#disqus_thread"></a>
+      </span>
+
+      
+        <span class="post-meta" ><i class="fa fa-tags">&nbsp;&nbsp;</i>programming</span>
+      
+
+      <div class="post-content truncate" itemprop="articleBody" style="max-height:300px;margin-top:20px;">
+	      <p>Days before, I changed the operating system of my old laptop from Windows7 to Ubuntu Desktop, I installed Ubuntu from a USB stick from my friend. After installing I found I Broadcom wireless driver wasn’t installed so I couldn’t connect to my WiFi. I tried several ways then found the solution, hope it my be helpful.</p>
+
+<p>To download the driver from Internet, you need to connect with Ethernet.</p>
+
+<p>Open Software and Update from system and configuration, open the fifth tab optional drivers and see if wireless driver comes out or not.</p>
+
+<p><img src="/img/ubuntu1.png" style="height:50%;width:50%;" /></p>
+
+<p>Make sure allowing downloading drivers from Internet is checked in the first tab Ubuntu Software.</p>
+
+<p><img src="/img/ubuntu2.png" style="height:50%;width:50%;" /></p>
+
+<p>If it still doesn’t come out, you need to manually install it from terminal, use <code class="language-plaintext highlighter-rouge">lspci -nn -d 14e4:</code> command to see which network card you’re using, then install the corresponding driver. <a href="http://askubuntu.com/questions/55868/installing-broadcom-wireless-drivers">http://askubuntu.com/questions/55868/installing-broadcom-wireless-drivers</a> offers an excellent guide.</p>
+
+      </div>
+      <div style="height:50px;">
+	      <a href="/posts/Troubleshooting-with-Installing-Broadcom-Wireless-Drivers-in-Ubuntu-Desktop/" class="button readmore-button">Read More</a>
+      </div>
+    </div>
+    <br />
     
     <div class="post-contents-shadow">
       <h2>
@@ -482,101 +525,6 @@
     </div>
     <br />
     
-    <div class="post-contents-shadow">
-      <h2>
-        <a class="post-link" href="/posts/using-concern-to-refactor-rails-model/">Using Concern To Refactor Rails Model</a>
-      </h2>
-      <span class="post-meta" style="margin-right:50px">
-          <i class="fas fa-user">&nbsp;&nbsp;</i>By Paulo Pimenta
-      </span>
-      
-      <span class="post-meta"><i class="fa fa-calendar">&nbsp;&nbsp;</i>Oct 22, 2016</span>
-      <span class="post-meta" style="margin-left:50px;margin-right:50px;">
-        <i class="fa fa-comment-o">&nbsp;&nbsp;</i>
-        <a style="color:#828282" href="/posts/using-concern-to-refactor-rails-model/#disqus_thread"></a>
-      </span>
-
-      
-        <span class="post-meta" ><i class="fa fa-tags">&nbsp;&nbsp;</i>programming</span>
-      
-
-      <div class="post-content truncate" itemprop="articleBody" style="max-height:300px;margin-top:20px;">
-	      <h1 id="background">Background</h1>
-
-<p>Recently I’m working on upgrading a Rails 2.3 application to Rails 4.2 (Yes, it’s true, our company is still using 2.3 now, ( ‘Θ’)ﾉ( ‘Θ’)ﾉ( ‘Θ’)ﾉ). There are 5 models containing codes which are 90% the same. I tried to refactor them with Rails 4’s concern module.</p>
-<hr />
-
-<h1 id="what-is-concern">What is concern</h1>
-
-<h3 id="rails-23-way">Rails 2.3 way</h3>
-<p>In Rails 2.3, if you extract code from model to a module, you need to create a module and put it into your <code class="language-plaintext highlighter-rouge">/lib</code> directory. To realize validations and class methods, you need to add a hook method in it, which was not an elegant way.</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">Taggable</span>
-  <span class="k">def</span>  <span class="nc">self</span><span class="o">.</span><span class="nf">included</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
-    <span class="n">base</span><span class="p">.</span><span class="nf">extend</span> <span class="no">ClassMethods</span>
-    <span class="n">base</span><span class="p">.</span><span class="nf">class_eval</span> <span class="k">do</span>
-      <span class="n">scope</span> <span class="ss">:disabled</span><span class="p">,</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="n">where</span><span class="p">(</span><span class="ss">disabled: </span><span class="kp">true</span><span class="p">)</span> <span class="p">}</span>
-      <span class="c1"># scope, validations, after_save .....</span>
-    <span class="k">end</span>
-  <span class="k">end</span>
-
-  <span class="k">module</span> <span class="nn">ClassMethods</span>
-    <span class="k">def</span> <span class="nf">find_with_tag</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
-	 <span class="c1"># .....</span>
-    <span class="k">end</span>
-  <span class="k">end</span>
-<span class="k">end</span>
-</code></pre></div></div>
-
-<h3 id="realization-with-concern">Realization with concern</h3>
-<p>In Rails 4, you can eaily realize it by creating a module extending <code class="language-plaintext highlighter-rouge">ActiveSupport::Concern</code> and include this module in your model.</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">Taggable</span>
-  <span class="kp">extend</span> <span class="no">ActiveSupport</span><span class="o">::</span><span class="no">Concern</span>
-  <span class="n">included</span> <span class="k">do</span>
-    <span class="n">scope</span> <span class="ss">:disabled</span><span class="p">,</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="n">where</span><span class="p">(</span><span class="ss">disabled: </span><span class="kp">true</span><span class="p">)</span> <span class="p">}</span>
-  <span class="k">end</span>
-  
-  <span class="n">class_methods</span> <span class="k">do</span>
-    <span class="k">def</span> <span class="nf">find_with_tag</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
-	 <span class="c1"># ...</span>
-    <span class="k">end</span>
-  <span class="k">end</span>
-  
-  <span class="c1">#put instance methods here</span>
-<span class="k">end</span>
-</code></pre></div></div>
-
-<h3 id="notice">Notice</h3>
-<ul>
-  <li>If you want to know which class is using this module in a class method, you can simply call <code class="language-plaintext highlighter-rouge">self</code>. For example, I want to cache class method <code class="language-plaintext highlighter-rouge">find</code>, then in my taggble module, I use</li>
-</ul>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">class_methods</span> <span class="k">do</span>
-  <span class="k">def</span> <span class="nf">some_class_method</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
-    <span class="no">Rails</span><span class="p">.</span><span class="nf">cache</span><span class="p">.</span><span class="nf">fetch</span><span class="p">(</span><span class="s2">"</span><span class="si">#{</span><span class="nb">self</span><span class="p">.</span><span class="nf">name</span><span class="si">}</span><span class="s2">.find(</span><span class="si">#{</span><span class="nb">id</span><span class="si">}</span><span class="s2">)"</span><span class="p">,</span> <span class="ss">:expires_in</span> <span class="o">=&gt;</span> <span class="mi">15</span><span class="p">.</span><span class="nf">minutes</span><span class="p">.</span><span class="nf">to_i</span><span class="p">)</span>
-  <span class="k">end</span>
-<span class="k">end</span>
-</code></pre></div></div>
-
-<ul>
-  <li>If it’s in an instance method, use <code class="language-plaintext highlighter-rouge">self.class</code> instead</li>
-</ul>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">some_instance_method</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
-  <span class="no">Rails</span><span class="p">.</span><span class="nf">cache</span><span class="p">.</span><span class="nf">fetch</span><span class="p">(</span><span class="s2">"</span><span class="si">#{</span><span class="nb">self</span><span class="p">.</span><span class="nf">class</span><span class="p">.</span><span class="nf">name</span><span class="si">}</span><span class="s2">.find(</span><span class="si">#{</span><span class="nb">id</span><span class="si">}</span><span class="s2">)"</span><span class="p">,</span> <span class="ss">:expires_in</span> <span class="o">=&gt;</span> <span class="mi">15</span><span class="p">.</span><span class="nf">minutes</span><span class="p">.</span><span class="nf">to_i</span><span class="p">)</span>
-<span class="k">end</span>
-</code></pre></div></div>
-
-<p>And the code is more elegant (^m^ )クスッ.</p>
-
-      </div>
-      <div style="height:50px;">
-	      <a href="/posts/using-concern-to-refactor-rails-model/" class="button readmore-button">Read More</a>
-      </div>
-    </div>
-    <br />
-    
 
     <!-- Paginator-->
     <div class="row">
@@ -769,73 +717,62 @@
       </div>
       <div class="clearfix">
     </div>
+    <!--Footer-->
+    <footer class="site-footer" style="background-color: #212529">
 
-    
-
-<footer class="site-footer" style="background-color: #212529">
-
-  <div class="container fluid center-block">
-
-    <!-- <h2 class="footer-heading">OuiCodeData</h2> -->
+  <div class="container">
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1" >
-        <!-- <ul class="contact-list">
-          <li>OuiCodeData</li> 
-          <li><a href="mailto:pfpimenta@gmail.com">pfpimenta@gmail.com</a></li> 
-        </ul>!-->
-      </div>
+    </div>
 
-      <div class="footer-col footer-col-2">
-          <br />
-        <ul class="social-media-list list-inline text-center">
+    <div class="footer-col footer-col-2">
+      <br />
+      <ul class="social-media-list list-inline text-center">
+        
+        <li class="list-inline-item">
           
-          <li class="list-inline-item">
-            
 
 <a href="https://github.com/paulofpimenta"  class="btn">
     <i class="fa fa-github footer-icons"></i>
 </a>
 
-          </li>
-          
+        </li>
+        
 
+        
+        <li class="list-inline-item">
           
-          <li class="list-inline-item">
-            
 <a href="https://twitter.com/paulofpimenta"  class="btn">
     <i class="fa fa-twitter footer-icons"></i>
     <!--<span class="username">paulofpimenta</span> -->
 </a>
 
-          </li>
-          
+        </li>
+        
 
+        
+        <li class="list-inline-item">
           
-          <li class="list-inline-item">
-            
 <a href="https://linkedin.com/paulofpimenta" class="btn">
     <i class="fa fa-linkedin footer-icons"></i>
 </a>
-          </li>
-          
-          
-        </ul>
-        <p class="text-white text-center small mb-0">© Copyright OuiCodeData 2023
-        </p>   
+        </li>
+        
+      </ul>
+      
+      <p class="text-white text-center small mb-0">© Copyright OuiCodeData 2023</p>   
 
-      </div>
     </div>
-    
+
   </div>
 
 </footer>
+
 <script src="/static/input_expand_collapse.js"></script>
 <script src="/static/tag_pages.js"></script>
 
     <script id="dsq-count-scr" src="//ouicodegis.disqus.com/count.js" async></script>
-
-
   </body>
 
 </html>
