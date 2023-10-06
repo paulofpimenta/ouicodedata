@@ -1,49 +1,40 @@
-
-
 <footer class="site-footer" style="background-color: #212529">
 
-  <div class="container fluid center-block">
-
-    <!-- <h2 class="footer-heading">{{ site.title }}</h2> -->
+  <div class="container">
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1" >
-        <!-- <ul class="contact-list">
-          <li>{{ site.title }}</li> 
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li> 
-        </ul>!-->
-      </div>
-
-      <div class="footer-col footer-col-2">
-          <br />
-        <ul class="social-media-list list-inline text-center">
-          {% if site.github_username %}
-          <li class="list-inline-item">
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li class="list-inline-item">
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-
-          {% if site.linkedin_username %}
-          <li class="list-inline-item">
-            {% include icon-linkedin.html username=site.linkedin_username %}
-          </li>
-          {% endif %}
-          
-        </ul>
-        <p class="text-white text-center small mb-0">© Copyright OuiCodeData {{ 'now' | date: "%Y" }}
-        </p>   
-
-      </div>
     </div>
-    
+
+    <div class="footer-col footer-col-2">
+      <br />
+      <ul class="social-media-list list-inline text-center">
+        {% if site.github_username %}
+        <li class="list-inline-item">
+          {% include icon-github.html username=site.github_username %}
+        </li>
+        {% endif %}
+
+        {% if site.twitter_username %}
+        <li class="list-inline-item">
+          {% include icon-twitter.html username=site.twitter_username %}
+        </li>
+        {% endif %}
+
+        {% if site.linkedin_username %}
+        <li class="list-inline-item">
+          {% include icon-linkedin.html username=site.linkedin_username %}
+        </li>
+        {% endif %}
+      </ul>
+      
+      <p class="text-white text-center small mb-0">© Copyright OuiCodeData {{ 'now' | date: "%Y" }}</p>   
+
+    </div>
+
   </div>
 
 </footer>
+
 <script src="/static/input_expand_collapse.js"></script>
 <script src="/static/tag_pages.js"></script>
