@@ -332,9 +332,9 @@ pre {
  */
 .site-footer {
   border-top: 1px solid #e8e8e8;
-  padding: 1px;
   width: 100%;
-  position: relative; }
+  position: absolute;
+  z-index: -100; }
 
 .footer-heading {
   font-size: 1px;
