@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "My Experience During ISWI(International Student Week in Ilmenau)"
-date:   2017-06-12 20:15:09 +0800
+title:  "Gender detection with Pytorch"
+date:   2023-06-12 20:15:09 +0800
 comments: true
 tags:
-- life
+- Deep Learning
+- Pytorch
 ---
-
 Last month I spent such an unforgettable week with participants from all over the world in Ilmenau, Germany(2017.iswi.org) to discuss the topic 'Global Justice'. It was my first time in Europe and the first student conference I joined, the conference was a crazy party week and it was so amazing. I came there alone and surprised to find that I'm the only delegate from China!
 
 
