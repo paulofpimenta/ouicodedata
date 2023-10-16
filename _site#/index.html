@@ -154,6 +154,92 @@
     
     <div class="post-contents-shadow">
       <h2>
+        <a class="post-link" href="/posts/worldclim-with-r/">Worldclim data with R</a>
+      </h2>
+      <span class="post-meta" style="margin-right:50px">
+          <i class="fas fa-user">&nbsp;&nbsp;</i>By Paulo Pimenta
+      </span>
+      
+      <span class="post-meta"><i class="fa fa-calendar">&nbsp;&nbsp;</i>Oct 13, 2023</span>
+      <span class="post-meta" style="margin-left:50px;margin-right:50px;">
+        <i class="fa fa-comment-o">&nbsp;&nbsp;</i>
+        <a style="color:#828282" href="/posts/worldclim-with-r/#disqus_thread"></a>
+      </span>
+
+      
+        <span class="post-meta" ><i class="fa fa-tags">&nbsp;&nbsp;</i>R</span>
+      
+        <span class="post-meta" ><i class="fa fa-tags">&nbsp;&nbsp;</i>Spatial data</span>
+      
+
+      <div class="post-content truncate" itemprop="articleBody" style="max-height:300px;margin-top:20px;">
+	      <p>Worldclim data is a great source of environmental data opensource data.</p>
+
+<h3 id="r-api">R API</h3>
+
+<p>Worldclim has set a nice API for R users that want to access worldclim data. The R API allows any user with litte experience with R to quickly acess a large set of raster files containing many environmental data.</p>
+
+<h3 id="set-raster-and-vector-path">Set raster and vector path</h3>
+
+<p>You can raster_path = tempdir() if you want to download the data into a temp folder</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">raster_path_folder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tempdir</span><span class="p">()</span><span class="w"> 
+</span><span class="n">vector_output_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"~/nigeria_adm2"</span><span class="w">
+</span><span class="n">vector_output_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">vector_output_path</span><span class="p">,</span><span class="w"> </span><span class="s2">".zip"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="load-data-from-worldclim">Load data from worldclim</h3>
+
+<p>Use path=tempdir() if you want to download the data to a temp folder</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">raster_stack</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">worldclim_country</span><span class="p">(</span><span class="n">country</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"NGA"</span><span class="p">,</span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">raster_path_folder</span><span class="w"> </span><span class="p">,</span><span class="n">version</span><span class="o">=</span><span class="s2">"2.1"</span><span class="p">,</span><span class="n">res</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span><span class="n">var</span><span class="o">=</span><span class="s2">"prec"</span><span class="p">)</span><span class="w">
+</span><span class="n">crs_proj</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">crs</span><span class="p">(</span><span class="n">raster_stack</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="download-the-shapefile">Download the shapefile</h3>
+
+<p>You can download data from the OCHC site. The nigeria data is avaiable <a href="https://data.humdata.org/dataset/nigeria-admin-level-2">here</a>. All we have to do is download and unzip the file :</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">download.file</span><span class="p">(</span><span class="s2">"https://data.humdata.org/dataset/aac2a1d6-36c6-4f47-beee-34415742180d/resource/d7011402-0a22-4927-82eb-1359d17ff5cd/download/nigeria_admin_level_2.zip"</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">destfile</span><span class="o">=</span><span class="n">vector_output_file</span><span class="p">)</span><span class="w">
+</span><span class="n">unzip</span><span class="p">(</span><span class="n">vector_output_file</span><span class="p">,</span><span class="w"> </span><span class="n">exdir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vector_output_path</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="read-the-downloaded-shape-file">Read the downloaded shape file</h3>
+
+<p>If we want to plot them together, we must be sure that they belong to the same coordinate system. Let’s apply the coordinate systems saved previously in <code class="language-plaintext highlighter-rouge">crs_proj</code>
+and apply it to the nigeria admin level boundaries</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">nigeria_vector_adm2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read_sf</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="n">vector_output_path</span><span class="p">,</span><span class="s2">"/"</span><span class="p">,</span><span class="s2">"Nigeria_Admin_Level_2.shp"</span><span class="p">))</span><span class="w">
+</span><span class="n">nigeria_vector_adm2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">st_transform</span><span class="p">(</span><span class="n">nigeria_vector_adm2</span><span class="p">,</span><span class="w"> </span><span class="n">st_crs</span><span class="p">(</span><span class="n">raster_stack</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Now, since we set the <code class="language-plaintext highlighter-rouge">var</code> parameter of the <code class="language-plaintext highlighter-rouge">worldclim_country</code> as <code class="language-plaintext highlighter-rouge">prec</code>, than we will have 12 raster inside our <code class="language-plaintext highlighter-rouge">raster_stack</code> variable. All we must do now is to set the plot to 12 subplots, using the <code class="language-plaintext highlighter-rouge">par</code> function, loop over the raster stack and plot nigeria boundaries.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Set up plot area</span><span class="w">
+</span><span class="n">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">))</span><span class="w">
+
+</span><span class="c1"># Loop layers and plot</span><span class="w">
+</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">ii</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">raster_stack</span><span class="p">[</span><span class="m">1</span><span class="p">])){</span><span class="w">
+  </span><span class="n">plot</span><span class="p">(</span><span class="n">raster_stack</span><span class="p">[[</span><span class="n">ii</span><span class="p">]],</span><span class="w"> </span><span class="n">main</span><span class="o">=</span><span class="nf">names</span><span class="p">(</span><span class="n">raster_stack</span><span class="p">[[</span><span class="n">ii</span><span class="p">]]))</span><span class="w">
+  </span><span class="n">plot</span><span class="p">(</span><span class="n">st_geometry</span><span class="p">(</span><span class="n">nigeria_vector_adm2</span><span class="p">),</span><span class="n">bg</span><span class="o">=</span><span class="s1">'transparent'</span><span class="p">,</span><span class="w"> </span><span class="n">border</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"lightblue"</span><span class="p">,</span><span class="w"> </span><span class="n">add</span><span class="o">=</span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<p>Et voilà the result :</p>
+
+<p align="center">
+  <img src="/img/worldclim.png" />
+</p>
+
+
+      </div>
+      <div style="height:50px;">
+	      <a href="/posts/worldclim-with-r/" class="button readmore-button">Read More</a>
+      </div>
+    </div>
+    <br />
+    
+    <div class="post-contents-shadow">
+      <h2>
         <a class="post-link" href="/posts/gender-detector-with-pytorch/">Gender detection with Pytorch</a>
       </h2>
       <span class="post-meta" style="margin-right:50px">
@@ -173,39 +259,14 @@
       
 
       <div class="post-content truncate" itemprop="articleBody" style="max-height:300px;margin-top:20px;">
-	      <p>Last month I spent such an unforgettable week with participants from all over the world in Ilmenau, Germany(2017.iswi.org) to discuss the topic ‘Global Justice’. It was my first time in Europe and the first student conference I joined, the conference was a crazy party week and it was so amazing. I came there alone and surprised to find that I’m the only delegate from China!</p>
+	      <p>Last month I spent quite some time diving into the wonderful world of Pytorch library for deep learning. My objective is to post a series of applications with pytorch features. But for now I will focus on how to build an gender detection application with Pytorch using the webcam as input</p>
 
-<h3 id="to-get-to-ilmenau">To Get to Ilmenau</h3>
-<p>Ilmenau was quite a small city located in central Germany, the transportation is not that convinient compared with other big cities. From Berlin, I could either take FlixBus or ICE, finally I chose to take ICE from Berlin Central Station which is 20 mins from the airport, it took about 4 hours to get to ilmenau. Pay attention that ICE has a reservation system, if you don’t pay for the reservation you can still choose a seat after riding on the train, but it might be reserved, in that case you need to look for some other seat.</p>
+<h3 id="get-the-data-first">Get the data first</h3>
 
-<h3 id="general-experience">General Experience</h3>
-<p>The conference was held by TU Ilmenau, an university centering in technology. The campus was built on a moutain with a very nice secenery. I actually met several computer science guys there ^_^.</p>
+<p>It is not difficult to find some available datasets containing human faces. The <a href="https://susanqq.github.io/UTKFace/">UTKFace</a>; the famous <a href="https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html">CelebA database</a> with more than 200 thousand faces of celebrities; <a href="https://github.com/microsoft/DigiFace1M">DigiFace</a> with its 1.2 million free from privacy violations images, and others. A good list can be found <a href="https://datagen.tech/blog/face-datasets/">here</a>. In this post, I decided to work with a dataset with a public domain license that I found on kaggle <a href="https://www.kaggle.com/datasets/ashwingupta3012/male-and-female-faces-dataset/data">here</a>. I chosed this data set because some of the other dataset have files with annotations about objects ages and gender, and the classes are not divided by folders. In the context of this example, I believe it is easier to categorize gender by folder rather than by file annotations, specially if you want to add new face samples.</p>
 
-<p><img src="/img/iswi3.jpg" style="height:50%;width:50%;" /></p>
+<h3 id="how-to-read-data-with-pytorch">How to read data with Pytorch</h3>
 
-<p>A typical day during the week is basically lecture/workshop + discussion + live concert/some other festival + club night, starting from 9 am to 2pm. The lectures were actually very interesting, there were topics on international NGOs, human rights, and even Bitcoin!</p>
-
-<p><img src="/img/iswi1.jpg" style="height:50%;width:50%;" /></p>
-
-<p>I was in the music group, and I met extremly talented people there, there was a professional pianist and famous band members! We made an original EuroVision-like song about global justice. Somehow I’ve managed to play the electronic guitar and the closing ceremony finally ^_^.</p>
-
-<p><img src="/img/iswi2.jpg" style="height:50%;width:50%;" /></p>
-
-<p>During the live concert, I could experiece something “Germany” (mixed beer haha). Somehow I love the idea of mixing beer with everything.</p>
-
-<p><img src="/img/iswi4.jpg" style="height:50%;width:50%;" /></p>
-
-<p>After schedule on the time table finally comes party time! I’m not a night person so I only went to clubs inside campus for three times, I tasted all kinds of beer from different parts of Germany, but unluckily I missed the “Jägermeister night”.</p>
-
-<h3 id="incidents-in-berlin">Incidents in Berlin</h3>
-<p>Unluckily my cash (about 150 euros) was stolen in the bus from the airport to Berlin central station. Before coming I thought Germany was general safe but this incident told me it’s not. What disappoints me most is how the police deal with such things. In my case, the policeman said it wasn’t much money at all and it happens here every day. I believe they’re not making any efforts to stop theft towards travellers, even not putting on a notice telling people to take care of their wallet.</p>
-
-<p>Another incident was after the conference when I spent several days to hangout with my friends in Berlin. One day I walked on the street and suddenly a middle aged man riding a bicycle passed by me calling me “stupid Chinese”. I tried to grab him out of his fucking bycle but he had been already far away. Guys if you encounter similar insults in Germany, erect your middle figure and call him “Wichser”.</p>
-
-<p>I’m so disappointed in Berlin, the conference I joined was about “Global Justice”, and in Berlin it seems not “safe” to be Asian, it’s not global justice at all. There’re still many ignorant people in the world, that’s why global justice is so hard to achieve.</p>
-
-<h3 id="my-thinkings">My Thinkings</h3>
-<p>Except the disappointment in Berlin, I had nice time in Germany. I met amazing people of my age in the conference, my vision about the world was different now, I saw young people doing great effort to achieve global justice, it’s not easy, let’s try at least!</p>
 
       </div>
       <div style="height:50px;">
@@ -2059,49 +2120,6 @@ Text(0.5, 1.0, 'Number of accidents per cell grid in Paris')
     </div>
     <br />
     
-    <div class="post-contents-shadow">
-      <h2>
-        <a class="post-link" href="/posts/welcome-to-jekyll-copy/">Welcome to Jekyll!</a>
-      </h2>
-      <span class="post-meta" style="margin-right:50px">
-          <i class="fas fa-user">&nbsp;&nbsp;</i>By Paulo Pimenta
-      </span>
-      
-      <span class="post-meta"><i class="fa fa-calendar">&nbsp;&nbsp;</i>Mar 31, 2022</span>
-      <span class="post-meta" style="margin-left:50px;margin-right:50px;">
-        <i class="fa fa-comment-o">&nbsp;&nbsp;</i>
-        <a style="color:#828282" href="/posts/welcome-to-jekyll-copy/#disqus_thread"></a>
-      </span>
-
-      
-
-      <div class="post-content truncate" itemprop="articleBody" style="max-height:300px;margin-top:20px;">
-	      <p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-<p>Jekyll requires blog post files to be named according to the following format:</p>
-
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
-
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
-
-
-      </div>
-      <div style="height:50px;">
-	      <a href="/posts/welcome-to-jekyll-copy/" class="button readmore-button">Read More</a>
-      </div>
-    </div>
-    <br />
-    
 
     <!-- Paginator-->
     <div class="row">
@@ -2133,7 +2151,13 @@ Text(0.5, 1.0, 'Number of accidents per cell grid in Paris')
     
     
     <a href="/tag_index/#spatial-data" class="btn btn-link shadow-none text-decoration-none" style="padding: .375rem 0rem 0.375rem .75rem;box-shadow: none;">
-        <span class="fa fa-tag" aria-hidden="true"></span> Spatial data (1)
+        <span class="fa fa-tag" aria-hidden="true"></span> Spatial data (2)
+    </a> <br/>
+
+    
+    
+    <a href="/tag_index/#r" class="btn btn-link shadow-none text-decoration-none" style="padding: .375rem 0rem 0.375rem .75rem;box-shadow: none;">
+        <span class="fa fa-tag" aria-hidden="true"></span> R (1)
     </a> <br/>
 
     
