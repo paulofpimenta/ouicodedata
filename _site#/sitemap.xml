@@ -16,9 +16,6 @@
 <loc>http://localhost:4000/about-me/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/about/</loc>
-</url>
-<url>
 <loc>http://localhost:4000/portfolio/bike</loc>
 </url>
 <url>
@@ -31,10 +28,10 @@
 <loc>http://localhost:4000/portfolio/gender</loc>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>http://localhost:4000/portfolio/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/portfolio/</loc>
+<loc>http://localhost:4000/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/resume/</loc>

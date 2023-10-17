@@ -22,6 +22,7 @@ permalink: none
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-scholar
   #- jekyll-redirect-from
 
 # Where things are
@@ -37,7 +38,11 @@ destination: ./_site#
 
 # Add portfolio folder
 
-
+scholar:
+  style: modern-language-association
+  source: ./_bibliography
+  bibliography: references.bib
+  bibliography_template: bib
 
 
 # Build settings
