@@ -22,6 +22,17 @@ Pytorch library is a very rich framework with libraries that fit your need accor
   Source https://arcwiki.rs.gsu.edu
 </p>
 
+### Application architecture
+
+As stated before, the idea is to have application that captures images from webcam and performs predictions over live screenshots. The application was built according to the following schema :
+
+<p align="center">
+  <img src="/img/app1_architecture.png" width="500">
+  <strong>Application main architecture</strong>
+</p>
+
+In this post, we will focus only on the Pytorch side, which is the aim of this post. However, it is import to keep in mind that models are applied to real cases might always have limitations, due to limited infrastructure resources or, even, model complexity and deployment issues. We will come to that later
+
 ### Building your custom set
 
 `Torchvision` is a package in the PyTorch library containing computer-vision models, datasets, and image transformations. A famous dataset in the domain of Machine Learning (the MNIST) dataset, could be easily load like this : 
@@ -36,6 +47,37 @@ mnist_trainset = datasets.MNIST(root='./data', train=True, download=True, transf
 mnist_testset = datasets.MNIST(root='./data', train=False, download=True, transform=None)
 ```
 
-Notice that `datasets.MNIST` is already provided out of the box to us. But in real data problems, that is not always the case. We will have to create our own datataset. But, as I said, Pytorch makes it quite easy :-)
+Notice that `datasets.MNIST` is already provided out of the box to us. But in real data problems, that is usually not the case. Thus we will have to create our own datataset. But, as I said, Pytorch makes it quite easy :-)
 
+In order to create your own data set, you must create a class that inhertis the `torch.utils.data.Dataset` abstract class. Our custom dataset class must also override the methods `__len__`  and `__getitem__`. They are respectively responsible for returning the size of the dataset and provide support for the indexing samples.
 
+Let's create our custom dataset called GenderDataSet as follows :
+
+```python
+class GenderDataset(Dataset):
+
+    def __init__(self, image_paths, classes,transform=None):
+        self.image_paths = image_paths
+        self.transform = transform
+        self.classes = classes
+
+    def __len__(self):
+        return len(self.image_paths)
+
+    def __getitem__(self, idx):
+        # Select images by path and indexes
+        image_filepath = self.image_paths[idx]
+        image = read_image(image_filepath)
+        # Create dictionary for class indexes
+        idx_to_class =  {i:j for i, j in enumerate(self.classes)}
+        class_to_idx =  {value:key for key,value in idx_to_class.items()}
+        # Replace split char by '/' on unix systems
+        label = image_filepath.split('\\')[-2]
+        label = class_to_idx[label]
+        # Appy transform if there any is provided
+        if self.transform:
+            image = self.transform(image)
+        # Return image and its label
+        return image, label
+```
+When we instantiate our dataset, we s 
