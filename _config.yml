@@ -39,12 +39,15 @@ destination: ./_site#
 # Add portfolio folder
 
 scholar:
-  #style: _bibliography/simple-ieee.csl
+  style: wireless-communications-and-mobile-computing
   bibliography: references.bib
 
   details_dir:    bibliography
+  bibliography_template: bib
   details_layout: bibtex.html
-  details_link:   Details
+  replace_strings: true
+  query: "@*"
+
 
 
 # Build settings

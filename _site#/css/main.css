@@ -585,6 +585,15 @@ pre > code {
 }
 
 /**
+* Bibliography list
+*/
+ol.bibliography {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+/**
  * Syntax highlighting styles
  */
 .highlight {

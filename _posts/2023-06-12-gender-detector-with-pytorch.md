@@ -38,8 +38,7 @@ In this post, we will focus only on the Pytorch side, which is the aim of this p
 
 ### Neural network architecture
 
-The architecture of a neural network is core of deep learning application, since it can provide the most optimized way to deal if the data thought the many layers of input neurons. Our architecture is the same used at 
-{% cite Levi2015AgeAG %}
+The architecture of a neural network is core of deep learning application, since it can provide the most optimized way to deal if the data thought the many layers of input neurons. Our architecture is the same used in {% cite Levi2015AgeAG %}
 
 ### Building your custom set
 
@@ -97,5 +96,9 @@ So we instantiate the model {% cite ruby %}.
     model = ConvolutionalNeuralNet(conv_net)
     print(conv_net)
     
-    
-{% bibliography %}
+
+#### References
+
+{% bibliography --cited %}
+
+

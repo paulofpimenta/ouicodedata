@@ -289,8 +289,7 @@ and apply it to the nigeria admin level boundaries</p>
 
 <h3 id="neural-network-architecture">Neural network architecture</h3>
 
-<p>The architecture of a neural network is core of deep learning application, since it can provide the most optimized way to deal if the data thought the many layers of input neurons. Our architecture is the same used at 
-<a class="citation" href="#Levi2015AgeAG">(Levi &amp; Hassner, 2015)</a></p>
+<p>The architecture of a neural network is core of deep learning application, since it can provide the most optimized way to deal if the data thought the many layers of input neurons. Our architecture is the same used in <a class="citation" href="#Levi2015AgeAG">[1]</a></p>
 
 <h3 id="building-your-custom-set">Building your custom set</h3>
 
@@ -339,15 +338,18 @@ and apply it to the nigeria admin level boundaries</p>
 </code></pre></div></div>
 <p>When we instantiate our dataset, we added 3 more class attributes : <code class="language-plaintext highlighter-rouge">image_paths</code>, <code class="language-plaintext highlighter-rouge">classes</code> and <code class="language-plaintext highlighter-rouge">transform</code>. Remember about why I chose this dataset ? Since the dataset contains folders per class, and each class has a <code class="language-plaintext highlighter-rouge">train</code> and <code class="language-plaintext highlighter-rouge">test</code> folder, all we have to do is to point where the train and test folders are. That implementation will take care of of rest, for each class present in the root folder :-)</p>
 
-<p>So we instantiate the model <a class="citation" href="#ruby">(Flanagan &amp; Matsumoto, 2008)</a>.</p>
+<p>So we instantiate the model <a class="citation" href="#ruby">[2]</a>.</p>
 
 <p>#  Instantiating model
     conv_net = ConvNet()
     model = ConvolutionalNeuralNet(conv_net)
     print(conv_net)</p>
 
-<ol class="bibliography"><li><span id="ruby">Flanagan, D., &amp; Matsumoto, Y. (2008). <i>The Ruby Programming Language</i>. O’Reilly Media.</span></li>
-<li><span id="Levi2015AgeAG">Levi, G., &amp; Hassner, T. (2015). Age and gender classification using convolutional neural networks. <i>2015 IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)</i>, 34–42. https://api.semanticscholar.org/CorpusID:15398231</span></li></ol>
+<h4 id="references">References</h4>
+
+<ol class="bibliography"><li><p><span id="Levi2015AgeAG">1. Levi G, Hassner T. Age and gender classification using convolutional neural networks. <i>2015 IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)</i> 2015: 34–42.</span></p></li>
+<li><p><span id="ruby">2. Flanagan D, Matsumoto Y. <i>The Ruby Programming Language</i>. O’Reilly Media, 2008.</span></p></li></ol>
+
 
       </div>
       <div style="height:50px;">
