@@ -18,7 +18,6 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-scholar", "~> 6.0" # Last version compatible jekkyl 3
   gem "jekyll-paginate",
-  gem "github-pages"
 end
 
 gem 'jekyll-sitemap'
