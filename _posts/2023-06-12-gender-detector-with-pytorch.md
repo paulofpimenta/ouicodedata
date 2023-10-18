@@ -13,6 +13,7 @@ Last month I spent quite some time diving into the wonderful world of Pytorch li
 
 It is not difficult to find some available datasets containing human faces. The sources are numerous : The [UTKFace](https://susanqq.github.io/UTKFace/); the famous [CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) database with more than 200 thousand faces of celebrities; [DigiFace](https://github.com/microsoft/DigiFace1M) with its 1.2 million free from privacy violations images, and so on. A good list can be found [here](https://datagen.tech/blog/face-datasets/). In this post, I decided to work with a dataset this dataset [here](https://www.kaggle.com/datasets/ashwingupta3012/male-and-female-faces-dataset/data) for three reasons. The first is that this dataset, as many others, has  with a public domain license, but is also very used in kaggle notebooks. The second reason, is how the data is presented and organized.  The other datasets have either spreadsheets with annotations containing name files and the classes thar each file belong to, or, in some cases, classes are not divided by folders. Since my object is to load data from custom dataset (next section :-)), I wanted a dataset that was more structured into folders and classes. And the final reason is the image quality : this dataset does not contain high quality images. Which is is quite well, considering that our input images will come from web cam, that usually have low resolution images. Thus, in this case, a model trained with nice and artistic images may not reflect the context of the application. 
 
+
 ### How to work with data with Pytorch
 
 Pytorch library is a very rich framework with libraries that fit your need according to the type of problem you want to solve. For instance,`Torchaudio` for audio recognition, `Torchvision` for images, `Torchtext`for NLP, `Torchgeo` for satellite images, and so on. Since our problem is image classification, we will use the `Torchvision` library. This library has has a very straight forward (but flexible) process about reading data: your first (1) create your dataset, than you transform (2) the data, augment (3) it if necessary, and finally, add it to a dataloader (4) before training. This process can be illustrated by the image bellow: 
@@ -38,8 +39,7 @@ In this post, we will focus only on the Pytorch side, which is the aim of this p
 ### Neural network architecture
 
 The architecture of a neural network is core of deep learning application, since it can provide the most optimized way to deal if the data thought the many layers of input neurons. Our architecture is the same used at 
-Gil Levi and Tal Hassner
-https://talhassner.github.io/home/projects/cnn_agegender/CVPR2015_CNN_AgeGenderEstimation.pdf
+{% cite Levi2015AgeAG %}
 
 ### Building your custom set
 
@@ -90,13 +90,11 @@ class GenderDataset(Dataset):
 ```
 When we instantiate our dataset, we added 3 more class attributes : `image_paths`, `classes` and `transform`. Remember about why I chose this dataset ? Since the dataset contains folders per class, and each class has a `train` and `test` folder, all we have to do is to point where the train and test folders are. That implementation will take care of of rest, for each class present in the root folder :-)
 
-So we instantiate the model
+So we instantiate the model {% cite ruby %}.
 
    #  Instantiating model
     conv_net = ConvNet()
     model = ConvolutionalNeuralNet(conv_net)
     print(conv_net)
-
-
-
-
+    
+{% bibliography %}
