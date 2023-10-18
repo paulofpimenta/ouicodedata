@@ -12,8 +12,8 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 16px/1.5 "Sawarabi Gothic", sans-serif;
-  color: #111;
+  font: 400 16px/1.5 "Lucida Grande", Arial;
+  color: #3d4144;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
@@ -340,7 +340,7 @@ pre > code {
   display: none;
 }
 .site-nav .page-link {
-  color: #111;
+  color: #3d4144;
   line-height: 1.5;
 }
 .site-nav .page-link:not(:last-child) {
