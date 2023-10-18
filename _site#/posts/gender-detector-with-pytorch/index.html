@@ -146,7 +146,7 @@
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">Gender detection with Pytorch</h1>
     <p class="post-meta"><i class="fa fa-calendar">&nbsp;&nbsp;</i>
-      <time datetime="2023-06-12T12:15:09+00:00" itemprop="datePublished">Jun 12, 2023</time>
+      <time datetime="2023-06-12T14:15:09+02:00" itemprop="datePublished">Jun 12, 2023</time>
       
         <span itemprop="author" itemscope itemtype="http://schema.org/Person">
         <span itemprop="name">Paulo Pimenta</span></span>
@@ -186,20 +186,19 @@
 <h3 id="neural-network-architecture">Neural network architecture</h3>
 
 <p>The architecture of a neural network is core of deep learning application, since it can provide the most optimized way to deal if the data thought the many layers of input neurons. Our architecture is the same used at 
-Gil Levi and Tal Hassner
-https://talhassner.github.io/home/projects/cnn_agegender/CVPR2015_CNN_AgeGenderEstimation.pdf</p>
+<a class="citation" href="#Levi2015AgeAG">(Levi &amp; Hassner, 2015)</a></p>
 
 <h3 id="building-your-custom-set">Building your custom set</h3>
 
 <p><code class="language-plaintext highlighter-rouge">Torchvision</code> is a package in the PyTorch library containing computer-vision models, datasets, and image transformations. A famous dataset in the domain of Machine Learning (the MNIST) dataset, could be easily load like this :</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">torchvision</span>
-<span class="kn">import</span> <span class="nn">torchvision.datasets</span> <span class="k">as</span> <span class="n">datasets</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">torchvision</span>
+<span class="kn">import</span> <span class="n">torchvision.datasets</span> <span class="k">as</span> <span class="n">datasets</span>
 
 <span class="c1"># Load train set
-</span><span class="n">mnist_trainset</span> <span class="o">=</span> <span class="n">datasets</span><span class="p">.</span><span class="n">MNIST</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s">'./data'</span><span class="p">,</span> <span class="n">train</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+</span><span class="n">mnist_trainset</span> <span class="o">=</span> <span class="n">datasets</span><span class="p">.</span><span class="nc">MNIST</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="sh">'</span><span class="s">./data</span><span class="sh">'</span><span class="p">,</span> <span class="n">train</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
 <span class="c1"># Load test set
-</span><span class="n">mnist_testset</span> <span class="o">=</span> <span class="n">datasets</span><span class="p">.</span><span class="n">MNIST</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s">'./data'</span><span class="p">,</span> <span class="n">train</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+</span><span class="n">mnist_testset</span> <span class="o">=</span> <span class="n">datasets</span><span class="p">.</span><span class="nc">MNIST</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="sh">'</span><span class="s">./data</span><span class="sh">'</span><span class="p">,</span> <span class="n">train</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Notice that <code class="language-plaintext highlighter-rouge">datasets.MNIST</code> is already provided out of the box to us. But in real data problems, that is usually not the case. Thus we will have to create our own datataset. But, as I said, Pytorch makes it quite easy :-)</p>
@@ -210,39 +209,41 @@ https://talhassner.github.io/home/projects/cnn_agegender/CVPR2015_CNN_AgeGenderE
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">GenderDataset</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image_paths</span><span class="p">,</span> <span class="n">classes</span><span class="p">,</span><span class="n">transform</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">image_paths</span> <span class="o">=</span> <span class="n">image_paths</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">transform</span> <span class="o">=</span> <span class="n">transform</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">classes</span> <span class="o">=</span> <span class="n">classes</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">image_paths</span><span class="p">,</span> <span class="n">classes</span><span class="p">,</span><span class="n">transform</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">image_paths</span> <span class="o">=</span> <span class="n">image_paths</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">transform</span> <span class="o">=</span> <span class="n">transform</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">classes</span> <span class="o">=</span> <span class="n">classes</span>
 
-    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">image_paths</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nf">len</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">image_paths</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
         <span class="c1"># Select images by path and indexes
-</span>        <span class="n">image_filepath</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">image_paths</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
-        <span class="n">image</span> <span class="o">=</span> <span class="n">read_image</span><span class="p">(</span><span class="n">image_filepath</span><span class="p">)</span>
+</span>        <span class="n">image_filepath</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">image_paths</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="nf">read_image</span><span class="p">(</span><span class="n">image_filepath</span><span class="p">)</span>
         <span class="c1"># Create dictionary for class indexes
-</span>        <span class="n">idx_to_class</span> <span class="o">=</span>  <span class="p">{</span><span class="n">i</span><span class="p">:</span><span class="n">j</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">classes</span><span class="p">)}</span>
-        <span class="n">class_to_idx</span> <span class="o">=</span>  <span class="p">{</span><span class="n">value</span><span class="p">:</span><span class="n">key</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span><span class="n">value</span> <span class="ow">in</span> <span class="n">idx_to_class</span><span class="p">.</span><span class="n">items</span><span class="p">()}</span>
+</span>        <span class="n">idx_to_class</span> <span class="o">=</span>  <span class="p">{</span><span class="n">i</span><span class="p">:</span><span class="n">j</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nf">enumerate</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">classes</span><span class="p">)}</span>
+        <span class="n">class_to_idx</span> <span class="o">=</span>  <span class="p">{</span><span class="n">value</span><span class="p">:</span><span class="n">key</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span><span class="n">value</span> <span class="ow">in</span> <span class="n">idx_to_class</span><span class="p">.</span><span class="nf">items</span><span class="p">()}</span>
         <span class="c1"># Replace split char by '/' on unix systems
-</span>        <span class="n">label</span> <span class="o">=</span> <span class="n">image_filepath</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">'</span><span class="se">\\</span><span class="s">'</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+</span>        <span class="n">label</span> <span class="o">=</span> <span class="n">image_filepath</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sh">'</span><span class="se">\\</span><span class="sh">'</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
         <span class="n">label</span> <span class="o">=</span> <span class="n">class_to_idx</span><span class="p">[</span><span class="n">label</span><span class="p">]</span>
         <span class="c1"># Appy transform if there any is provided
-</span>        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">transform</span><span class="p">:</span>
-            <span class="n">image</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+</span>        <span class="k">if</span> <span class="n">self</span><span class="p">.</span><span class="n">transform</span><span class="p">:</span>
+            <span class="n">image</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">transform</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
         <span class="c1"># Return image and its label
 </span>        <span class="k">return</span> <span class="n">image</span><span class="p">,</span> <span class="n">label</span>
 </code></pre></div></div>
 <p>When we instantiate our dataset, we added 3 more class attributes : <code class="language-plaintext highlighter-rouge">image_paths</code>, <code class="language-plaintext highlighter-rouge">classes</code> and <code class="language-plaintext highlighter-rouge">transform</code>. Remember about why I chose this dataset ? Since the dataset contains folders per class, and each class has a <code class="language-plaintext highlighter-rouge">train</code> and <code class="language-plaintext highlighter-rouge">test</code> folder, all we have to do is to point where the train and test folders are. That implementation will take care of of rest, for each class present in the root folder :-)</p>
 
-<p>So we instantiate the model</p>
+<p>So we instantiate the model <a class="citation" href="#ruby">(Flanagan &amp; Matsumoto, 2008)</a>.</p>
 
 <p>#  Instantiating model
     conv_net = ConvNet()
     model = ConvolutionalNeuralNet(conv_net)
     print(conv_net)</p>
 
+<ol class="bibliography"><li><span id="ruby">Flanagan, D., &amp; Matsumoto, Y. (2008). <i>The Ruby Programming Language</i>. O’Reilly Media.</span></li>
+<li><span id="Levi2015AgeAG">Levi, G., &amp; Hassner, T. (2015). Age and gender classification using convolutional neural networks. <i>2015 IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)</i>, 34–42. https://api.semanticscholar.org/CorpusID:15398231</span></li></ol>
 
     <!-- Social Bar -->
 <hr />

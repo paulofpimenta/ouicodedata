@@ -46,29 +46,50 @@ layout: default
     {% endfor %}
 
     <!-- Paginator-->
-    <div class="row">
-      {% if paginator.total_pages > 1 %}
-      <div class="pagination mx-auto" style="width: fit-content">
-        {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button page-button">&laquo;</a>
-        {% endif %}
+    <!-- pagination -->
+    <nav aria-label="Page navigation example">
 
-        {% for page in (1..paginator.total_pages) %}
-          {% if page == paginator.page %}
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button current-page-button">{{ page }}</a>
-          {% elsif page == 1 %}
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button page-button">{{ page }}</a>
-          {% else %}
-            <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="button page-button">{{ page }}</a>
-          {% endif %}
-        {% endfor %}
+    {% if paginator.total_pages > 1 %}
+    <ul class="pagination  justify-content-center">
+      {% if paginator.previous_page %}
+        <li class="page-item ">
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" tabindex="-1" >&laquo; Prev</a>
+        </li>
 
-        {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button page-button">&raquo;</a>
-        {% endif %}
-      </div>
+      {% else %}
+        <li class="page-item disabled" >
+          <span>&laquo; Prev</span>
+        </li>
       {% endif %}
-    </div>
+
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <li class="page-item">
+            <span>{{ page }}</span>
+          </li>
+        {% elsif page == 1 %}
+          <li class="page-item">
+            <a href="/" >{{ page }}</a>
+          </li>
+        {% else %}
+          <li class="page-item">
+            <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" >{{ page }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+        <li class="page-item">
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-link">Next &raquo;</a>
+        </li>
+      {% else %}
+        <li class="page-item">
+          <span>Next &raquo;</span>
+        <li>
+      {% endif %}
+    </ul>
+    {% endif %}
+    </nav>
   <!-- Left content-->
   </div>
   
@@ -116,3 +137,4 @@ layout: default
   </div>
 <!--.row-->
 </div>
+
