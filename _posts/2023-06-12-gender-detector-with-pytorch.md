@@ -97,4 +97,5 @@ So we instantiate the model {% cite ruby %}.
     model = ConvolutionalNeuralNet(conv_net)
     print(conv_net)
     
+    
 {% bibliography %}
