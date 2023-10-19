@@ -1,12 +1,28 @@
-<span style="font-size: 21px;font-weight: 300;line-height: 24px;color: #292F33;vertical-align: bottom;">About me</span>
-<br />
+    
+    <div style="height: 500px">
+        <div class="img-bx">
+            <img src="{{ site.baseurl }}/img/me.png">
+        </div>
+        <div class="content">
+    
+            <div class="detail">
+                <h2>Paulo Pimenta, Phd<br /><span>Data Scientist</span></h2>
+   
+                <ul class="sci justify-content-center">
+                    <li>
+                    <a href="https://linkedin.com/{{ include.username }}"><i class="fab fa-at"></i></a>
+                    </li>
+                    <li>
+                    <a href="https://linkedin.com/{{ include.username }}"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                    <a href="https://linkedin.com/{{ include.username }}"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                    <a href="https://linkedin.com/{{ include.username }}"><i class="fab fa-github-alt"></i></a>
+                    </li>
+                </ul> 
+            </div>
+        </div>
+    </div>
 
-<p style="text-align: center;">
-    <img src="{{ site.baseurl }}/img/me.png" style="margin:20px auto 0 auto;">
-</p>
-<br />
-<p style="font-size:18px;text-align: justify;">
-    I'm a data scientist currently living in Montpellier. I made this blog to share some stuff about data science, programming and spatial modelling
-    research topics.
-</p><br />
-{% include social-profile-buttons.html%}

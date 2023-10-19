@@ -1,0 +1,12 @@
+<span style="font-size: 21px;font-weight: 300;line-height: 24px;color: #292F33;">Latest Post</span>
+<br />
+<a href="{{site.posts.first.url}}">{{site.posts.first.title}}</a>
+
+<br />
+<br />
+
+<span style="font-size: 21px;font-weight: 300;line-height: 24px;color: #292F33;">Recent Posts</span>
+<br />
+{% for post in site.posts offset:1 limit:2 %}
+<a href="{{post.url}}">{{post.title}}</a>
+{% endfor %}

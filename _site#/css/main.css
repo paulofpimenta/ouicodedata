@@ -290,11 +290,14 @@ pre > code {
  * CV
  */
 .post-contents-shadow {
-  background-color: white;
   padding: 15px;
-  border: 1px solid #d9d9d9;
-  overflow: auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  #background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
 }
 
 /**
@@ -549,9 +552,8 @@ pre > code {
   }
 }
 .post-content p {
-  font-family: Open Sans;
-  font-size: 16px;
-  line-height: 31px;
+  font-family: "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+  line-height: 1.5;
 }
 
 .mbtablestyle {

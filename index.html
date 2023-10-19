@@ -1,8 +1,6 @@
 ---
 layout: default
 ---
-
-
 <!--Content-->
 <div class="row">
 
@@ -50,7 +48,7 @@ layout: default
     <nav aria-label="Page navigation example">
 
     {% if paginator.total_pages > 1 %}
-    <ul class="pagination  justify-content-center">
+    <ul class="pagination justify-content-center">
       {% if paginator.previous_page %}
         <li class="page-item ">
           <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" tabindex="-1" >&laquo; Prev</a>
@@ -96,19 +94,19 @@ layout: default
   <!-- Right content-->
   <div class="col-md-4">
     
-    <!-- Tags-->
-    <div class="post-contents-shadow ">
-      <i class="fa fa-tags">&nbsp;&nbsp;</i>
-        {% include card_tags.html%}
-    </div>
-    <br />
-    
     <!-- About me-->
     <div class="post-contents-shadow">
-        <i class="fa fa-face-smile">&nbsp;&nbsp;</i>
-          {% include card_about_me.html%}
+        {% include card_about_me.html%}
     </div>
     <br />
+
+      <!-- Tags-->
+      <div class="post-contents-shadow ">
+        <i class="fa fa-tags">&nbsp;&nbsp;</i>
+          {% include card_tags.html%}
+      </div>
+      <br />
+        
 
     <!-- Books-->
     <div class="post-contents-shadow">
@@ -119,7 +117,8 @@ layout: default
 
     <!-- Recent Posts-->
     <div class="post-contents-shadow">
-        <p style="font-size: 21px;font-weight: 300;line-height: 24px;color: #292F33;">Recent Posts</p>
+      <i class="fa-regular fa-newspaper">&nbsp;&nbsp;</i>
+        {% include card_recent_posts.html %}
       </div>
     <br/>
 
