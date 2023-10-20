@@ -1,12 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-21T00:12:59+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">OuiCodeData</title><subtitle>A portal with news, tutorials and tips about GIS.</subtitle><entry><title type="html">Worldclim data with R</title><link href="http://localhost:4000/posts/worldclim-with-r/" rel="alternate" type="text/html" title="Worldclim data with R" /><published>2023-10-13T14:05:09+02:00</published><updated>2023-10-13T14:05:09+02:00</updated><id>http://localhost:4000/posts/worldclim-with-r</id><content type="html" xml:base="http://localhost:4000/posts/worldclim-with-r/"><![CDATA[<p>Worldclim data is a great source of environmental data opensource data.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-21T01:52:37+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">OuiCodeData</title><subtitle>A portal with news, tutorials and tips about GIS.</subtitle><entry><title type="html">Worldclim data with R: the right way</title><link href="http://localhost:4000/posts/worldclim-with-r/" rel="alternate" type="text/html" title="Worldclim data with R: the right way" /><published>2023-10-13T14:05:09+02:00</published><updated>2023-10-13T14:05:09+02:00</updated><id>http://localhost:4000/posts/worldclim-with-r</id><content type="html" xml:base="http://localhost:4000/posts/worldclim-with-r/"><![CDATA[<h3 id="introduction">Introduction</h3>
 
-<h3 id="r-api">R API</h3>
+<p>Worldclim data is a great source of environmental data opensource data. Its a database of high spatial resolution global weather and climate data. Worldclim <a class="citation" href="#worldclim">[1]</a> is in its version 2.1 and it has climate data from 1970 to 2000. Containing several bioclimatic variables derived from monthly temperatre and rainfall values, the data is usually applied to ecology and modelling techniques.Althought you can download all the data <a href="https://worldclim.org/data/index.html">here</a>, Worldclim has developed a <code class="language-plaintext highlighter-rouge">R</code> package to easly access its data with few lines of code.</p>
 
-<p>Worldclim has set a nice API for R users that want to access worldclim data. The R API allows any user with litte experience with R to quickly acess a large set of raster files containing many environmental data.</p>
+<p>The package, however, will soon be deprecated due to the <a href="https://r-spatial.org/r/2022/04/12/evolution.html">retirement of rgdal, rgeos and maptools</a>. Hopefully, Worldclim is still easlly acessible, and I will show you how. For this post, we will focus on how to extract and plot data from Worldclim, focusing on preciptation raster in Nigeria</p>
+
+<h3 id="worlclim-package-is-deadlong-live-to-worlclim-package-">Worlclim package is dead…Long live to Worlclim package !</h3>
+
+<p>The R API allows any user with litte experience with R to quickly acess a large set of raster files containing many environmental data. With the deprecation of the old version, the new version is now part of the <a href="https://cran.r-project.org/web/packages/geodata/geodata.pdf">geodata</a> package. Depending on your R versiom, you might still be able to run the old version, but you find some warnings. Plus, it is better to get used to the new practices of spatial data manipulation in <code class="language-plaintext highlighter-rouge">R</code>. Let’s start !</p>
 
 <h3 id="set-raster-and-vector-path">Set raster and vector path</h3>
 
-<p>You can raster_path = tempdir() if you want to download the data into a temp folder</p>
+<p>We start by defining raster and vector paths. For raster data, you can set <code class="language-plaintext highlighter-rouge">raster_path = tempdir()</code> if you want to download the data into a temp folder. If not, set it to folder of preference. You can also do the same for <code class="language-plaintext highlighter-rouge">vector_output_path</code>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">raster_path_folder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tempdir</span><span class="p">()</span><span class="w"> 
 </span><span class="n">vector_output_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"~/nigeria_adm2"</span><span class="w">
@@ -15,7 +19,10 @@
 
 <h3 id="load-data-from-worldclim">Load data from worldclim</h3>
 
-<p>Use path=tempdir() if you want to download the data to a temp folder</p>
+<p>Now, we use a worlclim function called <code class="language-plaintext highlighter-rouge">worldclim_country</code>. The <code class="language-plaintext highlighter-rouge">res</code> paramater is the resolution, with valid values as 10,5,2.5 and 0.5. The <code class="language-plaintext highlighter-rouge">var</code> parameter is the variable name, with valid values as <code class="language-plaintext highlighter-rouge">tmin</code>, <code class="language-plaintext highlighter-rouge">tmax</code>, <code class="language-plaintext highlighter-rouge">tavg</code>, <code class="language-plaintext highlighter-rouge">prec</code>, <code class="language-plaintext highlighter-rouge">wind</code>,
+“vapr”, and <code class="language-plaintext highlighter-rouge">bio</code>.</p>
+
+<p>Since we chose <code class="language-plaintext highlighter-rouge">prec</code> as of precipitation, the function will return 12 layers of raster (in a raster stack), each image representing a month of precipitation in Nigeria (NGA). We later save the coordinate system of the data for later use in line 2</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">raster_stack</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">worldclim_country</span><span class="p">(</span><span class="n">country</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"NGA"</span><span class="p">,</span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">raster_path_folder</span><span class="w"> </span><span class="p">,</span><span class="n">version</span><span class="o">=</span><span class="s2">"2.1"</span><span class="p">,</span><span class="n">res</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span><span class="n">var</span><span class="o">=</span><span class="s2">"prec"</span><span class="p">)</span><span class="w">
 </span><span class="n">crs_proj</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">crs</span><span class="p">(</span><span class="n">raster_stack</span><span class="p">)</span><span class="w">
@@ -23,7 +30,7 @@
 
 <h3 id="download-the-shapefile">Download the shapefile</h3>
 
-<p>You can download data from the OCHC site. The nigeria data is avaiable <a href="https://data.humdata.org/dataset/nigeria-admin-level-2">here</a>. All we have to do is download and unzip the file :</p>
+<p>You can manually download and extract data from the OCHC site. The nigeria administrative level 2 vector data is avaiable <a href="https://data.humdata.org/dataset/nigeria-admin-level-2">here</a>. Or, you can just run these two lines :</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">download.file</span><span class="p">(</span><span class="s2">"https://data.humdata.org/dataset/aac2a1d6-36c6-4f47-beee-34415742180d/resource/d7011402-0a22-4927-82eb-1359d17ff5cd/download/nigeria_admin_level_2.zip"</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">destfile</span><span class="o">=</span><span class="n">vector_output_file</span><span class="p">)</span><span class="w">
 </span><span class="n">unzip</span><span class="p">(</span><span class="n">vector_output_file</span><span class="p">,</span><span class="w"> </span><span class="n">exdir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vector_output_path</span><span class="p">)</span><span class="w">
@@ -31,14 +38,13 @@
 
 <h3 id="read-the-downloaded-shape-file">Read the downloaded shape file</h3>
 
-<p>If we want to plot them together, we must be sure that they belong to the same coordinate system. Let’s apply the coordinate systems saved previously in <code class="language-plaintext highlighter-rouge">crs_proj</code>
-and apply it to the nigeria admin level boundaries</p>
+<p>If we want to plot them together, we must be sure that they belong to the same coordinate system. Let’s apply the coordinate systems saved previously in <code class="language-plaintext highlighter-rouge">crs_proj</code> and apply it to the nigeria admin level boundaries</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">nigeria_vector_adm2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read_sf</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="n">vector_output_path</span><span class="p">,</span><span class="s2">"/"</span><span class="p">,</span><span class="s2">"Nigeria_Admin_Level_2.shp"</span><span class="p">))</span><span class="w">
 </span><span class="n">nigeria_vector_adm2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">st_transform</span><span class="p">(</span><span class="n">nigeria_vector_adm2</span><span class="p">,</span><span class="w"> </span><span class="n">st_crs</span><span class="p">(</span><span class="n">raster_stack</span><span class="p">))</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Now, since we set the <code class="language-plaintext highlighter-rouge">var</code> parameter of the <code class="language-plaintext highlighter-rouge">worldclim_country</code> as <code class="language-plaintext highlighter-rouge">prec</code>, than we will have 12 raster inside our <code class="language-plaintext highlighter-rouge">raster_stack</code> variable. All we must do now is to set the plot to 12 subplots, using the <code class="language-plaintext highlighter-rouge">par</code> function, loop over the raster stack and plot nigeria boundaries.</p>
+<p>All we have to do now is to set the plot to 12 subplots, using the <code class="language-plaintext highlighter-rouge">par</code> function, loop over the raster stack and plot nigeria boundaries.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Set up plot area</span><span class="w">
 </span><span class="n">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">))</span><span class="w">
@@ -49,11 +55,13 @@ and apply it to the nigeria admin level boundaries</p>
   </span><span class="n">plot</span><span class="p">(</span><span class="n">st_geometry</span><span class="p">(</span><span class="n">nigeria_vector_adm2</span><span class="p">),</span><span class="n">bg</span><span class="o">=</span><span class="s1">'transparent'</span><span class="p">,</span><span class="w"> </span><span class="n">border</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"lightblue"</span><span class="p">,</span><span class="w"> </span><span class="n">add</span><span class="o">=</span><span class="nb">T</span><span class="p">)</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
-<p>Et voilà the result :</p>
+<p>And the result :</p>
 
 <p align="center">
   <img src="/img/worldclim.png" />
-</p>]]></content><author><name>Paulo Pimenta</name></author><category term="R" /><category term="Spatial data" /><summary type="html"><![CDATA[Worldclim data is a great source of environmental data opensource data.]]></summary></entry><entry><title type="html">Gender detection with Pytorch</title><link href="http://localhost:4000/posts/gender-detector-with-pytorch/" rel="alternate" type="text/html" title="Gender detection with Pytorch" /><published>2023-06-12T14:15:09+02:00</published><updated>2023-06-12T14:15:09+02:00</updated><id>http://localhost:4000/posts/gender-detector-with-pytorch</id><content type="html" xml:base="http://localhost:4000/posts/gender-detector-with-pytorch/"><![CDATA[<p>Last month I spent quite some time diving into the wonderful world of Pytorch library for deep learning. My objective is to post a series of applications with pytorch features. But for now I will focus on how to build an gender detection application with Pytorch using the webcam as input</p>
+</p>
+
+<ol class="bibliography"><li><p><span id="worldclim">1. Fick SE, Hijmans RJ. WorldClim 2: new 1-km spatial resolution climate surfaces for global land areas. <i>International Journal of Climatology</i> 2017; <b>37</b>(12): 4302–4315. DOI: https://doi.org/10.1002/joc.5086.</span></p></li></ol>]]></content><author><name>Paulo Pimenta</name></author><category term="R" /><category term="Spatial data" /><summary type="html"><![CDATA[Introduction]]></summary></entry><entry><title type="html">Gender detection with Pytorch</title><link href="http://localhost:4000/posts/gender-detector-with-pytorch/" rel="alternate" type="text/html" title="Gender detection with Pytorch" /><published>2023-06-12T14:15:09+02:00</published><updated>2023-06-12T14:15:09+02:00</updated><id>http://localhost:4000/posts/gender-detector-with-pytorch</id><content type="html" xml:base="http://localhost:4000/posts/gender-detector-with-pytorch/"><![CDATA[<p>Last month I spent quite some time diving into the wonderful world of Pytorch library for deep learning. My objective is to post a series of applications with pytorch features. But for now I will focus on how to build an gender detection application with Pytorch using the webcam as input</p>
 
 <h3 id="get-the-dataset-first-but-which-one-and-why-">Get the dataset first. But which one and why ?</h3>
 
