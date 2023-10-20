@@ -44,7 +44,7 @@
   
   .content .detail h2 span {
 	font-size: 0.7em;
-	color: #03a9f4;
+	color: #1e7fac;
 	font-weight: bold;
   }
   
@@ -75,7 +75,7 @@
   }
   
   .sci li a:hover {
-	background: #03a9f4;
+	background: #1e7fac;
 	color: #fff;
   }
   

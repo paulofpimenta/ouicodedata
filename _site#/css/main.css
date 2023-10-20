@@ -12,7 +12,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 16px/1.5 "Lucida Grande", Arial;
+  font: 400 16px/1.5 "Lucida Grande", monospace;
   color: #3d4144;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
@@ -297,6 +297,322 @@ pre > code {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(15px);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  font-family: "Lucida Grande", monospace;
+}
+
+/**
+ * Icons
+ */
+.icon > svg {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+.icon > svg path {
+  fill: #828282;
+}
+
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Basic styling
+ */
+body {
+  font: 400 16px/1.5 "Lucida Grande", monospace;
+  color: #3d4144;
+  background-color: #fdfdfd;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+
+hr {
+  border-bottom: 1px dashed #cfcfcf;
+  margin: 30px 0;
+}
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+.highlight {
+  margin-bottom: 15px;
+}
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+}
+
+/**
+ * Figures
+ */
+figure > img {
+  display: block;
+}
+
+figcaption {
+  font-size: 14px;
+}
+
+/**
+ * Lists
+ */
+ul, ol {
+  margin-left: 30px;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+/**
+ * Links
+ */
+a {
+  color: #1e7fac;
+  text-decoration: none;
+}
+a:visited {
+  color: #1e7fac;
+}
+a:hover {
+  color: #1e7fac;
+  text-decoration: underline;
+}
+
+/**
+ * Post-contents
+ */
+.post-news {
+  background-color: white;
+  border: 1px solid #d9d9d9;
+  overflow: auto;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.post-contents {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #d9d9d9;
+  overflow: auto;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+.button {
+  text-align: center;
+  margin: auto 4px auto 4px;
+  text-decoration: none;
+  background-color: white;
+}
+.button:hover {
+  text-decoration: none;
+}
+
+.readmore-button {
+  width: 150px;
+  font-size: 22px;
+  color: #1e7fac;
+  border: 2px solid #1e7fac;
+  padding: 8px;
+  border-radius: 2px;
+}
+.readmore-button:hover {
+  background-color: #1e7fac;
+  color: white !important;
+  transition: 0.8s;
+}
+
+.page-button {
+  font-size: 18px;
+  color: #1e7fac;
+  border: 2px solid #1e7fac;
+  padding: 8px;
+  border-radius: 2px;
+}
+.page-button:hover {
+  background-color: #1e7fac;
+  color: white !important;
+  transition: 0.8s;
+}
+
+.current-page-button {
+  font-size: 18px;
+  color: white !important;
+  border: 2px solid #1e7fac;
+  padding: 8px;
+  border-radius: 2px;
+  background-color: #1e7fac;
+  pointer-events: none;
+}
+
+.header-nav {
+  text-align: center;
+  float: none;
+  margin: 0;
+}
+
+.navbar-custom {
+  background: #1a1a1a;
+}
+
+ul.nav a:hover {
+  color: #fff !important;
+  font-weight: 300;
+}
+
+.nav-button {
+  padding: 10px;
+  font-size: 18px;
+  border: 5px solid rgb(255, 255, 255);
+}
+.nav-button:hover {
+  background-color: white !important;
+  margin: auto 4px auto 4px;
+  color: #1e7fac !important;
+  border-bottom: 5px solid #1e7fac;
+  transition: 0.8s;
+}
+.nav-button:visited {
+  background-color: white !important;
+}
+
+.social-network-list {
+  margin-left: 0;
+  display: inline-block;
+}
+
+.social-network {
+  height: 40px;
+  width: 60px;
+  text-align: center;
+}
+.social-network:hover {
+  opacity: 0.75;
+  transition: opacity 0.8s;
+}
+
+.progress-bar-skill {
+  background-color: #1e7fac;
+}
+
+.divider {
+  border: 0.5px solid #bfbfbf;
+}
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  color: #828282;
+  border-left: 4px solid #e8e8e8;
+  padding-left: 15px;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
+}
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+  font-size: 15px;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  background-color: #eef;
+}
+
+code {
+  padding: 1px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+}
+pre > code {
+  border: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/**
+ * Wrapper
+ */
+.wrapper {
+  max-width: -webkit-calc(800px - (30px * 2));
+  max-width: calc(800px - 30px * 2);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+@media screen and (max-width: 800px) {
+  .wrapper {
+    max-width: -webkit-calc(800px - (30px));
+    max-width: calc(800px - (30px));
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+/**
+ * Clearfix
+ */
+.footer-col-wrapper:after, .wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/**
+ * CV
+ */
+.post-contents-shadow {
+  padding: 15px;
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  font-family: "Lucida Grande", monospace;
 }
 
 /**
@@ -398,8 +714,9 @@ pre > code {
 .site-footer {
   border-top: 1px solid #e8e8e8;
   width: 100%;
-  position: absolute;
-  z-index: -100;
+  position: relative;
+  bottom: 0;
+  z-index: 100;
 }
 
 .footer-heading {
@@ -527,7 +844,7 @@ pre > code {
   margin-bottom: 30px;
 }
 .post-content h2 {
-  font-size: 32px;
+  font-size: 30px;
 }
 @media screen and (max-width: 800px) {
   .post-content h2 {
@@ -535,7 +852,7 @@ pre > code {
   }
 }
 .post-content h3 {
-  font-size: 26px;
+  font-size: 22px;
 }
 @media screen and (max-width: 800px) {
   .post-content h3 {
@@ -551,8 +868,9 @@ pre > code {
   }
 }
 .post-content p {
-  font-family: "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+  font-family: "Lucida Grande", monospace;
   line-height: 1.5;
+  font-size: 16px;
 }
 
 .mbtablestyle {

@@ -17,8 +17,8 @@
 {% for count_and_tag in counts_and_tags_sorted %}
     {% assign tag = count_and_tag | split:":::" | last | strip %}
     {% assign count = site.tags[tag].size %}
-    <a href="/tag_index/#{{ tag | slugify }}" class="btn btn-link shadow-none text-decoration-none" style="padding: .375rem 0rem 0.375rem .75rem;box-shadow: none;">
-        <span class="fa fa-tag" aria-hidden="true"></span> {{ tag }} ({{ count }})
+    <a href="/tag_index/#{{ tag | slugify }}" class="btn btn-link shadow-none text-decoration-none" style="padding-bottom: 0px;">
+        <p class="fa fa-tag" aria-hidden="true"></p> {{ tag }} ({{ count }})
     </a> <br/>
 {% endfor %}
 
