@@ -10,14 +10,14 @@ tags:
 
 ### Introduction
 
-Worldclim data is a great source of environmental data opensource data. Its a database of high spatial resolution global weather and climate data. Worldclim {% cite worldclim %} is in its version 2.1 and it has climate data from 1970 to 2000. Containing several bioclimatic variables derived from monthly temperatre and rainfall values, the data is usually applied to ecology and modelling techniques.Althought you can download all the data [here](https://worldclim.org/data/index.html), Worldclim has developed a `R` package to easly access its data with few lines of code.
+Worldclim data is a great source of environmental data opensource data. Its a database of high spatial resolution global weather and climate data. Worldclim {% cite worldclim %} is in its version 2.1 and it has climate data from 1970 to 2000. Containing several bioclimatic variables derived from monthly temperatre and rainfall values, the data is usually applied to ecology and modelling techniques.Althought you can download all the data [here](https://worldclim.org/data/index.html), Worldclim data can also be easy downloaded using `raster` package with few lines of code.
 
-The package, however, will soon be deprecated due to the [retirement of rgdal, rgeos and maptools](https://r-spatial.org/r/2022/04/12/evolution.html). Hopefully, Worldclim is still easlly acessible, and I will show you how. For this post, we will focus on how to extract and plot data from Worldclim, focusing on preciptation raster in Nigeria
+This approach will, however , be soon be deprecated due to the [retirement of rgdal, rgeos and maptools](https://r-spatial.org/r/2022/04/12/evolution.html). Hopefully, Worldclim is still easlly acessible. For this post, we will focus on how to extract and plot data from Worldclim, focusing on preciptation raster in Nigeria
 
 
-### Worlclim package is dead...Long live to Worlclim package !
+### The right way
 
-The R API allows any user with litte experience with R to quickly acess a large set of raster files containing many environmental data. With the deprecation of the old version, the new version is now part of the [geodata](https://cran.r-project.org/web/packages/geodata/geodata.pdf) package. Depending on your R versiom, you might still be able to run the old version, but you find some warnings. Plus, it is better to get used to the new practices of spatial data manipulation in `R`. Let's start !
+Any user with litte experience with R my quickly acess the worldclim large set of raster files containing many environmental data. With the deprecation `rdal` and others, wordclim is managed by the [geodata](https://cran.r-project.org/web/packages/geodata/geodata.pdf) package. Depending on your R versiom, you might still be able to run `raster` and `rgal` packages, but its very likelly will you find some warnings. Plus, it is better to get used to the new practices of spatial data manipulation in `R`, that is, the use of the `sf` package. Let's start !
 
 ### Set raster and vector path
 
@@ -56,7 +56,7 @@ unzip(vector_output_file, exdir = vector_output_path)
 If we want to plot them together, we must be sure that they belong to the same coordinate system. Let's apply the coordinate systems saved previously in `crs_proj` and apply it to the nigeria admin level boundaries
 
 ```r
-nigeria_vector_adm2 = read_sf(paste0(vector_output_path,"/","Nigeria_Admin_Level_2.shp"))
+nigeria_vector_adm2 <- read_sf(paste0(vector_output_path,"/","Nigeria_Admin_Level_2.shp"))
 nigeria_vector_adm2 <- st_transform(nigeria_vector_adm2, st_crs(raster_stack))
 ```
 
@@ -67,8 +67,8 @@ All we have to do now is to set the plot to 12 subplots, using the `par` functio
 par(mfrow=c(3,4))
 
 # Loop layers and plot
-for (ii in 1:length(raster_stack[1])){
-  plot(raster_stack[[ii]], main=names(raster_stack[[ii]]))
+for (i in 1:length(raster_stack[1])){
+  plot(raster_stack[[i]], main=names(raster_stack[[i]]))
   plot(st_geometry(nigeria_vector_adm2),bg='transparent', border = "lightblue", add=T)
 }
 ```
