@@ -235,7 +235,7 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
-
+    text-align: justify;
     h2 {
         font-size: 30px;
 
@@ -263,6 +263,7 @@
         font-family: $base-font-family;
 	    line-height: 1.5;
         font-size: 16px;
+        text-align: justify !important;
 
     }
 }
