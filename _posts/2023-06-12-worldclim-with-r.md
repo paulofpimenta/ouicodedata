@@ -10,7 +10,7 @@ tags:
 
 ### Introduction
 
-Worldclim data is a great source of environmental data opensource data. Its a database of high spatial resolution global weather and climate data. Worldclim {% cite worldclim %} is in its version 2.1 and it has climate data from 1970 to 2000. Containing several bioclimatic variables derived from monthly temperatre and rainfall values, the data is usually applied to ecology and modelling techniques.Althought you can download all the data [here](https://worldclim.org/data/index.html), Worldclim data can also be easy downloaded using `raster` package with few lines of code.
+Worldclim data is a great source of environmental data opensource data. Its a database of high spatial resolution global weather and climate data. Worldclim {% cite worldclim %} is in its version 2.1 and it has climate data from 1970 to 2000. Containing several bioclimatic variables derived from monthly temperatre and rainfall values, the data is usually applied to ecology and modelling techniques. Although you can download all the data [here](https://worldclim.org/data/index.html), Worldclim data can also be easily downloaded using `raster` package with few lines of code.
 
 This approach will, however , be soon be deprecated due to the [retirement of rgdal, rgeos and maptools](https://r-spatial.org/r/2022/04/12/evolution.html). Hopefully, Worldclim is still easlly acessible. For this post, we will focus on how to extract and plot data from Worldclim, focusing on preciptation raster in Nigeria
 
