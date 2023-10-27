@@ -10,9 +10,9 @@ tags:
 
 ### Introduction
 
-Worldclim data is a great source of environmental data opensource data. Its a database of high spatial resolution global weather and climate data. Worldclim {% cite worldclim %} is in its version 2.1 and it has climate data from 1970 to 2000. Containing several bioclimatic variables derived from monthly temperatre and rainfall values, the data is usually applied to ecology and modelling techniques. Although you can download all the data [here](https://worldclim.org/data/index.html), Worldclim data can also be easily downloaded using `raster` package with few lines of code.
+Worldclim data is a great source of environmental data opensource data. Its a database of high spatial resolution global weather and climate data. Worldclim {% cite worldclim %} is in its version 2.1 and it has climate data from 1970 to 2000. Containing several bioclimatic variables derived from monthly temperatre and rainfall values, the data is usually applied to ecology and modelling techniques. Although you can download all the data [here](https://worldclim.org/data/index.html), Worldclim data can also be easily downloaded using the  `raster` package with `R` using few lines of code.
 
-This approach will, however , be soon be deprecated due to the [retirement of rgdal, rgeos and maptools](https://r-spatial.org/r/2022/04/12/evolution.html). Hopefully, Worldclim is still easlly acessible. For this post, we will focus on how to extract and plot data from Worldclim, focusing on preciptation raster in Nigeria
+This approach will, however , soon be deprecated due to the [retirement of rgdal, rgeos and maptools](https://r-spatial.org/r/2022/04/12/evolution.html). Hopefully, Worldclim is still easlly acessible. For this post, we will focus on how to extract and plot data from Worldclim, focusing on preciptation raster in Nigeria
 
 
 ### The right way
@@ -32,9 +32,9 @@ vector_output_file = paste0(vector_output_path, ".zip")
 ### Load data from worldclim
 
 Now, we use a worlclim function called `worldclim_country`. The `res` paramater is the resolution, with valid values as 10,5,2.5 and 0.5. The `var` parameter is the variable name, with valid values as `tmin`, `tmax`, `tavg`, `prec`, `wind`,
-"vapr", and `bio`. 
+`vapr` and `bio`. 
 
-Since we chose `prec` as of precipitation, the function will return 12 layers of raster (in a raster stack), each image representing a month of precipitation in Nigeria (NGA). We later save the coordinate system of the data for later use in line 2
+Using the code bellow, we chose `prec` since we are interested in precipitation data. Thus, the `worldclim_country` function will return 12 layers of raster (in a raster stack), each image representing a month of precipitation in Nigeria (NGA). We later save the coordinate system of the data for later use in line 2
 
 ```r
 raster_stack <- worldclim_country(country = "NGA",path = raster_path_folder ,version="2.1",res=0.5,var="prec")

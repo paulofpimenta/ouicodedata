@@ -842,7 +842,6 @@ pre > code {
 
 .post-content {
   margin-bottom: 30px;
-  text-align: justify;
 }
 .post-content h2 {
   font-size: 30px;
@@ -872,7 +871,6 @@ pre > code {
   font-family: "Lucida Grande", monospace;
   line-height: 1.5;
   font-size: 16px;
-  text-align: justify !important;
 }
 
 .mbtablestyle {
