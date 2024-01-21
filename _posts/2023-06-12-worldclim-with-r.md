@@ -75,7 +75,7 @@ for (i in 1:length(raster_stack[1])){
 And the result :
 
 <p align="center">
-  <img src="/img/worldclim.png">
+  <img src="/img/posts/world_clim/worldclim.png">
 </p>
 
 {% bibliography --cited %}
