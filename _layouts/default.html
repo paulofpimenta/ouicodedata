@@ -3,13 +3,13 @@
   
   {% include head.html %}
   {% include analytics.html %}
-  <body>
+  <body style="min-height:100%;">
     <!--Header-->
     {% include header.html %}
     
     <!--Content-->
     <div class="page-content">
-      <div class="container">
+      <div class="container" style="min-height: 100vh;" >  <!--Always force the content to occupy the max height of the page-->
         {{ content }}
       </div>
       <div class="clearfix">
