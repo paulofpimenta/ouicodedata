@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Graph Analysis with Pytorch and Networkx"
-date:   2024-02-11 10:51:42 +0200
+date:   2024-02-07 20:19:16 +0200
 tags:
 - Graph
 - Data visualization
