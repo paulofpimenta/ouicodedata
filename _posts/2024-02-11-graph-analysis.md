@@ -8,4 +8,4 @@ tags:
 ---
 
 
-This is the start of the post. You can find a colab of this code here [here](https://colab.research.google.com/drive/1HLBVK9WFdEdbOjg4lmm4SiBdaqBx2boL?hl=fr%2F)
+This is the start of the post. You can find a colab of this code [here](https://colab.research.google.com/drive/1HLBVK9WFdEdbOjg4lmm4SiBdaqBx2boL?hl=fr%2F)
