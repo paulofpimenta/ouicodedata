@@ -177,7 +177,9 @@ Low closeness centrality means that a node is directly connected (or “just one
 
 ### Calculating indicators of centrality
 
-Hopefullly, we won't have to implement by hand the algorithms shown above. The great python package `Networkx` has ready-to-use implemetations of these and many other algorithms. We want to generate one a plot for each centrity measure, so let's define a helper function. The fucntion will take two arguments : the first is one of the three centrality measures exaplained before and the second, the name of centrality we want to show in the plot:
+Hopefullly, we won't have to implement by hand the algorithms shown above. The great python package `Networkx` has ready-to-use implemetations of these and many other algorithms.
+
+For each centrality measure discussed, we will compute and them in a plot. So we first define a helper function that will take two arguments : the desired centrality measure and the name of centrality label we want to show in the plot:
 
 ```python
 def generate_centrality_df(centrality_type,graph,plot_col_name):
