@@ -10,6 +10,7 @@ pre[class='highlight'] {
     border-radius: 0.4em;
     /*Atom background 2*/
     /* background-color:#31363F; */
+    
 }
 pre code {
     /*Sublime 2 background*/
@@ -20,6 +21,7 @@ pre code {
     background-color:#3A3C42 !important;
     /*Atom background 2*/
     /* background-color:#31363F; */
+
 }
 .highlight .gh {
   color: #999999;
