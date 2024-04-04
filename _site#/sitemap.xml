@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  
+  <url>
+    <loc>https://paulofpimenta.github.io/ouicodedata//posts/graph-analysis/</loc>
+    
+      <lastmod>2024-02-07</lastmod>
+    
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://paulofpimenta.github.io/ouicodedata//posts/bicycle-accidents-in-france/</loc>
+    
+      <lastmod>2024-01-10</lastmod>
+    
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://paulofpimenta.github.io/ouicodedata//posts/worldclim-with-r/</loc>
+    
+      <lastmod>2023-10-13</lastmod>
+    
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://paulofpimenta.github.io/ouicodedata//posts/gender-detector-with-pytorch/</loc>
+    
+      <lastmod>2023-06-12</lastmod>
+    
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <url>
+      <loc>https://paulofpimenta.github.io/ouicodedata//sitemap.xml</loc>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+    
+  
+    
+  
+    
+  
+
+</urlset>

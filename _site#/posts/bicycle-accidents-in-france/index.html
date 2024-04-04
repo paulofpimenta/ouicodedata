@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    
+      Bicycle Accidents in Paris
+    
+  </title>
+
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!--Flickity -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- Fontsawesome -->
+  <link rel="stylesheet" href="/assets/font-awesome/css/all.css">
+  <link rel="stylesheet" href="/assets/font-awesome/css/v4-shims.css">
+
+  <!-- Social icons -->
+  <link rel="stylesheet" href="/static/css/social-icons.css">
+  
+
+  <meta name="description" content="This is the start of the post. You can find a deployed dashboard here">
+
+  <link rel="canonical" href="https://paulofpimenta.github.io/ouicodedata//posts/bicycle-accidents-in-france/">
+  <link rel="alternate" type="application/rss+xml" title="OuiCodeData" href="https://paulofpimenta.github.io/ouicodedata//feed.xml">
+
+  <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|Roboto+Condensed:700&subset=latin' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/assets/main.css">
+
+  <meta property="og:url" content="https://paulofpimenta.github.io/ouicodedata//posts/bicycle-accidents-in-france/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bicycle Accidents in Paris">
+  <meta property="og:description" content="Bicycle Accidents in Paris">
+  <meta property="og:site_name" content="OuiCodeData">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://paulofpimenta.github.io/ouicodedata//posts/bicycle-accidents-in-france/">
+  <meta name="twitter:title" content="Bicycle Accidents in Paris">
+  <meta name="twitter:description" content="Bicycle Accidents in Paris">
+
+  
+    <meta property="og:image" content="https://paulofpimenta.github.io/ouicodedata//assets/images/bike.jpg">
+    <meta name="twitter:image" content="https://paulofpimenta.github.io/ouicodedata//assets/images/bike.jpg">
+  
+
+
+</head>
+
+
+  <body>
+    <div id="shadow"></div>
+
+      <header class="main-header content-wrapper">
+
+  <input type="checkbox" id="menu-checkbox" />
+
+  <nav class="center-wrapper nav-main">
+
+    <a class="blog-logo" href="/">OuiCodeData</a>
+
+    
+      
+        <a href="/about/">About</a>
+      
+    
+      
+    
+      
+        <a href="/posts/">Blog</a>
+      
+    
+      
+        <a href="/books/">Favorite books</a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <a href="/portfolio/">Portfolio</a>
+      
+    
+      
+        <a href="/resume/">Resume</a>
+      
+    
+      
+    
+      
+    
+
+
+    <label for="menu-checkbox" class="toggle-button" data-open="☰" data-close="☰" onclick></label>
+  </nav>
+
+</header>
+
+      
+  <aside class="sidebar" role="note" style="background-image: url(/assets/images/bike.jpg)">  
+
+
+  <div class="cover">
+
+    <div class="cover-text">
+      <div class="heading">
+
+        
+          
+            <a href="/posts/#spatial data">spatial data</a>
+          
+        
+      </div>
+
+      <p>
+        
+          Bicycle Accidents in Paris
+        
+        
+      </p>
+
+    </div>
+
+  </div>
+
+  <div id="switcher"></div>
+</aside>
+
+
+    <main class="content-wrapper blog-content">
+      <!-- Vis network -->
+<script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
+<!-- Tom select -->
+<link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+
+<!-- MathJax-->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<article class="post">
+
+  <h1 class="post-title">Bicycle Accidents in Paris</h1>
+
+  <p class="post-meta">
+    <time datetime="2024-01-10">10-01-2024</time>
+
+    
+      &nbsp;/&nbsp;
+      <span>Paulo Pimenta</span>
+    
+  </p>
+
+  <div class="post-content">
+
+    <p>This is the start of the post. You can find a deployed dashboard <a href="https://app2.ouicodedata.com">here</a></p>
+
+
+    <div class="post-links">
+      
+        <a class="link-to-post" href="/posts/graph-analysis/">
+          <span class="link-to-post__next">&#10535; &nbsp;Next post</span>
+          <span class="link-to-post__title">Unleashing the power of graph analysis with Networkx, NzViz and PyViz</span>
+        </a>
+      
+
+      
+        <a class="link-to-post" href="/posts/worldclim-with-r/">
+          <span class="link-to-post__prev">&#10535; &nbsp;Previous post</span>
+          <span class="link-to-post__title">Worldclim data with R: the right way</span>
+        </a>
+      
+    </div>
+
+  </div>
+
+</article>
+
+    </main>
+
+    <footer class="blog-footer content-wrapper">
+  <p>&copy; <span class="full-year"></span> OuiCodeData</p>
+</footer>
+<script src="/assets/js/scripts.js"></script>
+
+
+  </body>
+</html>

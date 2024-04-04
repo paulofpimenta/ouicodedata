@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    
+      Gender detection with Pytorch
+    
+  </title>
+
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!--Flickity -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- Fontsawesome -->
+  <link rel="stylesheet" href="/assets/font-awesome/css/all.css">
+  <link rel="stylesheet" href="/assets/font-awesome/css/v4-shims.css">
+
+  <!-- Social icons -->
+  <link rel="stylesheet" href="/static/css/social-icons.css">
+  
+
+  <meta name="description" content="Last month I spent quite some time diving into the wonderful world of Pytorch library for deep learning. My objective is to post a series of applications wit...">
+
+  <link rel="canonical" href="https://paulofpimenta.github.io/ouicodedata//posts/gender-detector-with-pytorch/">
+  <link rel="alternate" type="application/rss+xml" title="OuiCodeData" href="https://paulofpimenta.github.io/ouicodedata//feed.xml">
+
+  <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|Roboto+Condensed:700&subset=latin' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/assets/main.css">
+
+  <meta property="og:url" content="https://paulofpimenta.github.io/ouicodedata//posts/gender-detector-with-pytorch/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gender detection with Pytorch">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="OuiCodeData">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://paulofpimenta.github.io/ouicodedata//posts/gender-detector-with-pytorch/">
+  <meta name="twitter:title" content="Gender detection with Pytorch">
+  <meta name="twitter:description" content="">
+
+  
+    <meta property="og:image" content="https://paulofpimenta.github.io/ouicodedata//assets/images/bg.svg">
+    <meta name="twitter:image" content="https://paulofpimenta.github.io/ouicodedata//assets/images/bg.svg">
+  
+
+
+</head>
+
+
+  <body>
+    <div id="shadow"></div>
+
+      <header class="main-header content-wrapper">
+
+  <input type="checkbox" id="menu-checkbox" />
+
+  <nav class="center-wrapper nav-main">
+
+    <a class="blog-logo" href="/">OuiCodeData</a>
+
+    
+      
+        <a href="/about/">About</a>
+      
+    
+      
+    
+      
+        <a href="/posts/">Blog</a>
+      
+    
+      
+        <a href="/books/">Favorite books</a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <a href="/portfolio/">Portfolio</a>
+      
+    
+      
+        <a href="/resume/">Resume</a>
+      
+    
+      
+    
+      
+    
+
+
+    <label for="menu-checkbox" class="toggle-button" data-open="☰" data-close="☰" onclick></label>
+  </nav>
+
+</header>
+
+      
+  <aside class="sidebar" role="note" style="background-image: url(/assets/images/bg.svg)">
+
+
+  <div class="cover">
+
+    <div class="cover-text">
+      <div class="heading">
+
+        
+          
+            <a href="/posts/#deep learning">deep learning</a>
+          
+        
+      </div>
+
+      <p>
+        
+        
+      </p>
+
+    </div>
+
+  </div>
+
+  <div id="switcher"></div>
+</aside>
+
+
+    <main class="content-wrapper blog-content">
+      <!-- Vis network -->
+<script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
+<!-- Tom select -->
+<link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+
+<!-- MathJax-->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<article class="post">
+
+  <h1 class="post-title">Gender detection with Pytorch</h1>
+
+  <p class="post-meta">
+    <time datetime="2023-06-12">12-06-2023</time>
+
+    
+  </p>
+
+  <div class="post-content">
+
+    <p>Last month I spent quite some time diving into the wonderful world of Pytorch library for deep learning. My objective is to post a series of applications with pytorch features. But for now I will focus on how to build an gender detection application with Pytorch using the webcam as input</p>
+
+<h3 id="get-the-dataset-first-but-which-one-and-why-">Get the dataset first. But which one and why ?</h3>
+
+<p>It is not difficult to find some available datasets containing human faces. The sources are numerous : The <a href="https://susanqq.github.io/UTKFace/">UTKFace</a>; the famous <a href="https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html">CelebA</a> database with more than 200 thousand faces of celebrities; <a href="https://github.com/microsoft/DigiFace1M">DigiFace</a> with its 1.2 million free from privacy violations images, and so on. A good list can be found <a href="https://datagen.tech/blog/face-datasets/">here</a>. In this post, I decided to work with a dataset this dataset <a href="https://www.kaggle.com/datasets/ashwingupta3012/male-and-female-faces-dataset/data">here</a> for three reasons. The first is that this dataset, as many others, has  with a public domain license, but is also very used in kaggle notebooks. The second reason, is how the data is presented and organized.  The other datasets have either spreadsheets with annotations containing name files and the classes thar each file belong to, or, in some cases, classes are not divided by folders. Since my object is to load data from custom dataset (next section :-)), I wanted a dataset that was more structured into folders and classes. And the final reason is the image quality : this dataset does not contain high quality images. Which is is quite well, considering that our input images will come from web cam, that usually have low resolution images. Thus, in this case, a model trained with nice and artistic images may not reflect the context of the application.</p>
+
+<h3 id="how-to-work-with-data-with-pytorch">How to work with data with Pytorch</h3>
+
+<p>Pytorch library is a very rich framework with libraries that fit your need according to the type of problem you want to solve. For instance,<code class="language-plaintext highlighter-rouge">Torchaudio</code> for audio recognition, <code class="language-plaintext highlighter-rouge">Torchvision</code> for images, <code class="language-plaintext highlighter-rouge">Torchtext</code>for NLP, <code class="language-plaintext highlighter-rouge">Torchgeo</code> for satellite images, and so on. Since our problem is image classification, we will use the <code class="language-plaintext highlighter-rouge">Torchvision</code> library. This library has has a very straight forward (but flexible) process about reading data: your first (1) create your dataset, than you transform (2) the data, augment (3) it if necessary, and finally, add it to a dataloader (4) before training. This process can be illustrated by the image bellow:</p>
+
+<p align="center">
+  <img src="/assets/images/posts/gender_detect/basic_dataloader_pipeline.png" />
+  Source https://arcwiki.rs.gsu.edu
+</p>
+
+<p>Before we talk about how to load data with Pytorch, I will briefly present the application and the neural network architecture used in this work</p>
+
+<h3 id="application-architecture">Application architecture</h3>
+
+<p>As stated before, the idea is to have a web application that takes live screenshots from the user’s webcam performs live predictions as a result. The application was built according to the following schema :</p>
+
+<p align="center">
+  <img src="/assets/images/posts/gender_detect/app1_architecture.png" width="500" />
+  <p align="center"><strong>Application main architecture</strong></p>
+</p>
+
+<p>In this post, we will focus only on the Pytorch side, which is the aim of this post. However, it is import to keep in mind that models applied to real cases might suffer from some sort of technical limitation. These limitations include, but not limited to, poor infrastructure resources, nature of training data, model complexity or even, deployment issues. We will come to that later</p>
+
+<h3 id="neural-network-architecture">Neural network architecture</h3>
+
+<p>The architecture of a neural network is core of deep learning application, since it can provide the most optimized way to deal if the data thought the many layers of input neurons. Our architecture is the same used in <a class="citation" href="#Levi2015AgeAG">(Levi and Hassner, 2015)</a></p>
+
+<h3 id="building-your-custom-set">Building your custom set</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Torchvision</code> is a package in the PyTorch library containing computer-vision models, datasets, and image transformations. A famous dataset in the domain of Machine Learning (the MNIST) dataset, could be easily load like this :</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">torchvision</span>
+<span class="kn">import</span> <span class="nn">torchvision.datasets</span> <span class="k">as</span> <span class="n">datasets</span>
+
+<span class="c1"># Load train set
+</span><span class="n">mnist_trainset</span> <span class="o">=</span> <span class="n">datasets</span><span class="p">.</span><span class="n">MNIST</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s">'./data'</span><span class="p">,</span> <span class="n">train</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+<span class="c1"># Load test set
+</span><span class="n">mnist_testset</span> <span class="o">=</span> <span class="n">datasets</span><span class="p">.</span><span class="n">MNIST</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s">'./data'</span><span class="p">,</span> <span class="n">train</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Notice that <code class="language-plaintext highlighter-rouge">datasets.MNIST</code> is already provided out of the box to us. But in real data problems, that is usually not the case. Thus we will have to create our own datataset. But, as I said, Pytorch makes it quite easy :-)</p>
+
+<p>In order to create your own data set, you must create a class that inhertis the <code class="language-plaintext highlighter-rouge">torch.utils.data.Dataset</code> abstract class. Our custom dataset class must also override the methods <code class="language-plaintext highlighter-rouge">__len__</code>  and <code class="language-plaintext highlighter-rouge">__getitem__</code>. They are respectively responsible for returning the size of the dataset and provide support for the indexing samples.</p>
+
+<p>Let’s create our custom dataset called GenderDataSet as follows :</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">GenderDataset</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image_paths</span><span class="p">,</span> <span class="n">classes</span><span class="p">,</span><span class="n">transform</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">image_paths</span> <span class="o">=</span> <span class="n">image_paths</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">transform</span> <span class="o">=</span> <span class="n">transform</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">classes</span> <span class="o">=</span> <span class="n">classes</span>
+
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">image_paths</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+        <span class="c1"># Select images by path and indexes
+</span>        <span class="n">image_filepath</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">image_paths</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">read_image</span><span class="p">(</span><span class="n">image_filepath</span><span class="p">)</span>
+        <span class="c1"># Create dictionary for class indexes
+</span>        <span class="n">idx_to_class</span> <span class="o">=</span>  <span class="p">{</span><span class="n">i</span><span class="p">:</span><span class="n">j</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">classes</span><span class="p">)}</span>
+        <span class="n">class_to_idx</span> <span class="o">=</span>  <span class="p">{</span><span class="n">value</span><span class="p">:</span><span class="n">key</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span><span class="n">value</span> <span class="ow">in</span> <span class="n">idx_to_class</span><span class="p">.</span><span class="n">items</span><span class="p">()}</span>
+        <span class="c1"># Replace split char by '/' on unix systems
+</span>        <span class="n">label</span> <span class="o">=</span> <span class="n">image_filepath</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">'</span><span class="se">\\</span><span class="s">'</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">label</span> <span class="o">=</span> <span class="n">class_to_idx</span><span class="p">[</span><span class="n">label</span><span class="p">]</span>
+        <span class="c1"># Appy transform if there any is provided
+</span>        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">transform</span><span class="p">:</span>
+            <span class="n">image</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+        <span class="c1"># Return image and its label
+</span>        <span class="k">return</span> <span class="n">image</span><span class="p">,</span> <span class="n">label</span>
+</code></pre></div></div>
+<p>When we instantiate our dataset, we added 3 more class attributes : <code class="language-plaintext highlighter-rouge">image_paths</code>, <code class="language-plaintext highlighter-rouge">classes</code> and <code class="language-plaintext highlighter-rouge">transform</code>. Remember about why I chose this dataset ? Since the dataset contains folders per class, and each class has a <code class="language-plaintext highlighter-rouge">train</code> and <code class="language-plaintext highlighter-rouge">test</code> folder, all we have to do is to point where the train and test folders are. That implementation will take care of of rest, for each class present in the root folder :-)</p>
+
+<p>So we instantiate the model <a class="citation" href="#ruby">(Flanagan and Matsumoto, 2008)</a>.</p>
+
+<p>#  Instantiating model
+    conv_net = ConvNet()
+    model = ConvolutionalNeuralNet(conv_net)
+    print(conv_net)</p>
+
+<h4 id="references">References</h4>
+
+<ol class="bibliography"><li><p><span id="ruby">Flanagan, D., Matsumoto, Y., 2008. The Ruby Programming Language. O’Reilly Media.</span></p></li>
+<li><p><span id="Levi2015AgeAG">Levi, G., Hassner, T., 2015. Age and gender classification using convolutional neural networks. 2015 IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW) 34–42.</span></p></li></ol>
+
+
+
+    <div class="post-links">
+      
+        <a class="link-to-post" href="/posts/worldclim-with-r/">
+          <span class="link-to-post__next">&#10535; &nbsp;Next post</span>
+          <span class="link-to-post__title">Worldclim data with R: the right way</span>
+        </a>
+      
+
+      
+    </div>
+
+  </div>
+
+</article>
+
+    </main>
+
+    <footer class="blog-footer content-wrapper">
+  <p>&copy; <span class="full-year"></span> OuiCodeData</p>
+</footer>
+<script src="/assets/js/scripts.js"></script>
+
+
+  </body>
+</html>
