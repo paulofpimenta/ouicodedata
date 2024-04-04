@@ -1,9 +1,3 @@
-PATH
-  remote: .
-  specs:
-    voyager (1.0.0)
-      jekyll (>= 3.5, < 5.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -109,12 +103,10 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  bundler
   jekyll-gist
   jekyll-paginate
   jekyll-scholar
   jekyll-seo-tag
-  voyager!
   webrick (~> 1.7)
 
 BUNDLED WITH
