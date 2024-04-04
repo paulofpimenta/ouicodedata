@@ -262,4 +262,6 @@ Plot an interactive graph with Pyviz
 
 <br />
 
+### References
+
 {% bibliography --cited %}

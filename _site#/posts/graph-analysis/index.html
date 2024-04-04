@@ -159,11 +159,11 @@
 
   <div class="post-content" itemprop="articleBody">
     <h3 id="introduction">Introduction</h3>
-<p>Graph netowrks have got a lot of attention in the past decade. Almost every type of data can be represented as a graph. In that sense, newtwork analysis can be a powerfull and usesuful approach as an exloratory data analysis approach to graph neural networks (GNN). This post will focus on Network Analysis of a real data network presented by <a class="citation" href="#valentin2023">[1]</a>. In the next section, I will make a brief introduction about the dataset and the context on which it was produced before we dive into the graph analysis part</p>
+<p>Graph netowrks have got a lot of attention in the past decade. Almost every type of data can be represented as a graph. In that sense, newtwork analysis can be a powerfull and usesuful approach as an exloratory data analysis approach to graph neural networks (GNN). This post will focus on Network Analysis of a real data network presented by <a class="citation" href="#valentin2023">(Valentin et al., n.d.)</a>. In the next section, I will make a brief introduction about the dataset and the context on which it was produced before we dive into the graph analysis part</p>
 
 <h3 id="disease-outbreak">Disease outbreak</h3>
 
-<p>In the domain of epidemiology, an outbreak is defined as a sudden increase in the disease frequency, related to time, place, and observed population <a class="citation" href="#outbreak">[2]</a>
+<p>In the domain of epidemiology, an outbreak is defined as a sudden increase in the disease frequency, related to time, place, and observed population <a class="citation" href="#outbreak">(Reintjes and Zanuzdana, 2009)</a>
 Deasease outbreaks are usually reported by agencies that are spread around the globe. Thus, these agencies play a key role to minimize effects of any epidemics, , since if outbreak events are reported early, govermantal organizations may act in time to avoid the rapid spread rate of a possible infectious deasese.An agency must declares and event when an alert is triggered and confirmed by local authorities. So the presence of agencies in all geographical levels (local, regional and global) is essential to stop an eventual epidemic. In veterinary epidemiology, the suveillance of this events is more complex, since animal farms are usually on remote areas and latelly reported by certain type of agencies, but not by others.</p>
 
 <p>Thus, the use of graph network visualization tool could give us some insights about why and how agencies declare a certain type of event and how the declaration of events are connected.</p>
@@ -287,7 +287,7 @@ Deasease outbreaks are usually reported by agencies that are spread around the g
 
 <h3 id="indicators-of-centrality-centrality-mesure">Indicators of centrality (centrality mesure)</h3>
 
-<p>In network analysis, indicators of centrality are really useful when we want to determine the importance of distinct nodes in a graph. In essence, these indicators are based on calculations of some sort of distance, to later assign numbers or rakings to nodes within a graph corresponding to their network postion. They reflect a unit’s prominence; in different substantive settings for instance, this may be its structural power, status, prestige, or visibility <a class="citation" href="#marsden2009">[3]</a>. There are several centrality mesures in the literature of graph theory, but for the sake of brevity, I will (try to) explain three among them : Degree Centrality, Betweeness centrality, and Closeness Centrality</p>
+<p>In network analysis, indicators of centrality are really useful when we want to determine the importance of distinct nodes in a graph. In essence, these indicators are based on calculations of some sort of distance, to later assign numbers or rakings to nodes within a graph corresponding to their network postion. They reflect a unit’s prominence; in different substantive settings for instance, this may be its structural power, status, prestige, or visibility <a class="citation" href="#marsden2009">(Marsden, 2005)</a>. There are several centrality mesures in the literature of graph theory, but for the sake of brevity, I will (try to) explain three among them : Degree Centrality, Betweeness centrality, and Closeness Centrality</p>
 
 <h4 id="1-degree-centrality">1. Degree Centrality</h4>
 
@@ -311,11 +311,13 @@ Deasease outbreaks are usually reported by agencies that are spread around the g
 
 <p>where \(d_{ij}\) is the distance (length of the shortest path) of the shortest path between nodes <em>i</em> and <em>j</em>. Since the closiness centrality captures the average between each node and every other node in the graph, we use the normalized form of the average by multiplying \(1 / \sum_{j=1}^{N}d_{ij}\) by \(N - 1\).</p>
 
-<p>Low closeness centrality means that a node is directly connected (or “just one connection away”) from most others in the network. In contrast, nodes in very peripheral locations may have high closeness centrality scores, indicating the high number of connections they need to take to connect to distant others in the network  <a class="citation" href="#hansen202031">[4]</a></p>
+<p>Low closeness centrality means that a node is directly connected (or “just one connection away”) from most others in the network. In contrast, nodes in very peripheral locations may have high closeness centrality scores, indicating the high number of connections they need to take to connect to distant others in the network  <a class="citation" href="#hansen202031">(Hansen et al., 2020)</a></p>
 
 <h3 id="calculating-indicators-of-centrality">Calculating indicators of centrality</h3>
 
-<p>Hopefullly, we won’t have to implement by hand the algorithms shown above. The great python package <code class="language-plaintext highlighter-rouge">Networkx</code> has ready-to-use implemetations of these and many other algorithms. We want to generate one a plot for each centrity measure, so let’s define a helper function. The fucntion will take two arguments : the first is one of the three centrality measures exaplained before and the second, the name of centrality we want to show in the plot:</p>
+<p>Hopefullly, we won’t have to implement by hand the algorithms shown above. The great python package <code class="language-plaintext highlighter-rouge">Networkx</code> has ready-to-use implemetations of these and many other algorithms.</p>
+
+<p>For each centrality measure discussed, we will compute and them in a plot. So we first define a helper function that will take two arguments : the desired centrality measure and the name of centrality label we want to show in the plot:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">generate_centrality_df</span><span class="p">(</span><span class="n">centrality_type</span><span class="p">,</span><span class="n">graph</span><span class="p">,</span><span class="n">plot_col_name</span><span class="p">):</span>
   <span class="n">centrality</span> <span class="o">=</span> <span class="bp">None</span>
@@ -1650,10 +1652,12 @@ var tomSelect=function(e,t){return new TomSelect(e,t)}
 
 <p><br /></p>
 
-<ol class="bibliography"><li><p><span id="valentin2023">1. Valentin S, Boudoua B, Sewalk K, <i>et al.</i> Dissemination of information in event-based surveillance, a case study of Avian Influenza. <b>18</b>: e0285341. DOI: https://doi.org/10.1371/journal.pone.0285341.</span></p></li>
-<li><p><span id="outbreak">2. Reintjes R, Zanuzdana A. “Outbreak Investigations.” Modern Infectious Disease Epidemiology: Concepts, Methods, Mathematical Models, and Public Health. <i>Concepts, Methods, Mathematical Models, and Public Health</i> 2009: 159–176. DOI: https://doi.org/10.1007/978-0-387-93835-6_9.</span></p></li>
-<li><p><span id="marsden2009">3. Marsden PV. Network Analysis. Kempf-Leonard K (ed). <i>Encyclopedia of Social Measurement</i> 2005: 819–825. DOI: https://doi.org/10.1016/B0-12-369398-5/00409-6.</span></p></li>
-<li><p><span id="hansen202031">4. Hansen DL, Shneiderman B, Smith MA, Himelboim I. Chapter 3 - Social network analysis: Measuring, mapping, and modeling collections of connections. Hansen DL, Shneiderman B, Smith MA, Himelboim I (eds). <i>Analyzing Social Media Networks with NodeXL (Second Edition)</i> 2020: 31–51. DOI: https://doi.org/10.1016/B978-0-12-817756-3.00003-0.</span></p></li></ol>
+<h3 id="references">References</h3>
+
+<ol class="bibliography"><li><p><span id="valentin2023">Valentin, S., Boudoua, B., Sewalk, K., Arınık, N., Roche, M., Lancelot, R., Arsevska, E., n.d. Dissemination of information in event-based surveillance, a case study of Avian Influenza 18, e0285341. https://doi.org/https://doi.org/10.1371/journal.pone.0285341</span></p></li>
+<li><p><span id="marsden2009">Marsden, P.V., 2005. Network Analysis. Encyclopedia of Social Measurement 819–825. https://doi.org/https://doi.org/10.1016/B0-12-369398-5/00409-6</span></p></li>
+<li><p><span id="outbreak">Reintjes, R., Zanuzdana, A., 2009. “Outbreak Investigations.” Modern Infectious Disease Epidemiology: Concepts, Methods, Mathematical Models, and Public Health. Concepts, Methods, Mathematical Models, and Public Health 159–176. https://doi.org/https://doi.org/10.1007/978-0-387-93835-6_9</span></p></li>
+<li><p><span id="hansen202031">Hansen, D.L., Shneiderman, B., Smith, M.A., Himelboim, I., 2020. Chapter 3 - Social network analysis: Measuring, mapping, and modeling collections of connections. Analyzing Social Media Networks with NodeXL (Second Edition) 31–51. https://doi.org/https://doi.org/10.1016/B978-0-12-817756-3.00003-0</span></p></li></ol>
 
     <!-- Social Bar -->
 <hr />
