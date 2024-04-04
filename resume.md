@@ -2,7 +2,7 @@
 bg: "resume_bg.jpg"
 layout: page
 title: "Resume"
-crawlertitle: "Why and how this blog was created"
+crawlertitle: "Paulo Pimenta - CV"
 permalink: /resume/
 summary: "More about me"
 active: resume

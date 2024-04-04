@@ -2,7 +2,7 @@
 bg: "archive.jpg"
 layout: page
 permalink: /posts/
-title: "Blog"
+title: "Posts"
 crawlertitle: "All articles"
 summary: "All blog posts"
 active: archive
