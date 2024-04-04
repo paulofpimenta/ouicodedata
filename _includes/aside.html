@@ -22,7 +22,7 @@
         {% if page.summary %}
           {{ page.summary }}
         {% endif %}
-        {% if page.url == '/' %}
+        {% if page.url == '/' or page.url contains 'page'  or page.url contains 'about' %}
           {% include socialbar-left.html %} 
         {% endif %}
       </p>
