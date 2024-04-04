@@ -7,8 +7,8 @@
 
 # Site settings
 title: OuiCodeData
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
+email: pfpimenta@gmail.com
+description: # this means to ignore newlines until "baseurl:"
   A website about spatial data, artificial intelligence and data science
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -18,9 +18,22 @@ github_username:  paulofpimenta
 twitter_username:  paulofpimenta
 linkedin_username:  paulofpimenta
 
+# Set by GitHub
+destination: ./_site#
+
+
+#Paginate settings
+
+paginate: 5
+paginate_path: /page:num/
+
+
 # Build settings
 markdown: kramdown
-#permalink: /:categories/:title/
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 # Gems settings
 plugins:
@@ -77,11 +90,11 @@ sass:
 images: '/assets/images'
 
 
+
+
 # Outputting
 ############################################################
-paginate: 5
 permalink: /posts/:title/
-paginate_path: /page:num
 # Set the time zone for site generation.
 timezone: Europe/Paris
 
