@@ -1,13 +1,14 @@
 ---
+bg: "net_analysis_bg.jpg"
 layout: post
 title:  "Unleashing the power of graph analysis with Networkx, NzViz and PyViz"
+crawlertitle: "Unleashing the power of graph analysis with Networkx, NzViz and PyViz"
+summary: "Unleashing the power of graph analysis with Networkx, NzViz and PyViz"
 date:   2024-02-07 20:19:16 +0200
-tags:
-- Graph
-- Data visualization
+categories: posts
+tags: ['Network Analysis']
+author: Paulo Pimenta
 ---
-
-
 
 ### Introduction
 Graph netowrks have got a lot of attention in the past decade. Almost every type of data can be represented as a graph. In that sense, newtwork analysis can be a powerfull and usesuful approach as an exloratory data analysis approach to graph neural networks (GNN). This post will focus on Network Analysis of a real data network presented by {%cite valentin2023%}. In the next section, I will make a brief introduction about the dataset and the context on which it was produced before we dive into the graph analysis part 
@@ -23,9 +24,9 @@ Thus, the use of graph network visualization tool could give us some insights ab
 
 The official dataset can be found [here](https://zenodo.org/records/7828530). This dataset contains sveral csv files, but will focus on 3 main files : 
 
-* The `sources.csv` : represents the data about the source of outbreak declaration, 
-* The `event.csv` : represents the data about each outbreak event, 
-* The `event_source.csv` : represents all outbreak declared events
+- The `sources.csv` : represents the data about the source of outbreak declaration, 
+- The `event.csv` : represents the data about each outbreak event, 
+- The `event_source.csv` : represents all outbreak declared events
 
 If we transform our data into a graph, `source` and `event` will be considered as node types, and `event_source` are edges of our graph. But before transforming the dataset into a graph, it is good to know which type the of graph we are working with
  
@@ -35,7 +36,7 @@ In graph theory, graphs can be classed by different ways (e.g. interconnectivity
 
 <br />
 <p align="center">
-  <img src="/img/posts/graph/bipartite.svg"  width="500">
+  <img src="/assets/images/posts/graph/bipartite.svg"  width="500">
 </p>
 <p align="center">Examples of bipartite graphs <br> Source https://mathworld.wolfram.com/BipartiteGraph.html</p>
 <br />
@@ -66,8 +67,8 @@ To build the edges, we must build a triplet containing $$ (S,T,E) $$ where $$ S 
 
 ```python
 source_event_mapping_list = [(s,e,{"num":n}) for s, e, n in zip(list(events_source_early['source']),
-                                                                      list(events_source_early['id_event']),
-                                                                      list(events_source_early['n']))]
+                                                                list(events_source_early['id_event']),
+                                                                list(events_source_early['n']))]
 ```
 and the output with the top four edges of edges would be :
 
@@ -214,7 +215,7 @@ closeness_df_ppa.sort_values('Closeness',ascending=False).plot(kind="bar",color=
 
 <br />
 <p align="center">
-  <img src="/img/posts/graph/centrality.png"  width="100%">
+  <img src="/assets/images/posts/graph/centrality.png"  width="100%">
 </p>
 <p align="center">Indicators of centrality <br></p>
 <br />
@@ -247,7 +248,7 @@ and the plot output :
 
 <br />
 <p align="center">
-  <img src="/img/posts/graph/circos.png"  width="80%">
+  <img src="/assets/images/posts/graph/circos.png"  width="80%">
 </p>
 <p align="center">Circos plot of Avian Influenza's report events by type of reporting source and event region<br></p>
 <br />
@@ -262,6 +263,6 @@ Plot an interactive graph with Pyviz
 
 <br />
 
-### References
+#### References
 
 {% bibliography --cited %}

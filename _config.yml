@@ -7,37 +7,42 @@
 
 # Site settings
 title: OuiCodeData
-email: pfpimenta@gmail.com
-description: # this means to ignore newlines until "baseurl:"
-  A portal with news, tutorials and tips about GIS.
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  A website about spatial data, artificial intelligence and data science
+  Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://paulofpimenta.github.io/ouicodedata/" # the base hostname & protocol for your site
+lang: "en"
+url: "http://localhost:4000" # the base hostname & protocol for your site
+twitter_username: ouicodegis
 github_username:  paulofpimenta
-twitter_username:  paulofpimenta
-linkedin_username:  paulofpimenta
+disqus_username:
 
-permalink: none
+# Build settings
+markdown: kramdown
+#permalink: /:categories/:title/
 
 # Gems settings
 plugins:
-  - jekyll-sitemap
-  - jekyll-paginate
   - jekyll-scholar
-  #- jekyll-redirect-from
+  - jekyll-gist
+  - jekyll-seo-tag
+  - jekyll-paginate
 
-# Where things are
-############################################################
-#source: . # Set by GitHub
-# This is where the generated site will be placed once Jekyll is done transforming it.
-destination: ./_site#
-#plugins_dir: ./_plugins
-# This folder is for the main templates your content will be inserted into. You can have different layouts for different pages or page sections.
-#layouts_dir: ./_layouts
-#data_dir: ./_data
-#collections: null
+# Jekyl SEO Tag setup
+twitter:
+  username: ouicodegis
+  card: summary
+logo: logo.png
+social:
+  name: Songzi Vong
+  links:
+    - https://twitter.com/ouicodegis
+    - https://github.com/paulofpimenta
+google_site_verification: xxxxx
+lang: en
 
-# Add portfolio folder
-
+# Jekyl Scholar setup
 scholar:
   style: _bibliography/simple-ieee.csl
   bibliography: references.bib
@@ -52,39 +57,29 @@ scholar:
   replace_strings: true
   query: "@*"
 
+# Posts settings
+future: true
+safe: false
+lsi: false
+excerpt_separator: "\n\n"
+
+# Theme settings
+compress_html:
+  comments: ["<!-- ", " -->"]
+  clippings: all
+  endings: all
 
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-
-paginate: 5
-paginate_path: /page:num/
+sass:
+  style: compressed
 
 
-defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-      type: "posts" # previously `post` in Jekyll 2.2.
-    values:
-      layout: "post"
-      author: "Paulo Pimenta"
-
-
-#Plugins
-############################################################
-
-#Carousel configuration
-#iis_slider_array: []
-
+images: '/assets/images'
 
 
 # Outputting
 ############################################################
+paginate: 5
 permalink: /posts/:title/
 paginate_path: /page:num
 # Set the time zone for site generation.

@@ -1,11 +1,13 @@
 ---
+bg: "desert.jpg"
 layout: post
 title:  "Worldclim data with R: the right way"
+crawlertitle: "Worldclim data with R"
+summary: "Worldclim data with R: the right way"
 date:   2023-10-13 20:05:09 +0800
-comments: true
-tags:
-- R
-- Spatial data
+categories: posts
+tags: ['Spatial data']
+author: Paulo Pimenta
 ---
 
 ### Introduction
@@ -17,7 +19,7 @@ This approach will, however , soon be deprecated due to the [retirement of rgdal
 
 ### The right way
 
-Any user with litte experience with R my quickly acess the worldclim large set of raster files containing many environmental data. With the deprecation `rdal` and others, wordclim is managed by the [geodata](https://cran.r-project.org/web/packages/geodata/geodata.pdf) package. Depending on your R versiom, you might still be able to run `raster` and `rgal` packages, but its very likelly will you find some warnings. Plus, it is better to get used to the new practices of spatial data manipulation in `R`, that is, the use of the `sf` package. Let's start !
+Any user with litte experience with R may quickly acess the worldclim large set of raster files containing many environmental data. With the deprecation `rdal` and others, wordclim is managed by the [geodata](https://cran.r-project.org/web/packages/geodata/geodata.pdf) package. Depending on your R versiom, you might still be able to run `raster` and `rgal` packages, but its very likelly will you find some warnings. Plus, it is better to get used to the new practices of spatial data manipulation in `R`, that is, the use of the `sf` package. Let's start !
 
 ### Set raster and vector path
 
@@ -74,9 +76,12 @@ for (i in 1:length(raster_stack[1])){
 ```
 And the result :
 
+
 <p align="center">
-  <img src="/img/posts/world_clim/worldclim.png">
+  <img src="/assets/images/posts/world_clim/worldclim.png">
 </p>
+
+### References
 
 {% bibliography --cited %}
 

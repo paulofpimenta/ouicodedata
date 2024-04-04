@@ -1,71 +1,19 @@
-<header class="site-header" style="background-color: #212529">
-    <div class="container px-0">
-      <!-- <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#">OuiCodeData {{ site.baseurl }}</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-alt" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-        <div class="collapse navbar-collapse navbar-alt" id="navbarNav">
-          <ul class="navbar-nav">
-            <li {% if page.path == "index.html" %} class="nav-item active" {% endif %} class="nav-item" >
-              <a class="nav-link" href="{{ site.baseurl }}/index.html">{{ site.baseurl }} Home</a>
-            </li>
-            <li {% if page.path == "portfolio.html" %} class="nav-item active" {% endif %} class="nav-item" >
-                <a class="nav-link" href="{{ site.url }}/portfolio">Portfolio</a>
-            </li>
-            <li {% if page.path == "resume.html" %} class="nav-item active" {% endif %} class="nav-item" >
-                <a class="nav-link" href="{{ site.baseurl }}/resume">Resume</a>
-            </li>
-            <li {% if page.path == "about-me.html" %} class="nav-item active" {% endif %} class="nav-item" >
-                <a class="nav-link" href="{{ site.baseurl }}/about-me">About me</a>
-            </li>
-            <li {% if page.path == "tag_index.html" %} class="nav-item active" {% endif %} class="nav-item" >
-              <a class="nav-link" href="{{ site.baseurl }}/tag_index">Tags</a>
-          </li>
-          </ul>
-        </div>
-      </nav> -->
-      <!-- Fixed navbar -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="">
-        <div class="container-fluid" >
-          <a class="navbar-brand " href="#" style="color: white"  >OuiCodeData {{ site.baseurl }}</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon" ></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li {% if page.path == "index.html" %} class="nav-item active" {% endif %} class="nav-item" >
-                <a class="nav-link" href="{{ site.baseurl }}/index.html" style="color: white" >{{ site.baseurl }} Home</a>
-              </li>
-              <li {% if page.path == "index.html" %} class="nav-item active" {% endif %} class="nav-item" >
-                  <a class="nav-link" href="{{ site.baseurl }}/portfolio" style="color: white" >Portfolio</a>
-              </li>
-              <li {% if page.path == "resume.html" %} class="nav-item active" {% endif %} class="nav-item" >
-                  <a class="nav-link" href="{{ site.baseurl }}/resume" style="color: white" >Resume</a>
-              </li>
-              <li {% if page.path == "about-me.html" %} class="nav-item active" {% endif %} class="nav-item" >
-                  <a class="nav-link" href="{{ site.baseurl }}/about-me" style="color: white" >About me</a>
-              </li>
-              <li {% if page.path == "tag_index.html" %} class="nav-item active" {% endif %} class="nav-item" >
-                <a class="nav-link" href="{{ site.baseurl }}/tag_index" style="color: white" >Tags</a>
-            </li>
-              
-              <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li>s<a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-               -->
-            </ul>
-          </div>
-        </div>
-      </nav>
-      
-    </div>
-  </header>
+<header class="main-header content-wrapper">
+
+  <input type="checkbox" id="menu-checkbox" />
+
+  <nav class="center-wrapper nav-main">
+
+    <a class="blog-logo" href="{{ site.baseurl }}/">{{ site.title }}</a>
+
+    {% for my_page in site.pages %}
+      {% if my_page.active %}
+        <a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+      {% endif %}
+    {% endfor %}
+
+
+    <label for="menu-checkbox" class="toggle-button" data-open="☰" data-close="☰" onclick></label>
+  </nav>
+
+</header>

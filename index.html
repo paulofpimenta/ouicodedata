@@ -1,18 +1,13 @@
 ---
+bg: "rails.jpg"
 layout: default
+crawlertitle: "Jekyll blog"
+title: "Paulo Pimenta, Phd"
+summary: "Data Scientist"
 ---
-<!--Content-->
-<div class="row">
-
-  <!--Image welcome-->
-<div class="col-md-12" style="padding-bottom: 10px">
-    <img style="width: inherit;" src="{{ site.baseurl }}/img/logo2.png">
-</div>
-<br/>
-<br/>
 
   <!--Left content -->
-  <div class="home col-md-8" >
+  <div class="home col-md-12" >
     <!--Posts-->
     {% for post in paginator.posts %}
     <div class="post-contents-shadow">
@@ -33,7 +28,7 @@ layout: default
         <span class="post-meta" ><i class="fa fa-tags">&nbsp;&nbsp;</i>{{ tag }}</span>
       {% endfor %}
 
-      <div class="post-content truncate" itemprop="articleBody" style="max-height:300px;margin-top:20px;text-align: justify;">
+      <div class="post-content truncate" itemprop="articleBody" style="max-height:300px;margin-top:20px;text-align: justify; margin-bottom: 10px;">
 	      {{ post.content }}
       </div>
       <div style="height:50px;">
@@ -90,50 +85,3 @@ layout: default
     </nav>
   <!-- Left content-->
   </div>
-  
-  <!-- Right content-->
-  <div class="col-md-4">
-    
-    <!-- About me-->
-    <div class="post-contents-shadow">
-        {% include card_about_me.html%}
-    </div>
-    <br />
-
-      <!-- Tags-->
-      <div class="post-contents-shadow ">
-        <i class="fa fa-tags">&nbsp;&nbsp;</i>
-          {% include card_tags.html%}
-      </div>
-      <br />
-        
-
-    <!-- Books-->
-    <div class="post-contents-shadow">
-      <i class="fa-solid fa-book">&nbsp;&nbsp;</i>
-        {% include card_books.html %}
-    </div>
-    <br/>
-
-    <!-- Recent Posts-->
-    <div class="post-contents-shadow">
-      <i class="fa-regular fa-newspaper">&nbsp;&nbsp;</i>
-        {% include card_recent_posts.html %}
-      </div>
-    <br/>
-
-    <!-- Twitter-->
-    <div class="post-contents-shadow" style="margin-bottom: 20px;">
-      <a class="twitter-timeline" 
-          data-tweet-limit="1"
-          href="https://twitter.com/paulofpimenta?ref_src=twsrc%5Etfw">Tweets by paulofpimenta</a> 
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <!--<p style="font-size: 21px;font-weight: 300;line-height: 24px;color: #292F33;">Twitter</p>-->
-    </div>
-  <!--.col-4-->
-  </div>
-  <!--.col-8-->
-  </div>
-<!--.row-->
-</div>
-

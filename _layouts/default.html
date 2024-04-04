@@ -1,23 +1,21 @@
+---
+---
 <!DOCTYPE html>
-<html>
-  
+<html lang="{{ site.lang }}">
+
   {% include head.html %}
-  {% include analytics.html %}
-  <body style="min-height:100%;">
-    <!--Header-->
-    {% include header.html %}
-    
-    <!--Content-->
-    <div class="page-content">
-      <div class="container" style="min-height: 100vh;" >  <!--Always force the content to occupy the max height of the page-->
-        {{ content }}
-      </div>
-      <div class="clearfix">
-    </div>
-    <!--Footer-->
+
+  <body>
+    <div id="shadow"></div>
+
+      {% include header.html %}
+      {% include aside.html %}
+
+    <main class="content-wrapper blog-content">
+      {{ content }}
+    </main>
+
     {% include footer.html %}
 
-    <script id="dsq-count-scr" src="//ouicodegis.disqus.com/count.js" async></script>
   </body>
-
 </html>

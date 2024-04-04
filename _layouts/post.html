@@ -1,34 +1,52 @@
 ---
 layout: default
 ---
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<div class="row">
-  <div class="col-md-1 col-xs-0"></div>
-    <div class="col-md-10 col-xs-12">
-<article class="post post-contents-shadow" style="margin-bottom:30px;" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><i class="fa fa-calendar">&nbsp;&nbsp;</i>
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
-      {% if page.author %}
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">{{ page.author }}</span></span>
-      {% endif %}
-    </p>
-  </header>
+<!-- Vis network -->
+<script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 
-  <div class="post-content" itemprop="articleBody">
+<!-- Tom select -->
+<link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+
+<!-- MathJax-->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<article class="post">
+
+  <h1 class="post-title">{{ page.title }}</h1>
+
+  <p class="post-meta">
+    <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%d-%m-%Y" }}</time>
+
+    {% if page.author %}
+      &nbsp;/&nbsp;
+      <span>{{ page.author }}</span>
+    {% endif %}
+  </p>
+
+  <div class="post-content">
+
     {{ content }}
-    {% include social-post-share.html %}
+
+    <div class="post-links">
+      {% if page.next.url %}
+        <a class="link-to-post" href="{{ page.next.url | relative_url}}">
+          <span class="link-to-post__next">&#10535; &nbsp;Next post</span>
+          <span class="link-to-post__title">{{ page.next.title }}</span>
+        </a>
+      {% endif %}
+
+      {% if page.previous.url %}
+        <a class="link-to-post" href="{{ page.previous.url | relative_url}}">
+          <span class="link-to-post__prev">&#10535; &nbsp;Previous post</span>
+          <span class="link-to-post__title">{{ page.previous.title }}</span>
+        </a>
+      {% endif %}
+    </div>
+
   </div>
+
 </article>
-
-<div class="post-contents-shadow" style="margin-bottom:30px;">
-  {% include disqus.html %}
-</div>
-</div>
-
-<div class="col-md-1 col-xs-0"></div>
-</div>
-
