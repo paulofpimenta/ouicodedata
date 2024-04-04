@@ -1,5 +1,5 @@
 ---
-bg: "resume_bg.jpg"
+bg: "fav_books_bg.avif"
 layout: page
 title: "Favorite books"
 crawlertitle: "Why and how this blog was created"
