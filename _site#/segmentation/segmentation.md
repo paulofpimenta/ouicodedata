@@ -1,22 +1,4 @@
----
-bg: "temp_bg.jpg"
-layout: post
-title:  "Temporal variability of climate time Series using MODIS satellite data"
-crawlertitle: "TTemporal Variability of climate time Series using MODIS satellite data"
-summary: "Temporal variability of climate time Series using MODIS satellite data"
-date:   2024-04-12 14:35:44 +0200
-categories: posts
-tags: ['Spatial data']
-author: Paulo Pimenta
----
-
-
-## Introduction
-
-The colab is avaiable [here](https://colab.research.google.com/drive/1gT2joziZkQ9qNmsY1TQxAtqlP-pLn4mB?usp=sharing)
-
-
-## Install planetary_computer and import other libraries
+# 1. Install planetary_computer and import other libraries
 
 
 ```python
@@ -48,7 +30,113 @@ import zarr
 import os
 ```
 
-## Use pystac to import a stac catalog from microsoft planetary computer
+    Requirement already satisfied: planetary_computer in /usr/local/lib/python3.10/dist-packages (1.0.0)
+    Requirement already satisfied: click>=7.1 in /usr/local/lib/python3.10/dist-packages (from planetary_computer) (8.1.7)
+    Requirement already satisfied: pydantic>=1.7.3 in /usr/local/lib/python3.10/dist-packages (from planetary_computer) (2.6.4)
+    Requirement already satisfied: pystac>=1.0.0 in /usr/local/lib/python3.10/dist-packages (from planetary_computer) (1.10.0)
+    Requirement already satisfied: pystac-client>=0.2.0 in /usr/local/lib/python3.10/dist-packages (from planetary_computer) (0.7.6)
+    Requirement already satisfied: pytz>=2020.5 in /usr/local/lib/python3.10/dist-packages (from planetary_computer) (2023.4)
+    Requirement already satisfied: requests>=2.25.1 in /usr/local/lib/python3.10/dist-packages (from planetary_computer) (2.31.0)
+    Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from planetary_computer) (24.0)
+    Requirement already satisfied: python-dotenv in /usr/local/lib/python3.10/dist-packages (from planetary_computer) (1.0.1)
+    Requirement already satisfied: annotated-types>=0.4.0 in /usr/local/lib/python3.10/dist-packages (from pydantic>=1.7.3->planetary_computer) (0.6.0)
+    Requirement already satisfied: pydantic-core==2.16.3 in /usr/local/lib/python3.10/dist-packages (from pydantic>=1.7.3->planetary_computer) (2.16.3)
+    Requirement already satisfied: typing-extensions>=4.6.1 in /usr/local/lib/python3.10/dist-packages (from pydantic>=1.7.3->planetary_computer) (4.11.0)
+    Requirement already satisfied: python-dateutil>=2.7.0 in /usr/local/lib/python3.10/dist-packages (from pystac>=1.0.0->planetary_computer) (2.8.2)
+    Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests>=2.25.1->planetary_computer) (3.3.2)
+    Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests>=2.25.1->planetary_computer) (3.6)
+    Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests>=2.25.1->planetary_computer) (2.0.7)
+    Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests>=2.25.1->planetary_computer) (2024.2.2)
+    Requirement already satisfied: jsonschema~=4.18 in /usr/local/lib/python3.10/dist-packages (from pystac>=1.0.0->planetary_computer) (4.19.2)
+    Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil>=2.7.0->pystac>=1.0.0->planetary_computer) (1.16.0)
+    Requirement already satisfied: attrs>=22.2.0 in /usr/local/lib/python3.10/dist-packages (from jsonschema~=4.18->pystac>=1.0.0->planetary_computer) (23.2.0)
+    Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /usr/local/lib/python3.10/dist-packages (from jsonschema~=4.18->pystac>=1.0.0->planetary_computer) (2023.12.1)
+    Requirement already satisfied: referencing>=0.28.4 in /usr/local/lib/python3.10/dist-packages (from jsonschema~=4.18->pystac>=1.0.0->planetary_computer) (0.34.0)
+    Requirement already satisfied: rpds-py>=0.7.1 in /usr/local/lib/python3.10/dist-packages (from jsonschema~=4.18->pystac>=1.0.0->planetary_computer) (0.18.0)
+    Requirement already satisfied: odc-stac in /usr/local/lib/python3.10/dist-packages (0.3.9)
+    Requirement already satisfied: affine in /usr/local/lib/python3.10/dist-packages (from odc-stac) (2.4.0)
+    Requirement already satisfied: odc-geo>=0.3.0 in /usr/local/lib/python3.10/dist-packages (from odc-stac) (0.4.3)
+    Requirement already satisfied: rasterio!=1.3.0,!=1.3.1,>=1.0.0 in /usr/local/lib/python3.10/dist-packages (from odc-stac) (1.3.10)
+    Requirement already satisfied: dask[array] in /usr/local/lib/python3.10/dist-packages (from odc-stac) (2023.8.1)
+    Requirement already satisfied: numpy>=1.20.0 in /usr/local/lib/python3.10/dist-packages (from odc-stac) (1.25.2)
+    Requirement already satisfied: pandas in /usr/local/lib/python3.10/dist-packages (from odc-stac) (2.0.3)
+    Requirement already satisfied: pystac<2,>=1.0.0 in /usr/local/lib/python3.10/dist-packages (from odc-stac) (1.10.0)
+    Requirement already satisfied: toolz in /usr/local/lib/python3.10/dist-packages (from odc-stac) (0.12.1)
+    Requirement already satisfied: xarray>=0.19 in /usr/local/lib/python3.10/dist-packages (from odc-stac) (2023.7.0)
+    Requirement already satisfied: cachetools in /usr/local/lib/python3.10/dist-packages (from odc-geo>=0.3.0->odc-stac) (5.3.3)
+    Requirement already satisfied: pyproj>=3.0.0 in /usr/local/lib/python3.10/dist-packages (from odc-geo>=0.3.0->odc-stac) (3.6.1)
+    Requirement already satisfied: shapely in /usr/local/lib/python3.10/dist-packages (from odc-geo>=0.3.0->odc-stac) (2.0.3)
+    Requirement already satisfied: python-dateutil>=2.7.0 in /usr/local/lib/python3.10/dist-packages (from pystac<2,>=1.0.0->odc-stac) (2.8.2)
+    Requirement already satisfied: attrs in /usr/local/lib/python3.10/dist-packages (from rasterio!=1.3.0,!=1.3.1,>=1.0.0->odc-stac) (23.2.0)
+    Requirement already satisfied: certifi in /usr/local/lib/python3.10/dist-packages (from rasterio!=1.3.0,!=1.3.1,>=1.0.0->odc-stac) (2024.2.2)
+    Requirement already satisfied: click>=4.0 in /usr/local/lib/python3.10/dist-packages (from rasterio!=1.3.0,!=1.3.1,>=1.0.0->odc-stac) (8.1.7)
+    Requirement already satisfied: cligj>=0.5 in /usr/local/lib/python3.10/dist-packages (from rasterio!=1.3.0,!=1.3.1,>=1.0.0->odc-stac) (0.7.2)
+    Requirement already satisfied: snuggs>=1.4.1 in /usr/local/lib/python3.10/dist-packages (from rasterio!=1.3.0,!=1.3.1,>=1.0.0->odc-stac) (1.4.7)
+    Requirement already satisfied: click-plugins in /usr/local/lib/python3.10/dist-packages (from rasterio!=1.3.0,!=1.3.1,>=1.0.0->odc-stac) (1.1.1)
+    Requirement already satisfied: setuptools in /usr/local/lib/python3.10/dist-packages (from rasterio!=1.3.0,!=1.3.1,>=1.0.0->odc-stac) (67.7.2)
+    Requirement already satisfied: packaging>=21.3 in /usr/local/lib/python3.10/dist-packages (from xarray>=0.19->odc-stac) (24.0)
+    Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas->odc-stac) (2023.4)
+    Requirement already satisfied: tzdata>=2022.1 in /usr/local/lib/python3.10/dist-packages (from pandas->odc-stac) (2024.1)
+    Requirement already satisfied: cloudpickle>=1.5.0 in /usr/local/lib/python3.10/dist-packages (from dask[array]->odc-stac) (2.2.1)
+    Requirement already satisfied: fsspec>=2021.09.0 in /usr/local/lib/python3.10/dist-packages (from dask[array]->odc-stac) (2023.6.0)
+    Requirement already satisfied: partd>=1.2.0 in /usr/local/lib/python3.10/dist-packages (from dask[array]->odc-stac) (1.4.1)
+    Requirement already satisfied: pyyaml>=5.3.1 in /usr/local/lib/python3.10/dist-packages (from dask[array]->odc-stac) (6.0.1)
+    Requirement already satisfied: importlib-metadata>=4.13.0 in /usr/local/lib/python3.10/dist-packages (from dask[array]->odc-stac) (7.1.0)
+    Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.10/dist-packages (from importlib-metadata>=4.13.0->dask[array]->odc-stac) (3.18.1)
+    Requirement already satisfied: locket in /usr/local/lib/python3.10/dist-packages (from partd>=1.2.0->dask[array]->odc-stac) (1.0.0)
+    Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil>=2.7.0->pystac<2,>=1.0.0->odc-stac) (1.16.0)
+    Requirement already satisfied: pyparsing>=2.1.6 in /usr/local/lib/python3.10/dist-packages (from snuggs>=1.4.1->rasterio!=1.3.0,!=1.3.1,>=1.0.0->odc-stac) (3.1.2)
+    Requirement already satisfied: osmnx in /usr/local/lib/python3.10/dist-packages (1.9.2)
+    Requirement already satisfied: geopandas>=0.12 in /usr/local/lib/python3.10/dist-packages (from osmnx) (0.13.2)
+    Requirement already satisfied: networkx>=2.5 in /usr/local/lib/python3.10/dist-packages (from osmnx) (3.3)
+    Requirement already satisfied: numpy>=1.20 in /usr/local/lib/python3.10/dist-packages (from osmnx) (1.25.2)
+    Requirement already satisfied: pandas>=1.1 in /usr/local/lib/python3.10/dist-packages (from osmnx) (2.0.3)
+    Requirement already satisfied: requests>=2.27 in /usr/local/lib/python3.10/dist-packages (from osmnx) (2.31.0)
+    Requirement already satisfied: shapely>=2.0 in /usr/local/lib/python3.10/dist-packages (from osmnx) (2.0.3)
+    Requirement already satisfied: fiona>=1.8.19 in /usr/local/lib/python3.10/dist-packages (from geopandas>=0.12->osmnx) (1.9.6)
+    Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from geopandas>=0.12->osmnx) (24.0)
+    Requirement already satisfied: pyproj>=3.0.1 in /usr/local/lib/python3.10/dist-packages (from geopandas>=0.12->osmnx) (3.6.1)
+    Requirement already satisfied: python-dateutil>=2.8.2 in /usr/local/lib/python3.10/dist-packages (from pandas>=1.1->osmnx) (2.8.2)
+    Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas>=1.1->osmnx) (2023.4)
+    Requirement already satisfied: tzdata>=2022.1 in /usr/local/lib/python3.10/dist-packages (from pandas>=1.1->osmnx) (2024.1)
+    Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests>=2.27->osmnx) (3.3.2)
+    Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests>=2.27->osmnx) (3.6)
+    Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests>=2.27->osmnx) (2.0.7)
+    Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests>=2.27->osmnx) (2024.2.2)
+    Requirement already satisfied: attrs>=19.2.0 in /usr/local/lib/python3.10/dist-packages (from fiona>=1.8.19->geopandas>=0.12->osmnx) (23.2.0)
+    Requirement already satisfied: click~=8.0 in /usr/local/lib/python3.10/dist-packages (from fiona>=1.8.19->geopandas>=0.12->osmnx) (8.1.7)
+    Requirement already satisfied: click-plugins>=1.0 in /usr/local/lib/python3.10/dist-packages (from fiona>=1.8.19->geopandas>=0.12->osmnx) (1.1.1)
+    Requirement already satisfied: cligj>=0.5 in /usr/local/lib/python3.10/dist-packages (from fiona>=1.8.19->geopandas>=0.12->osmnx) (0.7.2)
+    Requirement already satisfied: six in /usr/local/lib/python3.10/dist-packages (from fiona>=1.8.19->geopandas>=0.12->osmnx) (1.16.0)
+    Requirement already satisfied: rioxarray in /usr/local/lib/python3.10/dist-packages (0.15.3)
+    Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from rioxarray) (24.0)
+    Requirement already satisfied: rasterio>=1.3 in /usr/local/lib/python3.10/dist-packages (from rioxarray) (1.3.10)
+    Requirement already satisfied: xarray>=2022.3.0 in /usr/local/lib/python3.10/dist-packages (from rioxarray) (2023.7.0)
+    Requirement already satisfied: pyproj>=3.3 in /usr/local/lib/python3.10/dist-packages (from rioxarray) (3.6.1)
+    Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.10/dist-packages (from rioxarray) (1.25.2)
+    Requirement already satisfied: certifi in /usr/local/lib/python3.10/dist-packages (from pyproj>=3.3->rioxarray) (2024.2.2)
+    Requirement already satisfied: affine in /usr/local/lib/python3.10/dist-packages (from rasterio>=1.3->rioxarray) (2.4.0)
+    Requirement already satisfied: attrs in /usr/local/lib/python3.10/dist-packages (from rasterio>=1.3->rioxarray) (23.2.0)
+    Requirement already satisfied: click>=4.0 in /usr/local/lib/python3.10/dist-packages (from rasterio>=1.3->rioxarray) (8.1.7)
+    Requirement already satisfied: cligj>=0.5 in /usr/local/lib/python3.10/dist-packages (from rasterio>=1.3->rioxarray) (0.7.2)
+    Requirement already satisfied: snuggs>=1.4.1 in /usr/local/lib/python3.10/dist-packages (from rasterio>=1.3->rioxarray) (1.4.7)
+    Requirement already satisfied: click-plugins in /usr/local/lib/python3.10/dist-packages (from rasterio>=1.3->rioxarray) (1.1.1)
+    Requirement already satisfied: setuptools in /usr/local/lib/python3.10/dist-packages (from rasterio>=1.3->rioxarray) (67.7.2)
+    Requirement already satisfied: pandas>=1.4 in /usr/local/lib/python3.10/dist-packages (from xarray>=2022.3.0->rioxarray) (2.0.3)
+    Requirement already satisfied: python-dateutil>=2.8.2 in /usr/local/lib/python3.10/dist-packages (from pandas>=1.4->xarray>=2022.3.0->rioxarray) (2.8.2)
+    Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas>=1.4->xarray>=2022.3.0->rioxarray) (2023.4)
+    Requirement already satisfied: tzdata>=2022.1 in /usr/local/lib/python3.10/dist-packages (from pandas>=1.4->xarray>=2022.3.0->rioxarray) (2024.1)
+    Requirement already satisfied: pyparsing>=2.1.6 in /usr/local/lib/python3.10/dist-packages (from snuggs>=1.4.1->rasterio>=1.3->rioxarray) (3.1.2)
+    Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil>=2.8.2->pandas>=1.4->xarray>=2022.3.0->rioxarray) (1.16.0)
+    Requirement already satisfied: zarr in /usr/local/lib/python3.10/dist-packages (2.17.2)
+    Requirement already satisfied: asciitree in /usr/local/lib/python3.10/dist-packages (from zarr) (0.3.3)
+    Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.10/dist-packages (from zarr) (1.25.2)
+    Requirement already satisfied: numcodecs>=0.10.0 in /usr/local/lib/python3.10/dist-packages (from zarr) (0.12.1)
+    Requirement already satisfied: fasteners in /usr/local/lib/python3.10/dist-packages (from zarr) (0.19)
+    Requirement already satisfied: geojson in /usr/local/lib/python3.10/dist-packages (3.1.0)
+
+
+# 2. Use pystac to import a stac catalog from microsoft planetary computer
 
 
 ```python
@@ -58,7 +146,7 @@ catalog = pystac_client.Client.open(
 )
 ```
 
-## Choose an area, time of interest and dataset from planetary computer
+# 3. Choose an area, time of interest and dataset from planetary computer
 
 
 ```python
@@ -98,7 +186,7 @@ print(len(items))
     12
 
 
-## Choose the right asset
+## 3.1. Chose the right asset
 
 Each item has several available assets, including the original HDF file and a Cloud-optimized GeoTIFF of each subdataset. In our case, our interest is the ` LST_Day_1km` asset, that corresponds to the temperature mesured during daytime
 
@@ -137,7 +225,10 @@ rich_table
 └──────────────────┴─────────────────────────────────────────────────────────────────────┘
 </pre>
 
-The MODIS coordinate reference system is a sinusoidal grid, which means that views in a naïve XY raster look skewed. For visualization purposes, we reproject to a spherical Mercator projection for intuitive, north-up visualization.
+
+
+
+## 3.2. The MODIS coordinate reference system is a sinusoidal grid, which means that views in a naïve XY raster look skewed. For visualization purposes, we reproject to a spherical Mercator projection for intuitive, north-up visualization.
 
 
 ```python
@@ -658,9 +749,11 @@ Coordinates:
                &#x27;2021-09-30&#x27;, &#x27;2021-10-31&#x27;, &#x27;2021-11-30&#x27;, &#x27;2021-12-31&#x27;],
               dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, freq=None))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-5e55ce86-d78d-4531-831e-c2b26aee177d' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-5e55ce86-d78d-4531-831e-c2b26aee177d' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div>
 
-## Interpolate data and fill missing values
 
-There are many nodata values. Lets interpolate missing values using rioxarray. But me must first define our nodata value. In this case, we can define as -273.15, since Modis defines nodata value as 0
+
+# 4. Interpolate data and fill missing values
+
+## 4.1. There are many nodata values. Lets interpolate missing values using rioxarray. But me must first define our nodata value. In this case, we can define as -273.15, since Modis defines nodata value as 0
 
 
 ```python
@@ -671,7 +764,7 @@ print(f'No data value is {data_with_nodata.rio.nodata}')
     No data value is -273.15
 
 
-We plot the month of mars
+## 4.2. We plot the month of mars
 
 
 ```python
@@ -687,11 +780,11 @@ data_with_nodata[2].plot()
 
 
     
-![png](../../assets/images/posts/modis/output_15_1.png)
+![png](output_15_1.png)
     
 
 
-With the nodata defined, we can interpolate na's using the nearest neighbour method and fill missing data
+## 4.3. With the nodata defined, we can interpolate na's using the nearest neighbour method and fill missing data
 
 
 ```python
@@ -711,11 +804,11 @@ data_interpolated[2].plot()
 
 
     
-![png](../../assets/images/posts/modis/output_17_1.png)
+![png](output_17_1.png)
     
 
 
-Plot all the months together
+## 4.4. Plot all the months together
 
 
 ```python
@@ -732,13 +825,13 @@ for ax, datetime in zip(g.axes.flat, datetimes):
 
 
     
-![png](../../assets/images/posts/modis/output_19_1.png)
+![png](output_19_1.png)
     
 
 
-## Plot images with folium
+# 5. Plot images with folium
 
-Create bbox with Fiona
+## 5.1. Create bbox with Fiona
 
 
 ```python
@@ -803,7 +896,7 @@ for i,d in enumerate(data_interpolated,start=1):
 
 ```
 
-Export images and plot then together with Folium
+## 5.3. Export images and plot then together with Folium
 
 
 ```python
@@ -1034,9 +1127,9 @@ m
 
 
 
-## Plot temporal series for the data
+# 6. Plot temporal series for the data
 
-We calculate the mean temperature per month
+# 6.1. We calculate the mean temperature per month
 
 
 ```python
@@ -1919,7 +2012,9 @@ df_temp
   </div>
 
 
-Plot data with seaborn
+
+
+## 6.2. Plot data with seaborn
 
 
 ```python
@@ -1933,14 +2028,13 @@ plt.show()
 
 
     
-![png](../../assets/images/posts/modis/output_36_0.png)
+![png](output_36_0.png)
     
 
 
-## Make a animation from the output raster
+# 7. Make a animation from the output raster
 
-
-Create folders
+## 7.1. Create folders
 
 
 ```python
@@ -2022,7 +2116,7 @@ for f in file_list:
     /content/temp/animation/
 
 
-Create animation
+## 7.2. Create animation
 
 
 ```python
@@ -2041,7 +2135,7 @@ def make_gif(input_folder, save_file_path):
 make_gif(out_dir,os.path.join(out_dir,"Animation_Temp.gif"))
 ```
 
-Visualize the animation
+## 7.3. Visualize animation
 
 
 ```python
@@ -2052,8 +2146,11 @@ with open(out_dir + "Animation_Temp.gif", 'rb') as f:
 
 
     
-![png](../../assets/images/posts/modis/output_45_0.png)
+![png](output_45_0.png)
     
 
 
 
+```python
+
+```
