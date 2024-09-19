@@ -8,7 +8,7 @@
 
   <title>
     
-      All articles
+      Image Cropper
     
   </title>
 
@@ -34,26 +34,26 @@
 
   <meta name="description" content="A website about spatial data, artificial intelligence and data science Google search results) and in your feed.xml site description.">
 
-  <link rel="canonical" href="https://paulofpimenta.github.io/ouicodedata//posts/">
+  <link rel="canonical" href="https://paulofpimenta.github.io/ouicodedata//portfolio/image_cropper">
   <link rel="alternate" type="application/rss+xml" title="OuiCodeData" href="https://paulofpimenta.github.io/ouicodedata//feed.xml">
 
   <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|Roboto+Condensed:700&subset=latin' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/assets/main.css">
 
-  <meta property="og:url" content="https://paulofpimenta.github.io/ouicodedata//posts/">
+  <meta property="og:url" content="https://paulofpimenta.github.io/ouicodedata//portfolio/image_cropper">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Posts">
-  <meta property="og:description" content="All blog posts">
+  <meta property="og:title" content="Image Cropper">
+  <meta property="og:description" content="">
   <meta property="og:site_name" content="OuiCodeData">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:url" content="https://paulofpimenta.github.io/ouicodedata//posts/">
-  <meta name="twitter:title" content="Posts">
-  <meta name="twitter:description" content="All blog posts">
+  <meta name="twitter:url" content="https://paulofpimenta.github.io/ouicodedata//portfolio/image_cropper">
+  <meta name="twitter:title" content="Image Cropper">
+  <meta name="twitter:description" content="">
 
   
-    <meta property="og:image" content="https://paulofpimenta.github.io/ouicodedata//assets/images/archive.jpg">
-    <meta name="twitter:image" content="https://paulofpimenta.github.io/ouicodedata//assets/images/archive.jpg">
+    <meta property="og:image" content="https://paulofpimenta.github.io/ouicodedata//assets/images/bg.svg">
+    <meta name="twitter:image" content="https://paulofpimenta.github.io/ouicodedata//assets/images/bg.svg">
   
 
 
@@ -110,8 +110,6 @@
     
       
     
-      
-    
 
 
     <label for="menu-checkbox" class="toggle-button" data-open="☰" data-close="☰" onclick></label>
@@ -120,7 +118,7 @@
 </header>
 
       
-  <aside class="sidebar" role="note" style="background-image: url(/assets/images/archive.jpg)">  
+  <aside class="sidebar" role="note" style="background-image: url(/assets/images/bg.svg)">
 
 
   <div class="cover">
@@ -129,13 +127,11 @@
       <div class="heading">
 
         
-          Posts
+          Image Cropper
         
       </div>
 
       <p>
-        
-          All blog posts
         
         
       </p>
@@ -149,73 +145,56 @@
 
 
     <main class="content-wrapper blog-content">
-      <article class="page">
-  
-<h2 class="category-key" id="deep learning">Deep learning</h2>
+        <!-- ======= Portfolio Details Section ======= -->
+  <section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+      
+       
+      <div class="row gy-4">
 
-<ul class="year">
-    
-      
-        <li>
-          
-            <a href="/posts/gender-detector-with-pytorch/">Gender detection with Pytorch</a>
-            <span class="date">12-06-2023</span>
-          
-        </li>
-      
-    
-  </ul>
+        <!--Left columnn of portolio details-->
+        <div class="col-lg-8">
+          <ol class="breadcrumb " style="margin: 0px 0em 15px 0;">
+            <li class="breadcrumb-item">
+              <a href="/portfolio">Porfolio</a>
+            </li>
+            <li class="breadcrumb-item active">Image Cropper</li>
+          </ol>
+          <h2 class="mb-4">Image Cropper</h2>
+            <div class="container" style="padding: 0;text-align: justify;">
+    In this work, I developped a fullstack application that allows a user to send images to the server and crop images based on drag and drop user's interaction
+    The user can later download the result. The image processing can be redenred on the server (Springboot) or on the client (Angular). If rendered on the server,
+    the images are stored in the database (MongoDB). Images can be deleted by the users.
+</div>
 
-<h2 class="category-key" id="spatial data">Spatial data</h2>
+<div class="container" style="margin-top: 10px; text-align: center; text-align: center; max-width: auto;">
+    <a href="https://app3.ouicodedata.com">
+        <img src="../assets/images/portifolio/work3_detail.png" width="92%" height="92%">
+    </a>
+</div>  
+        </div>
+        
+        <!--Right columnn of portolio details-->
+        <div class="col-lg-4" style="margin-top: 30px;">
+          <div class="portfolio-info">
+            <h3>Project information</h3>
+            <ul>
+              <li><strong>Client</strong>:-</li>
+              <li><strong>Project date</strong>:23 Sep, 2024</li>
+              <li><strong>Deployed Project URL</strong>: <a href=https://app3.ouicodedata.com>Image Cropper</a></li>
+            </ul>
+          </div>
+          <div class="portfolio-description">
+            <p>
+              An image cropper using MongoDB, Springboot and Kakfa
+            </p>
+          </div>
+        </div>
 
-<ul class="year">
-    
-      
-        <li>
-          
-            <a href="/posts/temporal-series-modis/">Temporal variability of climate time Series using MODIS satellite data</a>
-            <span class="date">12-04-2024</span>
-          
-        </li>
-      
-    
-      
-        <li>
-          
-            <a href="/posts/bicycle-accidents-in-france/">Bicycle Accidents in Paris</a>
-            <span class="date">10-01-2024</span>
-          
-        </li>
-      
-    
-      
-        <li>
-          
-            <a href="/posts/worldclim-with-r/">Worldclim data with R: the right way</a>
-            <span class="date">13-10-2023</span>
-          
-        </li>
-      
-    
-  </ul>
+      </div>
 
-<h2 class="category-key" id="network analysis">Network analysis</h2>
-
-<ul class="year">
-    
-      
-        <li>
-          
-            <a href="/posts/graph-analysis/">Unleashing the power of graph analysis with Networkx, NzViz and PyViz</a>
-            <span class="date">07-02-2024</span>
-          
-        </li>
-      
-    
-  </ul>
-
-
-</article>
+    </div>
+  </section><!-- End Portfolio Details Section -->
 
     </main>
 

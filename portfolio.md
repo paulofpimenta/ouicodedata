@@ -41,7 +41,7 @@ active: More work
                 <h2 class="w-title">Gender detection</h2>
                 <div class="w-more">
                   <span class="w-ctegory">Computer Vision / Deep learning</span> /
-                  <span class="w-date">1 Oct. 2023</span>
+                  <br><span class="w-date">1 Oct. 2023</span>
                 </div>
               </span>
               <span style="width:20%">
@@ -69,7 +69,7 @@ active: More work
                 <h2 class="w-title">Bicycle risk map in France</h2>
                 <div class="w-more">
                   <span class="w-ctegory">Data Visualization / Spatial Data</span> /
-                  <span class="w-date">10 Dec. 2023</span>
+                  <br><span class="w-date">10 Dec. 2023</span>
                 </div>
               </span>
               <span style="width:20%">
@@ -84,21 +84,23 @@ active: More work
       </div> <!--End col 2-->
       <div class="col-md-6">
         <div class="card" style="margin-top: 10px;">
+          <a href="image_cropper.html">
           <div class="work-img">
-            <img src="{{ site.baseurl }}/assets/images/portifolio/under_dev.avif" alt="" width="100%" height="auto" />
+            <img src="{{ site.baseurl }}/assets/images/portifolio/work3.png" alt="" width="94%" height="90%" />
           </div>
+          </a>
           <div class="work-content">
             <div class="row">
               <div class="col-sm-10">
-                <h2 class="w-title">Work 3</h2>
+                <h2 class="w-title">Image Cropper</h2>
                 <div class="w-more">
-                  <span class="w-ctegory">Under developpement</span> /
-                  <span class="w-date">?</span>
+                  <span class="w-ctegory">Web Developpment</span> /
+                  <br><span class="w-date">24 Sep. 2024</span>
                 </div>
               </div>
               <div class="col-sm-2">
                 <div class="w-like">
-                  <a href="portfolio-details.html">
+                  <a href="image_cropper.html">
                     <span class="bi bi-plus-circle"></span></a>
                 </div>
               </div>
