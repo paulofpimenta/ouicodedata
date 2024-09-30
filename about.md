@@ -8,7 +8,7 @@ summary: "About me"
 active: about
 ---
 
-<img src="{{ site.baseurl }}/assets/images/me2_no_bg4.jpg" 
+<img src="{{ site.baseurl }}/assets/images/me.jpg" 
             alt="" width="35%" 
             height="auto" 
             style="color:#fdfdfd" />
