@@ -30,7 +30,6 @@ active: More work
             <div class="work-img">
               <img src="{{ site.baseurl }}/assets/images/portifolio/work1.webp" 
               alt="" 
-                class="img-fluid" 
                 width="100%"
                 height="auto" />
             </div>
@@ -86,7 +85,7 @@ active: More work
         <div class="card" style="margin-top: 10px;">
           <a href="image_cropper.html">
           <div class="work-img">
-            <img src="{{ site.baseurl }}/assets/images/portifolio/work3.png" alt="" width="94%" height="90%" />
+            <img src="{{ site.baseurl }}/assets/images/portifolio/work3.jpg" alt="" width="100%" />
           </div>
           </a>
           <div class="work-content">
